@@ -5,6 +5,7 @@ import {
     UserOutlined,
     VideoCameraOutlined,
   } from '@ant-design/icons';
+  import './Defaultlayout.css'
   import { Layout, Menu } from 'antd';
   import React, { useState } from 'react';
   const { Header, Sider, Content } = Layout;
@@ -64,3 +65,4 @@ import {
     );
   };
   export default DefaultLayout;
+  
