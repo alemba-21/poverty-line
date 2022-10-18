@@ -10,7 +10,7 @@ const Hero = () => {
             <div className='flex flex-col justify-center'>
 
         <h1 className='md:text-7xl sm:text-6xl text-4xl font-bold md:py-6'>
-          Grow with data.
+          LET'S GR🔥W TOGETHER.
         </h1>
         <p>
         Poverty~Line helps growing businesses find and work with top-notch talent and agencies. 
