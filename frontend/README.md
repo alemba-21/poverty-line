@@ -66,7 +66,7 @@ This is the front End for the Poverty-line website. Poverty~Line helps growing b
 
 ## Live Link
 
-Or you can access the web application directly via this [LINK.]()
+Or you can access the web application directly via this [LINK.]('https://github.com/joseph3559/poverty-line')
 
 ---
 
