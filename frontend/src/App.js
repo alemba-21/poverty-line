@@ -1,10 +1,9 @@
-import DefaultLayout from './components/Defaultlayout';
 import 'antd/dist/antd.css';
+import Registration from './components/Signup';
 
 function App() {
   return (
-    <DefaultLayout>
-    </DefaultLayout>
+    <Registration/>
   );
 }
 
