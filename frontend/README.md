@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Poverty Line Front end
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+### Scram Master :
 
-In the project directory, you can run:
+- Joseph Maina
 
-### `npm start`
+### Contributors
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Earnest Achayo
+2. Snaida Kabalika
+3. Alex Alemba
+4. Bryan Bosire
+5. Tim
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Project Description
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This is the front End for the Poverty-line website. Poverty~Line helps growing businesses find and work with top-notch talent and agencies. Users can sign up, post projects and  review proposals to find the right independent contractor or agency for you
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## SCREENSHOTS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![image](./public/images/Screenshot%20from%202022-10-19%2022-56-29.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## SetUp Instruction
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Requirements
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Text editor eg [Visual Studio Code](https://code.visualstudio.com/download)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Getting Files
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Fork the repo [LINK.](https://github.com/AchayoEarnest?tab=repositories)
 
-## Learn More
+* Create a new branch in your terminal (git checkout -b improve-feature)
+* Install the prerequisites
+* Make appropriate changes in file(s)
+* Run the server to see the changes
+* Add the changes and commit them (git commit -am "Improve App")
+* Push to the branch (git push origin improve-app)
+* Create a Pull request
+* Remember to also for the server from [LINK.](https://github.com/AchayoEarnest/phase-3-personal-blog-react-sinatra-project-api) and run it under its README.md instructions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Open the folder location on terminal and use the following command to run app:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Features
 
-### Code Splitting
+- Admin for the site can post new jobs for suitable applicants to apply
+- Admin can perform CRUD operations(create, read, update, delete) users
+- Users can create accounts and store the personal information in the database
+- Existing users in the database can log in and stay persisted in the system untill the logs out.
+- Users can perform CRUD operations(create, read, update, delete) their data
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## How To Run It
 
-### Analyzing the Bundle Size
+> $ type 'rails start' on your text editor commandline and hit enter to start rails server.
+> $ type 'npm start --prefix client' on your text editor commandline and hit enter to start react server.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## Live Link
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Or you can access the web application directly via this [LINK.]()
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Technologies Used
 
-### Deployment
+1. React
+2. JSX
+3. Tailwind
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## Contact Information
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Email : povertylinedev@gmail.com
+
+---
+
+## [License](LICENSE)
+
+MIT License
+Copyright (c) 2022 Poverty Line

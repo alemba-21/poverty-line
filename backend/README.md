@@ -1,4 +1,4 @@
-# Poverty Line Website
+# Poverty Line Endpoint API
 
 ---
 
@@ -6,7 +6,7 @@
 
 - Joseph Maina
 
-### Contribtors
+### Contributors
 
 1. Earnest Achayo
 2. Snaida Kabalika
