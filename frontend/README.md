@@ -12,7 +12,7 @@
 2. Snaida Kabalika
 3. Alex Alemba
 4. Bryan Bosire
-5. Tim
+5. Tim Mailu
 
 ---
 
