@@ -1,7 +1,7 @@
 puts "seeding demo user_profile"
 
-UserProfile.create(firstname: 'Earnest', lastname: 'Achayo', email: 'earnytech@live.com', gender: 'Male', dob: 12/5/1996, national_id: 297364546, address: '555 Nairobi', county: 'Nakuru', estate: 'Buma', user_id: 2)
-UserProfile.create(firstname: 'Jacky', lastname: 'Chan', email: 'chanbaby@live.com', gender: 'Female', dob: 22/5/1991, national_id: 307364546, address: '222-444 Nairobi', county: 'Mombasa', estate: 'Diani', user_id: 1)
+UserProfile.create(firstname: 'Earnest', lastname: 'Achayo', email: 'earnytech@live.com', phone: 0723455433, gender: 'Male', dob: 12/5/1996, national_id: 297364546, address: '555 Nairobi', county: 'Nakuru', estate: 'Buma', user_id: 2)
+UserProfile.create(firstname: 'Jacky', lastname: 'Chan', email: 'chanbaby@live.com', phone: 0723455433, gender: 'Female', dob: 22/5/1991, national_id: 307364546, address: '222-444 Nairobi', county: 'Mombasa', estate: 'Diani', user_id: 1)
 
 puts "Done seeding user Profile!"
 

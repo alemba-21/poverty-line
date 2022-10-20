@@ -8,7 +8,7 @@ class JobsController < ApplicationController
     end
 
     def show
-        job = Job.find(id: params[:id])
+        job = Job.find(params[:id])
         render json: job, status: :ok
     end
 
@@ -19,7 +19,7 @@ class JobsController < ApplicationController
 
     private
     def job_params
-        job.permit(:job_title, :job_description, :required_skills, :job_link)
+        params.permit(:job_title, :job_description, :required_skills, :job_link)
     end
 
     def render_not_found_response
