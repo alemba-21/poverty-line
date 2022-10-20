@@ -19,6 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_20_094411) do
     t.text "job_description"
     t.text "required_skills"
     t.string "job_link"
+    t.integer "admin_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -29,12 +30,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_20_094411) do
     t.string "email"
     t.integer "phone"
     t.boolean "gender"
-    t.datetime "dob"
+    t.date "dob"
     t.integer "national_id"
     t.string "address"
     t.string "county"
     t.string "estate"
     t.integer "user_id"
+    t.text "career_summary"
+    t.text "experience"
+    t.text "education"
+    t.text "skills_and_hobbies"
+    t.string "languages"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

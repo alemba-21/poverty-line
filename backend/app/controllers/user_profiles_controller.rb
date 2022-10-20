@@ -25,7 +25,7 @@ class UserProfilesController < ApplicationController
 
     private
     def user_profile_params
-        params.permit(:username, :firstname, :lastname, :email, :gender, :dob, :national_id, :address, :county, :estate, :user_id)
+        params.permit(:firstname, :lastname, :email, :gender, :dob, :national_id, :address, :county, :estate, :user_id, :career_summary, :experience, :education, :skills_and_hobbies, :languages)
     end
 
     def render_not_found_response

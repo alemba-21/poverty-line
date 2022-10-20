@@ -19,7 +19,7 @@ class JobsController < ApplicationController
 
     private
     def job_params
-        params.permit(:job_title, :job_description, :required_skills, :job_link)
+        params.permit(:job_title, :job_description, :required_skills, :job_link, :admin_id)
     end
 
     def render_not_found_response
