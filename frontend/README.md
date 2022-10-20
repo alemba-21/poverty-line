@@ -2,23 +2,20 @@
 
 ---
 
-### Scram Master :
-
-- Joseph Maina
-
-### Contributors
+### Authors :
 
 1. Earnest Achayo
 2. Snaida Kabalika
 3. Alex Alemba
 4. Bryan Bosire
 5. Tim Mailu
+6. Joseph Maina
 
 ---
 
 ## Project Description
 
-This is the front End for the Poverty-line website. Poverty~Line helps growing businesses find and work with top-notch talent and agencies. Users can sign up, post projects and  review proposals to find the right independent contractor or agency for you
+This is the front End for the Poverty-line website. Poverty~Line helps growing businesses find and work with top-notch talent and agencies. Users can sign up, post projects and review proposals to find the right independent contractor or agency for you
 
 ---
 

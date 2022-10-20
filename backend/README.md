@@ -2,17 +2,14 @@
 
 ---
 
-### Scram Master :
+### Authors:
 
-- Joseph Maina
-
-### Contributors
-
-1. Earnest Achayo
+1. Joseph Maina
 2. Snaida Kabalika
 3. Alex Alemba
 4. Bryan Bosire
-5. Tim Mailu 
+5. Tim Mailu
+6. Earnest Achayo
 
 ---
 
