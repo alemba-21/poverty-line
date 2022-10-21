@@ -3,7 +3,7 @@ import Hero from "./components/Hero";
 import Subscribe from "./components/Subscribe";
 // import About from "./components/About";
 // import Jobs from "./components/Jobs";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -11,10 +11,11 @@ function App() {
       <Navbar />
       <Hero />
       <Subscribe />
+      <Footer /> 
     {/* 
-      <About />
       <Jobs />
-      <Footer /> */}
+      <About />
+      */}
 
     </>
   );
