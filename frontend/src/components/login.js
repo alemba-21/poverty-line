@@ -1,9 +1,19 @@
 import React from "react";
+import picsignup from "../assets/signup.png"
 
 export default function Login() {
   return (
-    <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
-      <div className="w-full p-6 m-auto bg-white rounded-md shadow-lg lg:max-w-xl">
+    <div className="flex flex-row items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
+      <div className="sm:max-w-md mr-10 ">
+        <a href="/">
+          <h3 className="text-8xl font-bold text-green-600">Poverty-</h3>
+          {/* <img src={line}/> */}
+
+          <h3 className="text-8xl text-end font-bold text-green-600">Line</h3>
+        </a>
+        <img src={picsignup} />
+      </div>
+      <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-lg sm:max-w-sm sm:rounded-lg">
         <h1 className="text-3xl font-semibold text-center text-green-700 underline">
           Log in
         </h1>

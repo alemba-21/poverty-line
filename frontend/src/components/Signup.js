@@ -1,15 +1,24 @@
 import React from "react";
+import womanpic from "../assets/WomanPic.png"
+import line from "../assets/Line.png"
 
 export default function Registration() {
   return (
-    <div>
-      <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
-        <div>
+    <div className="">
+      <div className="flex flex-row items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
+        <div className="sm:max-w-md mr-10 ">
           <a href="/">
-            <h3 className="text-4xl font-bold text-green-600">Povert-Line</h3>
+            <h3 className="text-8xl font-bold text-green-600">Poverty-</h3>
+            {/* <img src={line}/> */}
+
+            <h3 className="text-8xl text-end font-bold text-green-600">Line</h3>
           </a>
+          <img src={womanpic} />
         </div>
-        <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-lg sm:max-w-lg sm:rounded-lg">
+        <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-lg sm:max-w-sm sm:rounded-lg">
+        <a href="/">
+            <h3 className="text-3xl font-bold text-green-600">Register</h3>
+          </a>
           <form>
             <div>
               <label
