@@ -17,6 +17,11 @@ class JobsController < ApplicationController
         render json: job, status: :created
     end
 
+    def destroy
+        job.destroy
+        head :no_content
+    end
+
     private
     def job_params
         params.permit(:job_title, :job_description, :required_skills, :job_link, :admin_id)
