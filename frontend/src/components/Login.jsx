@@ -6,7 +6,7 @@ export default function Login() {
     <div className="flex flex-row items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
       <div className="sm:max-w-md mr-10 ">
         <a href="/">
-          <h3 className="text-8xl font-bold text-green-600">Poverty-</h3>
+          <h3 className="text-8xl font-bold text-black-600">Poverty-</h3>
           {/* <img src={line} alt="/" /> */}
 
           <h3 className="text-8xl text-end font-bold text-green-600">Line</h3>
@@ -46,7 +46,7 @@ export default function Login() {
             Forget Password?
           </a>
           <div className="mt-6">
-            <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-green-700 rounded-md hover:bg-green-800 focus:outline-none focus:bg-purple-600">
+            <button className="w-full px-4 py-2 tracking-wide text-black transition-colors duration-200 transform bg-green-700 rounded-md hover:bg-green-800 focus:outline-none focus:bg-purple-600">
               Login
             </button>
           </div>
