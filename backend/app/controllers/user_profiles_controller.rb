@@ -23,6 +23,11 @@ class UserProfilesController < ApplicationController
         render json: user_profile, status: :accepted
     end 
 
+    def destroy
+        user_profile.destroy
+        head :no_content
+    end
+
     private
     def user_profile_params
         params.permit(:firstname, :lastname, :email, :gender, :dob, :national_id, :address, :county, :estate, :user_id, :career_summary, :experience, :education, :skills_and_hobbies, :languages)

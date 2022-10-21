@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "@heroicons/react": "^2.0.12",
-    "react-scroll": "^1.8.7",
-    "react-typed": "^1.2.0",
-    "scroll": "^3.0.1"
-  }
-}
