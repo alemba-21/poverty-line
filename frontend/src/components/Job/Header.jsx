@@ -7,8 +7,8 @@ const JobListing_page = () => {
         <Grid container class="flex justify-center">
             <Grid item xs={10}>
                 <Box class="flex items-center flex justify-between">
-                    <h1 class="text-5xl">Open Job Positions</h1>
-                    <Button class="normal-case text-2xl border-4 border-indigo-100/100" >Post a Job</Button>
+                    <h1 class="text-5xl font-bold">Job Entries</h1>
+                    <Button class="normal-case text-2xl border-4 border-indigo-100/100 text-black">Post a Job</Button>
                 </Box>
             </Grid>
         </Grid>

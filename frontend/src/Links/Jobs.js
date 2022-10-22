@@ -1,10 +1,12 @@
 import React from 'react'
-import JobListing_page from '../components/Job/JobListing_page'
+import Header from '../components/Job/Header'
+import SearchBar from '../components/Job/SearchBar'
 
 const Jobs = () => {
   return (
     <div>
-        <JobListing_page/>
+        <Header/>
+        <SearchBar/>
     </div>
   )
 }
