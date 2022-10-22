@@ -12,10 +12,12 @@ function App() {
       <Hero />
       <Subscribe />
       <Footer />
-    {/*
-      <Jobs />
-      <About />
-      */}
+    
+      <Routes>
+        <Switch>
+          <Route exact path="/" component={Home} />
+        </Switch>
+      </Routes>
 
     </>
   );
