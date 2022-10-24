@@ -9,7 +9,7 @@ import {
 
 const Footer = () => {
   return (
-    <div className='mx-auto py-16 bg-black px-4 grid lg:grid-cols-3 gap-8 text-gray-300'>
+    <div className='mx-auto py-16 bg-black px-20 grid lg:grid-cols-3 gap-8 text-gray-300'>
       <div>
         <h1 className='w-full text-3xl font-bold text-[#00df9a]'>PovertyLine.</h1>
         <p className='py-4'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id odit ullam iste repellat consequatur libero reiciendis, blanditiis accusantium.</p>
