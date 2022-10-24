@@ -15,7 +15,7 @@
 
 ## Project Description
 
-This is online software application for Poverty-line. Poverty~Line helps growing businesses by finding talents and connecting them with top-notch agencies. Users can sign up, post projects and review proposals to find the right independent contractor or agency for you
+This is online software application for Poverty-line. Poverty~Line helps growing businesses by finding talents and connecting them with top-notch agencies. Users can sign up, post projects and review proposals to find the right independent contractor or agency for them
 
 ---
 
