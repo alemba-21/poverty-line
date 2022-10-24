@@ -11,3 +11,9 @@ Job.create(job_title: "Software Endineer", job_description: "Software enginners 
 Job.create(job_title: "Network Administrator", job_description: "Good interpesonal and communication skills, good at networking in SISCO Must be ready to adapt to tech changes", required_skills: "Networking SISCO", job_link: "wwww.jmoko.com", admin_id: 2)
 
 puts "Done seeding user Profiles!"
+
+puts "seeding user email and password..."
+
+User.create!(email: 'cliffbosire@gmail.com', password_digest: '12345t')
+
+puts "Done seeding user email and password!"
