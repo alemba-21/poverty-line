@@ -1,4 +1,5 @@
 class JobsController < ApplicationController
+    before_action :authorized
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
 
@@ -8,17 +9,17 @@ class JobsController < ApplicationController
     end
 
     def show
-        job = Job.find(params[:id])
-        render json: job, status: :ok
+        @job = Job.find(params[:id])
+        render json: @job, status: :ok
     end
 
     def create
-        job = Job.create!(job_params)
-        render json: job, status: :created
+        @job = Job.create!(job_params)
+        render json: @job, status: :created
     end
 
     def destroy
-        job.destroy
+        @job.destroy
         head :no_content
     end
 

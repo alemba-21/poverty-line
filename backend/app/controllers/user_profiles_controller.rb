@@ -1,4 +1,5 @@
 class UserProfilesController < ApplicationController
+    before_action :authorized
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
 
@@ -8,29 +9,29 @@ class UserProfilesController < ApplicationController
     end    
     
     def create
-        user_profile = UserProfile.create!(user_profile_params)
-        render json:user_profile, status: :created
+        @user_profile = UserProfile.create!(user_profile_params)
+        render json:@user_profile, status: :created
     end
 
     def show
-        user_profile = UserProfile.find(params[:id])
-        render json: user_profile, status: :ok
+        @user_profile = UserProfile.find(params[:id])
+        render json: @user_profile, status: :ok
     end 
 
     def update
-        user_profile = UserProfile.find(params[:id])
-        user_profile.update!(user_profile_params)
-        render json: user_profile, status: :accepted
+        @user_profile = UserProfile.find(params[:id])
+        @user_profile.update!(user_profile_params)
+        render json: @user_profile, status: :accepted
     end 
 
     def destroy
-        user_profile.destroy
+        @user_profile.destroy
         head :no_content
     end
 
     private
     def user_profile_params
-        params.permit(:firstname, :lastname, :email, :gender, :dob, :national_id, :address, :county, :estate, :user_id, :career_summary, :experience, :education, :skills_and_hobbies, :languages)
+        params.permit(:firstname, :middlename, :lastname, :email, :gender, :dob, :national_id, :address, :county, :estate, :user_id, :career_summary, :experience, :education, :skills_and_hobbies, :languages)
     end
 
     def render_not_found_response
