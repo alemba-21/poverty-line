@@ -1,5 +1,6 @@
 import React from 'react'
 import Laptop from '../assets/cyber-bg.png'
+import {Link } from 'react-router-dom'
 
 import Typed from 'react-typed';
 
@@ -30,8 +31,12 @@ const Hero = () => {
           />
         </div>
                 <div className='flex '>
+                  <Link to="/Jobs">
                   <button className='bg-green-600 w-[200px] rounded-full font-medium my-6  py-3 text-black'>Find Talent</button>
+                  </Link>
+                  <Link to="/Jobs">
                   <button className='bg-slate-200 w-[200px] rounded-full font-medium my-6 ml-2 py-3 text-black'>Find Job</button>
+                  </Link>
                 </div>
               </div>
             <img className='w-[500px] mx-auto my-4 ' src={Laptop} alt="/" />
