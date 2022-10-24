@@ -11,11 +11,11 @@ const ProfileCreation = () => {
   const [idnum, setIdNum] = useState([]);
   const [postalAddress, setPostalAddress] = useState("");
   const [county, setCounty] = useState("");
-  const [estate, setestate] = useState("");
+  const [estate, setEstate] = useState("");
   const [careerSummary, setCareerSummary] = useState("");
   const [experienceDate, setExperienceDate] = useState([]);
   const [experience, setExperience] = useState("");
-  const [educationDate, setEduationDate] = useState([]);
+  const [educationDate, setEducationDate] = useState([]);
   const [education, setEducation] = useState("");
   const [hobbieSkills, setHobbieSkills] = useState(""); 
 
@@ -84,8 +84,8 @@ const ProfileCreation = () => {
                 id="grid-last-name" 
                 type="text"
                 placeholder="Maina"
-                value={ lastname }
-                onChange={ (e) => setLastName(e.target.value) }
+                value={ middlename }
+                onChange={ (e) => setMiddleName(e.target.value) }
               />
         </div>
         <div class="w-full md:w-1/2 px-3 mb-6">
@@ -135,22 +135,39 @@ const ProfileCreation = () => {
           <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
             Age
           </label>
-          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="number" placeholder="Your age"/>
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="grid-zip"
+                type="number"
+                placeholder="Your age"
+                value={ age }
+                onChange={ (e) => setAge(e.target.value) }
+              />
         </div>
         <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
           <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
             ID
           </label>
-          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="ID No"/>
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="grid-zip"
+                type="text"
+                placeholder="ID No"
+                value={ idnum }
+                onChange={ (e) => setIdNum(e.target.value) }
+              />
         </div>
       </div>
 
       <div class="flex flex-wrap -mx-3 mb-2">
         <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
+          <label htmlFor="postalAdderess" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
             Postal Address
           </label>
-          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="grid-city"
+                type="text"
+                value={ postalAddress }
+                onChange={ (e) => setPostalAddress(e.target.value) }
+              />
         </div>
         <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
           <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
@@ -171,7 +188,12 @@ const ProfileCreation = () => {
           <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
             Estate
           </label>
-          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" />
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="grid-zip"
+                type="text"
+                value={ estate }
+                onChange={ (e) => setEstate(e.target.value) }
+              />
         </div>
       </div>
 
@@ -180,7 +202,12 @@ const ProfileCreation = () => {
           <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
             Career Summary
           </label>
-          <textarea class="block p-2.5 w-full text-sm text-gray-900 h-36 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="grid-password" type="text" />
+              <textarea class="block p-2.5 w-full text-sm text-gray-900 h-36 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                id="grid-password"
+                type="text"
+                value={ careerSummary }
+                onChange={ (e) => setCareerSummary(e.target.value) }
+              />
         </div>
       </div>
 
@@ -189,13 +216,23 @@ const ProfileCreation = () => {
         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
             Date
         </label>
-        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="date"  />
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="grid-password"
+                type="date"
+                value={ experienceDate }
+                onChange={ (e) => setExperienceDate(e.target.value) }
+              />
         </div>
         <div class="w-full flex-3/4 px-3">
           <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
             Experience
           </label>
-          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text"  />
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="grid-password"
+                type="text"
+                value={ experience }
+                onChange={ (e) => setExperience(e.target.value) }
+              />
         </div>
       </div>
       
@@ -204,13 +241,23 @@ const ProfileCreation = () => {
         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
             Date
         </label>
-        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="date"  />
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="grid-password"
+                type="date"
+                value={ educationDate }
+                onChange={ (e) => setEducationDate(e.target.value) }
+              />
         </div>
         <div class="w-full flex-3/4 px-3">
           <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
             Education
           </label>
-          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" />
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="grid-password"
+                type="text"
+                value={ education }
+                onChange={ (e) => setEducation(e.target.value) }
+              />
         </div>
       </div>
 
@@ -218,7 +265,12 @@ const ProfileCreation = () => {
           <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
             Hobbies & Skills
           </label>
-          <textarea class="block p-2.5 w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="grid-password" type="text" />
+            <textarea class="block p-2.5 w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              id="grid-password"
+              type="text"
+              value={ hobbieSkills }
+              onChange={ (e) => setHobbieSkills(e.target.value) }
+            />
       </div>
 
       <button className='mt-16'>Save</button>
