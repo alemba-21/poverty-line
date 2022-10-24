@@ -2,8 +2,12 @@ import React from 'react'
 
 const Jobs = () => {
   return (
-    <div>
-        jobs
+    <div className='card'>
+        <div className='box'>
+          <form>
+            
+          </form>
+        </div>
     </div>
   )
 }
