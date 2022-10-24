@@ -10,7 +10,11 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
+<<<<<<< HEAD
     "react-scripts": "5.0.1",
+=======
+    "react-scripts": "^5.0.1",
+>>>>>>> c792b9ce7223c7d856bae5ebbe70fb218a25453d
     "react-typed": "^1.2.0",
     "web-vitals": "^2.1.4"
   },
