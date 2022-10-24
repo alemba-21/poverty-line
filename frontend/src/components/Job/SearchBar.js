@@ -1,4 +1,5 @@
 import React from 'react'
+import JobCard from './JobCard';
 import {Box, Grid, Button, Select, MenuItem, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles({
@@ -21,19 +22,23 @@ const SearchBar = () => {
     <Grid container class="flex justify-center p-2 -mt-7">
       <Grid item xs={10}>
         <Box className={classes.wrapper}>
-          <Select class = "text-white" disableUnderline variant='filled'>
-            <MenuItem value="Full Time" selected>Full Time</MenuItem>
+          <Select disableUnderline variant='filled' defaultValue="Full Time">
+            <MenuItem value="Full Time">Full Time</MenuItem>
             <MenuItem value="Part Time">Part Time</MenuItem>
             <MenuItem value= "Contract">Contract</MenuItem>
           </Select>
-          <Select class = "text-white" disableUnderline variant='filled'>
-            <MenuItem value="Remote" selected >Remote</MenuItem>
+          <Select disableUnderline variant='filled' defaultValue="Remote">
+            <MenuItem value="Remote" >Remote</MenuItem>
             <MenuItem value="HyBrid">Hybrid</MenuItem>
           </Select>
           <Button variant='contained' class="normal-case text-2xl border-4 border-indigo-100/100 text-black" >Search</Button>
         </Box>
+
+        <JobCard/>
+        
       </Grid>
     </Grid>
+    
   )
 }
 
