@@ -12,6 +12,7 @@ function App() {
         <Route path="/Details" element={<JobDetails/>}/>
         <Route path="/Apply" element={<Apply/>}/>
       </Routes>
+
   );
 }
 
