@@ -15,13 +15,13 @@
 
 ## Project Description
 
-This is the front End for the Poverty-line website. Poverty~Line helps growing businesses find and work with top-notch talent and agencies. Users can sign up, post projects and review proposals to find the right independent contractor or agency for you
+This is online software application for Poverty-line. Poverty~Line helps growing businesses by finding talents and connecting them with top-notch agencies. Users can sign up, post projects and review proposals to find the right independent contractor or agency for them
 
 ---
 
 ## SCREENSHOTS
 
-![image](./public/images/Screenshot%20from%202022-10-19%2022-56-29.png)
+![image](./frontend/public/images/Screenshot%20from%202022-10-19%2022-56-29.png)
 
 ---
 
@@ -72,6 +72,9 @@ Or you can access the web application directly via this [LINK.]('https://github.
 1. React
 2. JSX
 3. Tailwind
+4. Json
+5. Postgresql
+6. Rails
 
 ---
 
