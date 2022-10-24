@@ -1,8 +1,41 @@
-import React from "react";
+import React, {useState} from "react";
 import womanpic from "../assets/WomanPic.png"
-// import line from "../assets/Line.png"
 
-export default function Registration() {
+
+export default function Registration({onLogin}) {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordConfirmation, setPasswordConfirmation] = useState("");
+  const [errors, setErrors] = useState("");
+  const [isLoading, setIsLoading] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    setErrors([]);
+    setIsLoading(true);
+    fetch("/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        password,
+        password_confirmation: passwordConfirmation,
+       
+      }),
+    }).then((r) => {
+      setIsLoading(false);
+      if (r.ok) {
+        r.json().then((user) => onLogin(user));
+      } else {
+        r.json().then((err) => setErrors(err.errors));
+      }
+    });
+  }
+
   return (
     <div className="">
       <div className="flex flex-row items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
@@ -19,7 +52,7 @@ export default function Registration() {
         <a href="/">
             <h3 className="text-3xl font-bold text-green-600">Register</h3>
           </a>
-          <form>
+          <form className="register-form mt-6" onSubmit={handleSubmit}>
             <div>
               <label
                 htmlFor="name"
@@ -31,7 +64,12 @@ export default function Registration() {
                 <input
                   type="text"
                   name="name"
-                  className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  value={email}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder=" Name"
+                  id="name"
+
+                  className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
               </div>
             </div>
@@ -46,7 +84,12 @@ export default function Registration() {
                 <input
                   type="email"
                   name="email"
-                  className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="✉️ Email"
+                  id="email"
+
+                  className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
               </div>
             </div>
@@ -61,7 +104,12 @@ export default function Registration() {
                 <input
                   type="password"
                   name="password"
-                  className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="🔓 Password"
+                  id="password"
+
+                  className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
               </div>
             </div>
@@ -76,7 +124,12 @@ export default function Registration() {
                 <input
                   type="password"
                   name="password_confirmation"
-                  className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  id="password_confirmation"
+                  value={passwordConfirmation}
+                  onChange={(e) => setPasswordConfirmation(e.target.value)}
+                  placeholder="🔓 Confirm Password"
+                  autoComplete="current-password"
+                  className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
               </div>
             </div>
@@ -92,7 +145,7 @@ export default function Registration() {
           <div className="mt-4 text-grey-600">
             Already have an account?{" "}
             <span>
-              <a className="text-green-600 hover:underline" href="/">
+              <a className="text-green-600 hover:underline" href="/login">
                 Log in
               </a>
             </span>
