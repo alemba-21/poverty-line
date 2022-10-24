@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const ProfileCreation = () => {
   const [firstname, setFistName] = useState("");
-  const [middle, setMiddleName] = useState("");
+  const [middlename, setMiddleName] = useState("");
   const [lastname, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [gender, setGender] = useState("");
@@ -16,9 +16,44 @@ const ProfileCreation = () => {
   const [experience, setExperience] = useState("");
   const [educationDate, setEduationDate] = useState([]);
   const [education, setEducation] = useState("");
-  const [hobbieSkills, setHobbieSkills] = useState("");
-  
+  const [hobbieSkills, setHobbieSkills] = useState(""); 
 
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    fetch("", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        firstname,
+        middlename,
+        lastname,
+        email,
+        gender,
+        age,
+        idnum,
+        postalAddress,
+        county,
+        estate,
+        careerSummary,
+        experienceDate,
+        experience,
+        educationDate,
+        education,
+        hobbieSkills,
+
+      }),
+    }).then((r) => {
+      if (r.ok) {
+        r.json().then((user_profile) => setUserProfile(user_profile));
+      }
+    });
+
+  }
 
   return (
     <div className='bg-white mb-4'>
