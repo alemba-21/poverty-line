@@ -1,4 +1,5 @@
 import React from 'react'
+import './jobs.css'
 
 const Jobs = () => {
   return (
@@ -7,6 +8,9 @@ const Jobs = () => {
           <form>
             <div className='title'>
               <h1>Job Title</h1>
+              <input type='text'
+              placeholder='Job Title'
+              />
             </div>
             <div className='des'>
               <h1>Job Description</h1>
