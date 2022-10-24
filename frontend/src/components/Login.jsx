@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import picsignup from "../assets/signup.png"
+import {Link} from 'react-router-dom'
 
 
 export default function Login({onLogin}) {
@@ -81,11 +82,13 @@ export default function Login({onLogin}) {
             Forget Password?
           </a>
           <div className="mt-6">
+          <Link to="/profile">
             <button type="submit"
             className=" formButton w-full px-4 py-2 tracking-wide text-black
              transition-colors duration-200 transform bg-green-700 rounded-md hover:bg-green-800 focus:outline-none focus:bg-purple-600">
               Login
             </button>
+          </Link>
           </div>
         </form>
 
