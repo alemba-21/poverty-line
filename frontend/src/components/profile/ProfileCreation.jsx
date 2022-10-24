@@ -1,6 +1,25 @@
-import React from 'react'
+import React, { useState } from "react";
 
 const ProfileCreation = () => {
+  const [firstname, setFistName] = useState("");
+  const [middle, setMiddleName] = useState("");
+  const [lastname, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [gender, setGender] = useState("");
+  const [age, setAge] = useState([]);
+  const [idnum, setIdNum] = useState([]);
+  const [postalAddress, setPostalAddress] = useState("");
+  const [county, setCounty] = useState("");
+  const [estate, setestate] = useState("");
+  const [careerSummary, setCareerSummary] = useState("");
+  const [experienceDate, setExperienceDate] = useState([]);
+  const [experience, setExperience] = useState("");
+  const [educationDate, setEduationDate] = useState([]);
+  const [education, setEducation] = useState("");
+  const [hobbieSkills, setHobbieSkills] = useState("");
+  
+
+
   return (
     <div className='bg-white mb-4'>
       <h1 className='text-4xl font-bold text-center my-10'>Profile</h1>
