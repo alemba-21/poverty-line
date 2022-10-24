@@ -11,7 +11,7 @@ const Subscribe = () => {
         <div className='my-4'>
             <div className='flex flex-col sm:flex-row items-center justify-between w-full'>
                 <input type='email' placeholder='Enter your email' className='p-3 flex w-full rounded-md text-black' />
-                <button className='bg-[#00df9a] w-[200px] rounded-md font-medium ml-4 my-6 px-6 py-3 text-black'>Notify Me</button>
+                <button className='bg-green-600 w-[200px] rounded-md font-medium ml-4 my-6 px-6 py-3 text-black'>Notify Me</button>
             </div>
         </div>
         <p>We care about the protection of your data. Read our <span className='text-[#00df9a]'>Privacy Policy.</span></p>
