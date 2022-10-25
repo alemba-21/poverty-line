@@ -12,7 +12,7 @@ export default function Login({onLogin}) {
   function handleSubmit(e) {
     e.preventDefault();
     setIsLoading(true);
-    fetch("/login", {
+    fetch("http://localhost:5000/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

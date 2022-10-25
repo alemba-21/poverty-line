@@ -5,24 +5,26 @@ import womanpic from "../assets/WomanPic.png"
 export default function Registration({onLogin}) {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
   const [errors, setErrors] = useState("");
-  // const [isLoading, setIsLoading] = useState("");
   const [created, setCreated] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
     setErrors([]);
     setCreated(true);
-    fetch("http://localhost:5000/api/v1/users", {
+    fetch('http://localhost:5000/users', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+          Accept: 'application/json',
       },
       body: JSON.stringify({
         name,
         email,
+        username,
         password,
         password_confirmation: passwordConfirmation,
        
@@ -33,8 +35,7 @@ export default function Registration({onLogin}) {
         setCreated(true);
         setErrors('');
       }
-    })
-    .catch((response) =>
+    }).catch((response) =>
       setErrors(
         "Make sure your server is running!"
       )
@@ -63,7 +64,7 @@ export default function Registration({onLogin}) {
                 htmlFor="name"
                 className="block text-sm font-medium text-gray-700 undefined"
               >
-                Name
+                Full Names
               </label>
               <div className="flex flex-col items-start">
                 <input
@@ -73,6 +74,24 @@ export default function Registration({onLogin}) {
                   onChange={(e) => setName(e.target.value)}
                   placeholder=" Name"
                   id="name"
+
+                  className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                />
+              <label
+                htmlFor="username"
+                className="block text-sm font-medium text-gray-700 undefined"
+              >
+                Username
+              </label>
+              </div>
+              <div className="flex flex-col items-start">
+                <input
+                  type="text"
+                  name="username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  placeholder=" Username"
+                  id="username"
 
                   className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
@@ -142,7 +161,7 @@ export default function Registration({onLogin}) {
               Forget Password?
             </a>
             <div className="flex items-center mt-4">
-              <button className="w-full px-4 py-2 tracking-wide text-black transition-colors duration-200 transform bg-green-700 rounded-md hover:bg-green-800 focus:outline-none focus:bg-purple-600">
+              <button type="submit" className="w-full px-4 py-2 tracking-wide text-black transition-colors duration-200 transform bg-green-700 rounded-md hover:bg-green-800 focus:outline-none focus:bg-purple-600">
                 Register
               </button>
             </div>
