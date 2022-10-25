@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import picsignup from "../assets/signup.png"
-import {Link} from 'react-router-dom'
+import {Link, Navigate} from 'react-router-dom'
 
 
 export default function Login() {
@@ -30,7 +30,11 @@ export default function Login() {
   }
 
   return (
-    <div className="flex flex-row items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
+    <>
+      {
+      created?(
+      <Navigate to="/profile" />
+    ):(<div className="flex flex-row items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
       <div className="sm:max-w-md mr-10 ">
         <a href="/">
           <h3 className="text-8xl font-bold text-black-600">Poverty-</h3>
@@ -101,6 +105,8 @@ export default function Login() {
           </a>
         </p>
       </div>
-    </div>
+    </div>)}
+    </>
+    
   );
 }

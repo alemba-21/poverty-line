@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import womanpic from "../assets/WomanPic.png"
+import { Navigate } from 'react-router-dom';
 
 
 export default function Registration({onLogin}) {
@@ -43,7 +44,11 @@ export default function Registration({onLogin}) {
   }
 
   return (
-    <div className="">
+    <>
+      {
+      created? (
+        <Navigate to="/signin" />
+    ):( <div className="">
       <div className="flex flex-row items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
         <div className="sm:max-w-md mr-10 ">
           <a href="/">
@@ -197,6 +202,8 @@ export default function Registration({onLogin}) {
           </div>
         </div>
       </div>
-    </div>
+    </div>)}
+    </>
+    
   );
 }
