@@ -276,7 +276,7 @@ const ProfileCreation = () => {
           </div>
 
 
-      <button type="submit" className='bg-green-600 w-[200px] rounded-full font-medium my-6 ml-32  py-3 text-black'>Save</button>
+      <button type="submit" className='bg-green-600 w-[200px] rounded-full font-medium my-6 ml-32  py-3 text-black'>SAVE</button>
     </form>
 
     </div>
