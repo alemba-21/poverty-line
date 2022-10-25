@@ -56,17 +56,17 @@ const Createjob = () => {
                 </span>
               </li>
             ))}
-			</ul>
+			  </ul>
             
               
             </div>
-          <div className="flex space-between m-auto gap-2 px-4">
+        <div className="flex space-between m-auto gap-2 px-4">
           <button className='bg-green-600 w-[200px] rounded-full font-medium my-6  py-3 text-black'>Submit Post</button>
           <button className='bg-red-600 w-[200px] rounded-full font-medium my-6  py-3 text-black'>Cancel</button>
-          </div>
-          </form>
         </div>
+      </form>
     </div>
+  </div>
   )
 }
 
