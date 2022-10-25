@@ -8,13 +8,14 @@ export default function Registration({onLogin}) {
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
   const [errors, setErrors] = useState("");
-  const [isLoading, setIsLoading] = useState("");
+  // const [isLoading, setIsLoading] = useState("");
+  const [created, setCreated] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
     setErrors([]);
-    setIsLoading(true);
-    fetch("/register", {
+    setCreated(true);
+    fetch("http://localhost:5000/api/v1/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -26,14 +27,18 @@ export default function Registration({onLogin}) {
         password_confirmation: passwordConfirmation,
        
       }),
-    }).then((r) => {
-      setIsLoading(false);
-      if (r.ok) {
-        r.json().then((user) => onLogin(user));
-      } else {
-        r.json().then((err) => setErrors(err.errors));
+    }).then((r) => r.json())
+    .then((response) => {
+      if (response.status === 'created') {
+        setCreated(true);
+        setErrors('');
       }
-    });
+    })
+    .catch((response) =>
+      setErrors(
+        "Make sure your server is running!"
+      )
+    );
   }
 
   return (
@@ -64,7 +69,7 @@ export default function Registration({onLogin}) {
                 <input
                   type="text"
                   name="name"
-                  value={email}
+                  value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder=" Name"
                   id="name"
