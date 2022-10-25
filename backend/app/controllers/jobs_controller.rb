@@ -4,8 +4,8 @@ class JobsController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
 
     def index
-        jobs = Job.all
-        render json: jobs, status: :ok
+        @jobs = Job.all
+        render json: @jobs, status: :ok
     end
 
     def show

@@ -4,8 +4,8 @@ class UserProfilesController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
 
     def index
-        user_profiles = UserProfile.all
-        render json: user_profiles
+        @user_profiles = UserProfile.all
+        render json: @user_profiles
     end    
     
     def create
