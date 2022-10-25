@@ -41,7 +41,7 @@ class UsersController < ApplicationController
     end
 
     def user_params
-    params.permit(:name, :username, :email, :password, :password_confirmation)
+    params.permit(:name, :username, :email, :password, :password_confirmation, user_profile:[])
     end
 
 end
