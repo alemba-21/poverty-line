@@ -7,11 +7,13 @@ import Profile from "./Links/Profile";
 import SignIn from "./Links/SignIn";
 import SignedUp from "./Links/SignedUp";
 import About from "./Links/About";
+import ProfileView from './components/profile/ProfileView'
 
 function App() {
   return (
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<ProfileView />} />
         <Route path="/About" element={<About />}/>
         <Route path="/signed" element={<SignedUp />} />
         <Route path="/signin" element={<SignIn />} />
