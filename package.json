@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@heroicons/react": "^2.0.12",
+    "@material-ui/core": "^4.12.4",
     "react-country-dropdown": "^1.0.4",
     "react-select": "^5.5.4",
     "react-select-country-list": "^2.2.3",

@@ -7,10 +7,13 @@ import Profile from "./Links/Profile";
 import SignIn from "./Links/SignIn";
 import SignedUp from "./Links/SignedUp";
 import About from "./Links/About";
+import React from "react";
+import OurPartners from "./components/OurPartners";
 
 function App() {
   return (
       <Routes>
+       
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />}/>
         <Route path="/signed" element={<SignedUp />} />
