@@ -22,8 +22,11 @@ const ProfileCreation = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // console.log(e)
 
-    fetch("", {
+  
+
+    fetch("http:/127.0.0.1:5000//user_profiles", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -49,7 +52,7 @@ const ProfileCreation = () => {
       }),
     }).then((r) => {
       if (r.ok) {
-        r.json().then((user_profile) => setUserProfile(user_profile));
+        r.json().then((user_profile) => console.log(user_profile));
       }
     });
 
@@ -61,26 +64,26 @@ const ProfileCreation = () => {
       <div className='bg-green-50 h-screen max-w-[1000px] overflow-auto rounded-3xl mx-auto'>
 
       <form onSubmit={handleSubmit} className='w-full max-w-lg m-auto pt-8'>
-      <div class="flex flex-row -mx-3 mb-6">
-        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-          <label htmlFor="firstname" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+      <div className="flex flex-row -mx-3 mb-6">
+        <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+          <label htmlFor="firstname" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
             First Name
           </label>
-              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                 id="grid-first-name"
                 type="text"
                 placeholder="Joseph"
                 value={ firstname }
                 onChange={ (e) => setFistName(e.target.value) }
               />
-          <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+          <p className="text-red-500 text-xs italic">Please fill out this field.</p>
         </div>
-        <div class="w-full md:w-1/2 px-3 mb-6">
-          <label htmlFor="middlename" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+        <div className="w-full md:w-1/2 px-3 mb-6">
+          <label htmlFor="middlename" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
             Midle Name
           </label>
               <input
-                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-last-name" 
                 type="text"
                 placeholder="Maina"
@@ -88,12 +91,12 @@ const ProfileCreation = () => {
                 onChange={ (e) => setMiddleName(e.target.value) }
               />
         </div>
-        <div class="w-full md:w-1/2 px-3 mb-6">
-          <label htmlFor="lastname" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+        <div className="w-full md:w-1/2 px-3 mb-6">
+          <label htmlFor="lastname" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
             Last Name
           </label>
               <input
-                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-last-name" 
                 type="text"
                 placeholder="Morara"
@@ -103,39 +106,39 @@ const ProfileCreation = () => {
         </div>
       </div>
      
-      <div class="flex flex-row -mx-3 mb-2">
-        <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
+      <div className="flex flex-row -mx-3 mb-2">
+        <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+          <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
             Email
           </label>
               <input
-                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-city"
                 type="email"
                 value={ email }
                 onChange={ (e) => setEmail(e.target.value) }
               />
         </div>
-        <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+        <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+          <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
             Gender
           </label>
-          <div class="relative">
-            <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+          <div className="relative">
+            <select className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
               <option>Male</option>
               <option>Female</option>
               <option>I prefer not to say</option>
             </select>
-            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
             </div>
           </div>
         </div>
-        <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
+        <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+          <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
             Age
           </label>
-              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-zip"
                 type="number"
                 placeholder="Your age"
@@ -143,11 +146,11 @@ const ProfileCreation = () => {
                 onChange={ (e) => setAge(e.target.value) }
               />
         </div>
-        <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
+        <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+          <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
             ID
           </label>
-              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-zip"
                 type="text"
                 placeholder="ID No"
@@ -157,38 +160,38 @@ const ProfileCreation = () => {
         </div>
       </div>
 
-      <div class="flex flex-wrap -mx-3 mb-2">
-        <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-          <label htmlFor="postalAdderess" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
+      <div className="flex flex-wrap -mx-3 mb-2">
+        <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+          <label htmlFor="postalAdderess" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
             Postal Address
           </label>
-              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-city"
                 type="text"
                 value={ postalAddress }
                 onChange={ (e) => setPostalAddress(e.target.value) }
               />
         </div>
-        <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+        <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+          <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
             County
           </label>
-          <div class="relative">
-            <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+          <div className="relative">
+            <select className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
               <option>Nairobi</option>
               <option>Mombasa</option>
               <option>Kisumu</option>
             </select>
-            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
             </div>
           </div>
         </div>
-        <div class="w-full md:w-1/3 px-3 mb-8 md:mb-0">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
+        <div className="w-full md:w-1/3 px-3 mb-8 md:mb-0">
+          <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
             Estate
           </label>
-              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-zip"
                 type="text"
                 value={ estate }
@@ -197,12 +200,12 @@ const ProfileCreation = () => {
         </div>
       </div>
 
-      <div class="flex flex-row -mx-3 mb-6">
-        <div class="w-full px-3">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+      <div className="flex flex-row -mx-3 mb-6">
+        <div className="w-full px-3">
+          <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
             Career Summary
           </label>
-              <textarea class="block p-2.5 w-full text-sm text-gray-900 h-36 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              <textarea className="block p-2.5 w-full text-sm text-gray-900 h-36 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 id="grid-password"
                 type="text"
                 value={ careerSummary }
@@ -211,23 +214,23 @@ const ProfileCreation = () => {
         </div>
       </div>
 
-      <div class="flex flex-row -mx-3 mb-6">
+      <div className="flex flex-row -mx-3 mb-6">
         <div className='flex-1/4'>
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+        <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
             Date
         </label>
-              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-password"
                 type="date"
                 value={ experienceDate }
                 onChange={ (e) => setExperienceDate(e.target.value) }
               />
         </div>
-        <div class="w-full flex-3/4 px-3">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+        <div className="w-full flex-3/4 px-3">
+          <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
             Experience
           </label>
-              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-password"
                 type="text"
                 value={ experience }
@@ -236,23 +239,23 @@ const ProfileCreation = () => {
         </div>
       </div>
       
-      <div class="flex flex-row -mx-3 mb-6">
+      <div className="flex flex-row -mx-3 mb-6">
         <div className='flex-1/4'>
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+        <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
             Date
         </label>
-              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-password"
                 type="date"
                 value={ educationDate }
                 onChange={ (e) => setEducationDate(e.target.value) }
               />
         </div>
-        <div class="w-full flex-3/4 px-3">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+        <div className="w-full flex-3/4 px-3">
+          <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
             Education
           </label>
-              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-password"
                 type="text"
                 value={ education }
@@ -261,19 +264,19 @@ const ProfileCreation = () => {
         </div>
       </div>
 
-      <div class="w-full px-3">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+      <div className="w-full px-3">
+          <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
             Hobbies & Skills
           </label>
-            <textarea class="block p-2.5 w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            <textarea className="block p-2.5 w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               id="grid-password"
               type="text"
               value={ hobbieSkills }
               onChange={ (e) => setHobbieSkills(e.target.value) }
             />
-      </div>
+          </div>          
 
-      <button className='mt-16'>Save</button>
+      <button type="submit" className='mt-16'>Save</button>
 
     </form>
 
