@@ -9,6 +9,7 @@
     "react-router-dom": "^6.4.2",
     "react-select": "^5.5.4",
     "react-select-country-list": "^2.2.3",
-    "react-typed": "^1.2.0"
+    "react-typed": "^1.2.0",
+    "uuid": "^9.0.0"
   }
 }
