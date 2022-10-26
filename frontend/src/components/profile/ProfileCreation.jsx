@@ -1,60 +1,101 @@
 import React, { useState } from "react";
+import axios from '../../api'
 
 const ProfileCreation = () => {
-  const [user_profile, setUserProfile] = useState(null)
-  const [firstname, setFistName] = useState("");
-  const [middlename, setMiddleName] = useState("");
-  const [lastname, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [gender, setGender] = useState("");
-  const [age, setAge] = useState([]);
-  const [idnum, setIdNum] = useState([]);
-  const [postalAddress, setPostalAddress] = useState("");
-  const [county, setCounty] = useState("");
-  const [estate, setEstate] = useState("");
-  const [careerSummary, setCareerSummary] = useState("");
-  const [experienceDate, setExperienceDate] = useState([]);
-  const [experience, setExperience] = useState("");
-  const [educationDate, setEducationDate] = useState([]);
-  const [education, setEducation] = useState("");
-  const [hobbieSkills, setHobbieSkills] = useState(""); 
+  const [errors, setErrors] = useState("");
+  const [authenticated, setAuthenticated] = useState(false);
 
+  const [formData, setFormData] = useState({
+    firstname: "",
+    middlename: "",
+    lastname: "",
+    email: "",
+    gender: "",
+    age: "",
+    idnum: "",
+    postalAddress: "",
+    county: "",
+    estate: "",
+    careerSummary: "",
+    experienceDate: "",
+    experience: "",
+    educationDate: "",
+    education: "",
+    hobbieSkills: "",
+  });
 
-  const handleSubmit = (e) => {
+  //hangle change event
+  const handleChange = (event) => {
+    const key = event.target.name;
+    const value = event.target.value;
+
+    setFormData({ ...formData, [key]: value });
+  };
+
+  function handleSubmit(e) {
     e.preventDefault();
-    // console.log(e)
+
+    axios.post('/user_profiles', formData)
+    .then((response) => {
+      setAuthenticated(true);
+    })
+
+
+
+  // const [user_profile, setUserProfile] = useState(null)
+  // const [firstname, setFistName] = useState("");
+  // const [middlename, setMiddleName] = useState("");
+  // const [lastname, setLastName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [gender, setGender] = useState("");
+  // const [age, setAge] = useState([]);
+  // const [idnum, setIdNum] = useState([]);
+  // const [postalAddress, setPostalAddress] = useState("");
+  // const [county, setCounty] = useState("");
+  // const [estate, setEstate] = useState("");
+  // const [careerSummary, setCareerSummary] = useState("");
+  // const [experienceDate, setExperienceDate] = useState([]);
+  // const [experience, setExperience] = useState("");
+  // const [educationDate, setEducationDate] = useState([]);
+  // const [education, setEducation] = useState("");
+  // const [hobbieSkills, setHobbieSkills] = useState(""); 
+
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   // console.log(e)
 
   
 
-    fetch("http:/127.0.0.1:5000//user_profiles", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        firstname,
-        middlename,
-        lastname,
-        email,
-        gender,
-        age,
-        idnum,
-        postalAddress,
-        county,
-        estate,
-        careerSummary,
-        experienceDate,
-        experience,
-        educationDate,
-        education,
-        hobbieSkills,
+  //   fetch("http:/127.0.0.1:5000//user_profiles", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       firstname,
+  //       middlename,
+  //       lastname,
+  //       email,
+  //       gender,
+  //       age,
+  //       idnum,
+  //       postalAddress,
+  //       county,
+  //       estate,
+  //       careerSummary,
+  //       experienceDate,
+  //       experience,
+  //       educationDate,
+  //       education,
+  //       hobbieSkills,
 
-      }),
-    }).then((r) => {
-      if (r.ok) {
-        r.json().then((user_profile) => console.log(user_profile));
-      }
-    });
+  //     }),
+  //   }).then((r) => {
+  //     if (r.ok) {
+  //       r.json().then((user_profile) => console.log(user_profile));
+  //     }
+  //   });
 
   }
 

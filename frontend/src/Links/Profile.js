@@ -1,5 +1,5 @@
 import React from 'react'
-import Create from '../components/profile/ProfileCreation'
+import Create from '../components/ProfileCreation'
 
 const Profile = () => {
   return (
