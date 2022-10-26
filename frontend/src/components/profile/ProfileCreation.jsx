@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from '../../api'
+import axios from '../../api/axios'
 
 const ProfileCreation = () => {
   const [errors, setErrors] = useState("");
@@ -12,16 +12,16 @@ const ProfileCreation = () => {
     email: "",
     gender: "",
     age: "",
-    idnum: "",
-    postalAddress: "",
+    id_number: "",
+    address: "",
     county: "",
     estate: "",
-    careerSummary: "",
+    career_summary: "",
     experienceDate: "",
     experience: "",
-    educationDate: "",
+    education_date: "",
     education: "",
-    hobbieSkills: "",
+    hobbies_skills: "",
   });
 
   //hangle change event
@@ -36,66 +36,9 @@ const ProfileCreation = () => {
     e.preventDefault();
 
     axios.post('/user_profiles', formData)
-    .then((response) => {
-      setAuthenticated(true);
-    })
-
-
-
-  // const [user_profile, setUserProfile] = useState(null)
-  // const [firstname, setFistName] = useState("");
-  // const [middlename, setMiddleName] = useState("");
-  // const [lastname, setLastName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [gender, setGender] = useState("");
-  // const [age, setAge] = useState([]);
-  // const [idnum, setIdNum] = useState([]);
-  // const [postalAddress, setPostalAddress] = useState("");
-  // const [county, setCounty] = useState("");
-  // const [estate, setEstate] = useState("");
-  // const [careerSummary, setCareerSummary] = useState("");
-  // const [experienceDate, setExperienceDate] = useState([]);
-  // const [experience, setExperience] = useState("");
-  // const [educationDate, setEducationDate] = useState([]);
-  // const [education, setEducation] = useState("");
-  // const [hobbieSkills, setHobbieSkills] = useState(""); 
-
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   // console.log(e)
-
-  
-
-  //   fetch("http:/127.0.0.1:5000//user_profiles", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({
-  //       firstname,
-  //       middlename,
-  //       lastname,
-  //       email,
-  //       gender,
-  //       age,
-  //       idnum,
-  //       postalAddress,
-  //       county,
-  //       estate,
-  //       careerSummary,
-  //       experienceDate,
-  //       experience,
-  //       educationDate,
-  //       education,
-  //       hobbieSkills,
-
-  //     }),
-  //   }).then((r) => {
-  //     if (r.ok) {
-  //       r.json().then((user_profile) => console.log(user_profile));
-  //     }
-  //   });
+      .then((response) => {
+        setAuthenticated(true);
+      })
 
   }
 
@@ -114,8 +57,8 @@ const ProfileCreation = () => {
                 id="grid-first-name"
                 type="text"
                 placeholder="John"
-                value={ firstname }
-                onChange={ (e) => setFistName(e.target.value) }
+                value={formData?.firstname}
+                  onChange={handleChange}
               />
         </div>
         <div className="w-full md:w-1/2 px-3 mb-6">
@@ -127,8 +70,8 @@ const ProfileCreation = () => {
                 id="grid-last-name" 
                 type="text"
                 placeholder="Doe"
-                value={ middlename }
-                onChange={ (e) => setMiddleName(e.target.value) }
+                value={formData?.middlename}
+                  onChange={handleChange}
               />
         </div>
         <div className="w-full md:w-1/2 px-3 mb-6">
@@ -140,8 +83,8 @@ const ProfileCreation = () => {
                 id="grid-last-name" 
                 type="text"
                 placeholder="Morar"
-                value={ lastname }
-                onChange={ (e) => setLastName(e.target.value) }
+                value={formData?.lastname}
+                  onChange={handleChange}
               />
         </div>
       </div>
@@ -155,8 +98,8 @@ const ProfileCreation = () => {
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-city"
                 type="email"
-                value={ email }
-                onChange={ (e) => setEmail(e.target.value) }
+                value={formData?.email}
+                  onChange={handleChange}
               />
         </div>
         <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
@@ -182,8 +125,8 @@ const ProfileCreation = () => {
                 id="grid-zip"
                 type="number"
                 placeholder="Your age"
-                value={ age }
-                onChange={ (e) => setAge(e.target.value) }
+                value={formData?.age}
+                  onChange={handleChange}
               />
         </div>
         <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
@@ -194,8 +137,8 @@ const ProfileCreation = () => {
                 id="grid-zip"
                 type="text"
                 placeholder="ID No"
-                value={ idnum }
-                onChange={ (e) => setIdNum(e.target.value) }
+                value={formData?.id_number}
+                  onChange={handleChange}
               />
         </div>
       </div>
@@ -208,8 +151,8 @@ const ProfileCreation = () => {
               <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-city"
                 type="text"
-                value={ postalAddress }
-                onChange={ (e) => setPostalAddress(e.target.value) }
+                value={formData?.address}
+                  onChange={handleChange}
               />
         </div>
         <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
@@ -234,8 +177,8 @@ const ProfileCreation = () => {
               <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-zip"
                 type="text"
-                value={ estate }
-                onChange={ (e) => setEstate(e.target.value) }
+                value={formData?.estate}
+                  onChange={handleChange}
               />
         </div>
       </div>
@@ -248,8 +191,8 @@ const ProfileCreation = () => {
               <textarea className="block p-2.5 w-full text-sm text-gray-900 h-36 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 id="grid-password"
                 type="text"
-                value={ careerSummary }
-                onChange={ (e) => setCareerSummary(e.target.value) }
+                value={formData?.career_summary}
+                  onChange={handleChange}
               />
         </div>
       </div>
@@ -262,8 +205,8 @@ const ProfileCreation = () => {
               <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-password"
                 type="date"
-                value={ experienceDate }
-                onChange={ (e) => setExperienceDate(e.target.value) }
+                value={formData?.date}
+                  onChange={handleChange}
               />
         </div>
         <div className="w-full flex-3/4 px-3">
@@ -273,8 +216,8 @@ const ProfileCreation = () => {
               <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-password"
                 type="text"
-                value={ experience }
-                onChange={ (e) => setExperience(e.target.value) }
+                value={formData?.experience}
+                  onChange={handleChange}
               />
         </div>
       </div>
@@ -287,8 +230,8 @@ const ProfileCreation = () => {
               <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-password"
                 type="date"
-                value={ educationDate }
-                onChange={ (e) => setEducationDate(e.target.value) }
+                value={formData?.education_date}
+                  onChange={handleChange}
               />
         </div>
         <div className="w-full flex-3/4 px-3">
@@ -298,8 +241,8 @@ const ProfileCreation = () => {
               <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-password"
                 type="text"
-                value={ education }
-                onChange={ (e) => setEducation(e.target.value) }
+                value={formData?.education}
+                  onChange={handleChange}
               />
         </div>
       </div>
@@ -311,8 +254,8 @@ const ProfileCreation = () => {
             <textarea className="block p-2.5 w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               id="grid-password"
               type="text"
-              value={ hobbieSkills }
-              onChange={ (e) => setHobbieSkills(e.target.value) }
+              value={formData?.hobbies_skills}
+                  onChange={handleChange}
             />
           </div>
 
