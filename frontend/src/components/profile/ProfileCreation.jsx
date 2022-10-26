@@ -37,7 +37,8 @@ const ProfileCreation = () => {
 
     axios.post('/user_profiles', formData)
       .then((response) => {
-        setAuthenticated(true);
+        console.log(response)
+        // setAuthenticated(true);
       })
 
   }
@@ -57,6 +58,7 @@ const ProfileCreation = () => {
                 id="grid-first-name"
                 type="text"
                 placeholder="John"
+                name="firstname"
                 value={formData?.firstname}
                   onChange={handleChange}
               />
@@ -70,6 +72,7 @@ const ProfileCreation = () => {
                 id="grid-last-name" 
                 type="text"
                 placeholder="Doe"
+                name="middlename"
                 value={formData?.middlename}
                   onChange={handleChange}
               />
@@ -83,6 +86,7 @@ const ProfileCreation = () => {
                 id="grid-last-name" 
                 type="text"
                 placeholder="Morar"
+                name="lastname"
                 value={formData?.lastname}
                   onChange={handleChange}
               />
@@ -98,6 +102,8 @@ const ProfileCreation = () => {
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-city"
                 type="email"
+                placeholder="Email"
+                name="email"
                 value={formData?.email}
                   onChange={handleChange}
               />
@@ -125,6 +131,7 @@ const ProfileCreation = () => {
                 id="grid-zip"
                 type="number"
                 placeholder="Your age"
+                name="age"
                 value={formData?.age}
                   onChange={handleChange}
               />
@@ -137,6 +144,7 @@ const ProfileCreation = () => {
                 id="grid-zip"
                 type="text"
                 placeholder="ID No"
+                name="id_number"
                 value={formData?.id_number}
                   onChange={handleChange}
               />
@@ -151,6 +159,7 @@ const ProfileCreation = () => {
               <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-city"
                 type="text"
+                name="address"
                 value={formData?.address}
                   onChange={handleChange}
               />
@@ -177,6 +186,7 @@ const ProfileCreation = () => {
               <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-zip"
                 type="text"
+                name="estate"
                 value={formData?.estate}
                   onChange={handleChange}
               />
@@ -191,6 +201,7 @@ const ProfileCreation = () => {
               <textarea className="block p-2.5 w-full text-sm text-gray-900 h-36 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 id="grid-password"
                 type="text"
+                name="career_summary"
                 value={formData?.career_summary}
                   onChange={handleChange}
               />
@@ -205,6 +216,7 @@ const ProfileCreation = () => {
               <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-password"
                 type="date"
+                name="date"
                 value={formData?.date}
                   onChange={handleChange}
               />
@@ -216,6 +228,7 @@ const ProfileCreation = () => {
               <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-password"
                 type="text"
+                name="experience"
                 value={formData?.experience}
                   onChange={handleChange}
               />
@@ -230,6 +243,7 @@ const ProfileCreation = () => {
               <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-password"
                 type="date"
+                name="date"
                 value={formData?.education_date}
                   onChange={handleChange}
               />
@@ -241,6 +255,7 @@ const ProfileCreation = () => {
               <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-password"
                 type="text"
+                name="education"
                 value={formData?.education}
                   onChange={handleChange}
               />
@@ -254,13 +269,14 @@ const ProfileCreation = () => {
             <textarea className="block p-2.5 w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               id="grid-password"
               type="text"
+              name="hobbies_skills"
               value={formData?.hobbies_skills}
                   onChange={handleChange}
             />
           </div>
 
 
-      <button type="submit" className='bg-green-600 w-[200px] rounded-full font-medium my-6 ml-32  py-3 text-black'>SAVE</button>
+      <button type="submit" onClick={handleSubmit} className='bg-green-600 w-[200px] rounded-full font-medium my-6 ml-32  py-3 text-black'>SAVE</button>
     </form>
 
     </div>
