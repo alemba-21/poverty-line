@@ -1,6 +1,5 @@
 import React from 'react'
 import Joe from '../../assets/joe.png'
-import {TextField} from '@mui/material'
 
 
 const ProfileView = () => {
