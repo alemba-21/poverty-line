@@ -6,14 +6,14 @@ import axios from '../api/axios'
 
 export default function Registration({onLogin}) {
   const [errors, setErrors] = useState("");
-  const [created, setCreated] = useState(false);
+  const [authenticated, setAuthenticated] = useState(false);
 
   const [formData, setFormData] = useState({
     email: "",
     name: "",
     username: "",
     password: "",
-    passwordConfirmation: ""
+    password_confirmation: ""
   });
 
   //hangle change event
@@ -26,43 +26,19 @@ export default function Registration({onLogin}) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    setErrors([]);
-    setCreated(true);
 
-    axios.post('/users', {})
-    // fetch('http://localhost:5000/users', {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //       Accept: 'application/json',
-    //   },
-    //   body: JSON.stringify({
-    //     name,
-    //     email,
-    //     username,
-    //     password,
-    //     password_confirmation: passwordConfirmation,
-       
-    //   }),
-    // }).then((r) => r.json())
-    // .then((response) => {
-    //   if (response.status === 'created') {
-    //     setCreated(true);
-    //     setErrors('');
-    //   }
-    // }).catch((response) =>
-    //   setErrors(
-    //     "Make sure your server is running!"
-    //   )
-    // );
-
-
+    axios.post('/users', formData)
+    .then((response) => {
+      setAuthenticated(true);
+      localStorage.setItem('token', JSON.stringify(response.data.token))
+      localStorage.setItem('username', JSON.stringify(response.data.username))
+    })
   }
 
   return (
     <>
       {
-      created? (
+      authenticated? (
         <Navigate to="/signin" />
         ) : (
           <div className="">
@@ -178,7 +154,7 @@ export default function Registration({onLogin}) {
                   type="password"
                   name="password_confirmation"
                   id="password_confirmation"
-                  value={formData?.passwordConfirmation}
+                  value={formData?.password_confirmation}
                   onChange={handleChange}
                   placeholder="🔓 Confirm Password"
                           autoComplete="current-password"

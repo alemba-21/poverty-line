@@ -1,38 +1,43 @@
 import React, {useState} from "react";
 import picsignup from "../assets/signup.png"
-import {Navigate} from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
+import axios from '../api/axios'
+
 
 
 export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [errors, setErrors] = useState([]);
-  const [created, setCreated] = useState(false);
+  const [errors, setErrors] = useState("");
+  const [authenticated, setAuthenticated] = useState(false);
+
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  //hangle change event
+  const handleChange = (event) => {
+    const key = event.target.name;
+    const value = event.target.value;
+
+    setFormData({ ...formData, [key]: value });
+  };
 
   function handleSubmit(e) {
     e.preventDefault();
-    setCreated(true);
-    fetch("http://localhost:5000/auth/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-          Accept: 'application/json',
-      },
-      body: JSON.stringify({ email, password }),
-    }).then((r) => {
-      setCreated(false);
-      if (r.ok) {
-        r.json().then((user) => (user));
-      } else {
-        r.json().then((err) => setErrors(err.errors));
-      }
-    });
+
+    axios.post('/auth/login', formData)
+      .then((response) => {
+        setAuthenticated(true);
+        localStorage.setItem('token', JSON.stringify(response.data.token))
+        localStorage.setItem('username', JSON.stringify(response.data.username))
+      })
+      
   }
 
   return (
     <>
       {
-      created ? (
+      authenticated ? (
       <Navigate to="/profile" />
         ) : (
         <div className="flex flex-row items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
@@ -61,8 +66,8 @@ export default function Login() {
               email
             </label>
             <input
-             value={email}
-             onChange={(e) => setEmail(e.target.value)}
+             value={formData?.email}
+             onChange={handleChange}
              type="email"
              placeholder="Email"
              id="email"
@@ -79,8 +84,8 @@ export default function Login() {
               Password
             </label>
             <input
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  value={formData?.password}
+                  onChange={handleChange}
                   type="password"
                   placeholder="Password"
                   id="password"
