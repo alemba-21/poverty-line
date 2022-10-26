@@ -1,46 +1,62 @@
 import React, {useState} from "react";
 import womanpic from "../assets/WomanPic.png"
 import { Navigate } from 'react-router-dom';
+import axios from '../api/axios'
 
 
 export default function Registration({onLogin}) {
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [passwordConfirmation, setPasswordConfirmation] = useState("");
   const [errors, setErrors] = useState("");
   const [created, setCreated] = useState(false);
+
+  const [formData, setFormData] = useState({
+    email: "",
+    name: "",
+    username: "",
+    password: "",
+    passwordConfirmation: ""
+  });
+
+  //hangle change event
+  const handleChange = (event) => {
+    const key = event.target.name;
+    const value = event.target.value;
+
+    setFormData({ ...formData, [key]: value });
+  };
 
   function handleSubmit(e) {
     e.preventDefault();
     setErrors([]);
     setCreated(true);
-    fetch('http://localhost:5000/users', {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-          Accept: 'application/json',
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        username,
-        password,
-        password_confirmation: passwordConfirmation,
+
+    axios.post('/users', {})
+    // fetch('http://localhost:5000/users', {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //       Accept: 'application/json',
+    //   },
+    //   body: JSON.stringify({
+    //     name,
+    //     email,
+    //     username,
+    //     password,
+    //     password_confirmation: passwordConfirmation,
        
-      }),
-    }).then((r) => r.json())
-    .then((response) => {
-      if (response.status === 'created') {
-        setCreated(true);
-        setErrors('');
-      }
-    }).catch((response) =>
-      setErrors(
-        "Make sure your server is running!"
-      )
-    );
+    //   }),
+    // }).then((r) => r.json())
+    // .then((response) => {
+    //   if (response.status === 'created') {
+    //     setCreated(true);
+    //     setErrors('');
+    //   }
+    // }).catch((response) =>
+    //   setErrors(
+    //     "Make sure your server is running!"
+    //   )
+    // );
+
+
   }
 
   return (
@@ -79,8 +95,8 @@ export default function Registration({onLogin}) {
                 <input
                   type="text"
                   name="name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  value={formData?.name}
+                  onChange={handleChange}
                   placeholder=" Name"
                           id="name"
                           required
@@ -98,8 +114,8 @@ export default function Registration({onLogin}) {
                 <input
                   type="text"
                   name="username"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  value={formData?.username}
+                  onChange={handleChange}
                   placeholder=" Username"
                           id="username"
                           required
@@ -119,8 +135,8 @@ export default function Registration({onLogin}) {
                 <input
                   type="email"
                   name="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={formData?.email}
+                  onChange={handleChange}
                   placeholder="✉️ Email"
                           id="email"
                           required
@@ -140,8 +156,8 @@ export default function Registration({onLogin}) {
                 <input
                   type="password"
                   name="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  value={formData?.password}
+                  onChange={handleChange}
                   placeholder="🔓 Password"
                           id="password"
                           required
@@ -162,8 +178,8 @@ export default function Registration({onLogin}) {
                   type="password"
                   name="password_confirmation"
                   id="password_confirmation"
-                  value={passwordConfirmation}
-                  onChange={(e) => setPasswordConfirmation(e.target.value)}
+                  value={formData?.passwordConfirmation}
+                  onChange={handleChange}
                   placeholder="🔓 Confirm Password"
                           autoComplete="current-password"
                           required
