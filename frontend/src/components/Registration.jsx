@@ -48,7 +48,11 @@ export default function Registration({onLogin}) {
       {
       created? (
         <Navigate to="/signin" />
-    ):( <div className="">
+        ) : (
+          <div className="">
+            <div className="please-log-in">
+            <p>{errors}</p>
+          </div>
       <div className="flex flex-row items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
         <div className="sm:max-w-md mr-10 ">
           <a href="/">
@@ -78,7 +82,8 @@ export default function Registration({onLogin}) {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder=" Name"
-                  id="name"
+                          id="name"
+                          required
 
                   className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
@@ -96,7 +101,8 @@ export default function Registration({onLogin}) {
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   placeholder=" Username"
-                  id="username"
+                          id="username"
+                          required
 
                   className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
@@ -116,7 +122,8 @@ export default function Registration({onLogin}) {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="✉️ Email"
-                  id="email"
+                          id="email"
+                          required
 
                   className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
@@ -136,7 +143,8 @@ export default function Registration({onLogin}) {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="🔓 Password"
-                  id="password"
+                          id="password"
+                          required
 
                   className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
@@ -157,7 +165,8 @@ export default function Registration({onLogin}) {
                   value={passwordConfirmation}
                   onChange={(e) => setPasswordConfirmation(e.target.value)}
                   placeholder="🔓 Confirm Password"
-                  autoComplete="current-password"
+                          autoComplete="current-password"
+                          required
                   className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
               </div>
