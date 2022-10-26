@@ -12,7 +12,7 @@ const ProfileCreation = () => {
     email: "",
     gender: "",
     age: "",
-    id_number: "",
+    national_id: "",
     address: "",
     county: "",
     estate: "",
@@ -21,7 +21,7 @@ const ProfileCreation = () => {
     experience: "",
     education_date: "",
     education: "",
-    hobbies_skills: "",
+    skills_and_hobbies: "",
   });
 
   //hangle change event
@@ -144,8 +144,8 @@ const ProfileCreation = () => {
                 id="grid-zip"
                 type="text"
                 placeholder="ID No"
-                name="id_number"
-                value={formData?.id_number}
+                name="national_id"
+                value={formData?.national_id}
                   onChange={handleChange}
               />
         </div>
@@ -269,8 +269,8 @@ const ProfileCreation = () => {
             <textarea className="block p-2.5 w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               id="grid-password"
               type="text"
-              name="hobbies_skills"
-              value={formData?.hobbies_skills}
+              name="skills_and_hobbies"
+              value={formData?.skills_and_hobbies}
                   onChange={handleChange}
             />
           </div>
