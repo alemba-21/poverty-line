@@ -17,7 +17,7 @@ const ProfileView = () => {
                   <div className='flex justify-between flex-wrap px-4'>
                       <p className='flex px-4 py-2 text-slate-500 gap-1'><BsGenderAmbiguous className='h-6 text-xl tex-black font-bold' /> Male</p>
                       <p className='flex px-4 py-2 text-slate-500 gap-1'><AiOutlineMail className='h-6 text-Pink-600' /> Scottjoe@gmail.com</p>
-                      <p className='flex px-4 py-2 text-slate-500 gap-1'><BsCalendarDate className='h-6 text-Pink-600' />23-Years</p>
+                      <p className='flex px-4 py-2 text-slate-500 gap-1'><BsCalendarDate className='h-6 text-Pink-600' />24-Years</p>
                       <p className='flex px-4 py-2 text-slate-500 gap-1'>ID NO.<span>35591527</span> </p>
                   </div>
               </div>        
