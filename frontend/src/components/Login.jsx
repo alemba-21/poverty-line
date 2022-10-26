@@ -1,27 +1,28 @@
 import React, {useState} from "react";
 import picsignup from "../assets/signup.png"
-import {Link} from 'react-router-dom'
+import {Link, Navigate} from 'react-router-dom'
 
 
-export default function Login({onLogin}) {
+export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [created, setCreated] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
-    setIsLoading(true);
-    fetch("/login", {
+    setCreated(true);
+    fetch("http://localhost:5000/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+          Accept: 'application/json',
       },
       body: JSON.stringify({ email, password }),
     }).then((r) => {
-      setIsLoading(false);
+      setCreated(false);
       if (r.ok) {
-        r.json().then((user) => onLogin(user));
+        r.json().then((user) => (user));
       } else {
         r.json().then((err) => setErrors(err.errors));
       }
@@ -29,7 +30,11 @@ export default function Login({onLogin}) {
   }
 
   return (
-    <div className="flex flex-row items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
+    <>
+      {
+      created?(
+      <Navigate to="/profile" />
+    ):(<div className="flex flex-row items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
       <div className="sm:max-w-md mr-10 ">
         <a href="/">
           <h3 className="text-8xl font-bold text-black-600">Poverty-</h3>
@@ -49,7 +54,7 @@ export default function Login({onLogin}) {
               for="email"
               className="block text-sm font-semibold text-gray-800"
             >
-              Email
+              email
             </label>
             <input
              value={email}
@@ -83,7 +88,7 @@ export default function Login({onLogin}) {
           </a>
           <div className="mt-6">
           <Link to="/profile">
-            <button type="submit"
+            <button type="submit" onClick={handleSubmit}
             className=" formButton w-full px-4 py-2 tracking-wide text-black
              transition-colors duration-200 transform bg-green-700 rounded-md hover:bg-green-800 focus:outline-none focus:bg-purple-600">
               Login
@@ -100,6 +105,8 @@ export default function Login({onLogin}) {
           </a>
         </p>
       </div>
-    </div>
+    </div>)}
+    </>
+    
   );
 }

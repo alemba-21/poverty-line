@@ -2,11 +2,7 @@ Rails.application.routes.draw do
   resources :jobs
   resources :user_profiles
  
-  namespace :api do
-    namespace :v1 do
-      resources :users, only: [:create]
-      post '/login', to: 'auth#create'
-      get '/profile', to: 'users#profile'
-    end
-  end
+  resources :users, param: :_username
+  post '/auth/login', to: 'authentication#login'
+  get '/*a', to: 'application#not_found'
 end
