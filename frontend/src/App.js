@@ -8,7 +8,7 @@ import SignIn from "./Links/SignIn";
 import SignedUp from "./Links/SignedUp";
 import About from "./Links/About";
 import React from "react";
-import OurPartners from "./components/OurPartners";
+
 
 function App() {
   return (

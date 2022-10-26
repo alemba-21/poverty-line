@@ -2,8 +2,7 @@ import React, {useState} from "react";
 import picsignup from "../assets/signup.png"
 import {Link} from 'react-router-dom'
 
-
-export default function Login({onLogin}) {
+function Login({onLogin}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
@@ -103,3 +102,5 @@ export default function Login({onLogin}) {
     </div>
   );
 }
+
+export default Login;

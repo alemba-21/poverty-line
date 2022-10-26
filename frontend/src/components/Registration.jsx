@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import womanpic from "../assets/WomanPic.png";
+import React, {useState} from "react";
+import womanpic from "../assets/WomanPic.png"
 
-export default function Registration({ onLogin }) {
+
+export default function Registration({onLogin}) {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -14,7 +15,7 @@ export default function Registration({ onLogin }) {
     setErrors([]);
     setIsLoading(true);
     fetch("/register", {
-      mode: "no-cors",
+      mode: 'no-cors',
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -23,7 +24,8 @@ export default function Registration({ onLogin }) {
         name,
         email,
         password,
-        password_confirmation,
+        passwordConfirmation,
+       
       }),
     }).then((r) => {
       setIsLoading(false);
@@ -45,10 +47,10 @@ export default function Registration({ onLogin }) {
 
             <h3 className="text-8xl text-end font-bold text-green-600">Line</h3>
           </a>
-          <img src={womanpic} alt="/" />
+          <img src={womanpic} alt="/"/>
         </div>
         <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-lg sm:max-w-sm sm:rounded-lg">
-          <a href="/">
+        <a href="/">
             <h3 className="text-3xl font-bold text-green-600">Register</h3>
           </a>
           <form className="register-form mt-6" onSubmit={handleSubmit}>
@@ -63,10 +65,11 @@ export default function Registration({ onLogin }) {
                 <input
                   type="text"
                   name="name"
-                  value={username}
+                  value={name}
                   onChange={(e) => setName(e.target.value)}
-                  placeholder="☏ username"
+                  placeholder=" Name"
                   id="name"
+
                   className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
               </div>
@@ -86,6 +89,7 @@ export default function Registration({ onLogin }) {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="✉️ Email"
                   id="email"
+
                   className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
               </div>
@@ -105,6 +109,7 @@ export default function Registration({ onLogin }) {
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="🔓 Password"
                   id="password"
+
                   className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
               </div>
@@ -121,7 +126,7 @@ export default function Registration({ onLogin }) {
                   type="password"
                   name="password_confirmation"
                   id="password_confirmation"
-                  value={password_confirmation}
+                  value={passwordConfirmation}
                   onChange={(e) => setPasswordConfirmation(e.target.value)}
                   placeholder="🔓 Confirm Password"
                   autoComplete="current-password"
@@ -141,12 +146,12 @@ export default function Registration({ onLogin }) {
           <div className="mt-4 text-grey-600">
             Already have an account?{" "}
             <span>
-              <a className="text-green-600 hover:underline" href="/login">
+              <a className="text-green-600 hover:underline" href="/signin">
                 Log in
               </a>
             </span>
           </div>
-          <div className="flex items-center w-full my-4">
+          {/* <div className="flex items-center w-full my-4">
             <hr className="w-full" />
             <p className="px-3 ">OR</p>
             <hr className="w-full" />
@@ -166,7 +171,7 @@ export default function Registration({ onLogin }) {
               </svg>
               <p className="text-green-600">Login with Google</p>
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
