@@ -1,5 +1,5 @@
 class UserProfilesController < ApplicationController
-    before_action :authorized
+    before_action :authorize_request
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
 
@@ -9,7 +9,7 @@ class UserProfilesController < ApplicationController
     end    
     
     def create
-        @user_profile = UserProfile.create!(user_profile_params)
+        @user_profile = UserProfile.create!(user_profile_params.merge(user: @current_user))
         render json:@user_profile, status: :created
     end
 
@@ -31,7 +31,7 @@ class UserProfilesController < ApplicationController
 
     private
     def user_profile_params
-        params.permit(:firstname, :middlename, :lastname, :email, :gender, :dob, :national_id, :address, :county, :estate, :user_id, :career_summary, :experience, :education, :skills_and_hobbies, :languages)
+        params.permit(:firstname, :middlename, :lastname, :email, :gender, :dob, :national_id, :address, :county, :estate, :career_summary, :experience, :education, :skills_and_hobbies, :languages)
     end
 
     def render_not_found_response
