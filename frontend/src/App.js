@@ -6,11 +6,13 @@ import Profile from "./Links/Profile";
 import SignIn from "./Links/SignIn";
 import SignedUp from "./Links/SignedUp";
 import About from "./Links/About";
+import ProfView from './Links/ProfView'
 
 function App() {
   return (
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/View" element={<ProfView />} />
         <Route path="/About" element={<About />}/>
         <Route path="/signed" element={<SignedUp />} />
         <Route path="/signin" element={<SignIn />} />
