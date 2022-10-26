@@ -15,8 +15,14 @@ export default function Registration({onLogin}) {
   function handleSubmit(e) {
     e.preventDefault();
     setErrors([]);
+<<<<<<< HEAD
     setCreated(true);
     fetch('http://localhost:5000/users', {
+=======
+    setIsLoading(true);
+    fetch("/register", {
+      mode: 'no-cors',
+>>>>>>> origin/mailutim
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -27,7 +33,7 @@ export default function Registration({onLogin}) {
         email,
         username,
         password,
-        password_confirmation: passwordConfirmation,
+        passwordConfirmation,
        
       }),
     }).then((r) => r.json())
@@ -174,12 +180,12 @@ export default function Registration({onLogin}) {
           <div className="mt-4 text-grey-600">
             Already have an account?{" "}
             <span>
-              <a className="text-green-600 hover:underline" href="/login">
+              <a className="text-green-600 hover:underline" href="/signin">
                 Log in
               </a>
             </span>
           </div>
-          <div className="flex items-center w-full my-4">
+          {/* <div className="flex items-center w-full my-4">
             <hr className="w-full" />
             <p className="px-3 ">OR</p>
             <hr className="w-full" />
@@ -199,7 +205,7 @@ export default function Registration({onLogin}) {
               </svg>
               <p className="text-green-600">Login with Google</p>
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>)}

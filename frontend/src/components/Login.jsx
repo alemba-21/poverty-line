@@ -2,8 +2,8 @@ import React, {useState} from "react";
 import picsignup from "../assets/signup.png"
 import {Link, Navigate} from 'react-router-dom'
 
-
 export default function Login() {
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
@@ -100,13 +100,12 @@ export default function Login() {
         <p className="mt-8 text-xs font-light text-center text-gray-700">
           {" "}
           Don't have an account?{" "}
-          <a href="/signup" className="font-medium text-green-600 hover:underline">
+          <a href="/signed" className="font-medium text-green-600 hover:underline">
           Sign Up
           </a>
         </p>
       </div>
     </div>)}
     </>
-    
   );
 }

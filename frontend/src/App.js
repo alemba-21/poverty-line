@@ -7,10 +7,13 @@ import SignIn from "./Links/SignIn";
 import SignedUp from "./Links/SignedUp";
 import About from "./Links/About";
 import ProfView from './Links/ProfView'
+import React from "react";
+
 
 function App() {
   return (
       <Routes>
+       
         <Route path="/" element={<Home />} />
         <Route path="/View" element={<ProfView />} />
         <Route path="/About" element={<About />}/>
