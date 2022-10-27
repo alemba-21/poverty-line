@@ -29,14 +29,17 @@ const Navbar = () => {
         </Link>
         <Link to='/About'>
         <li className='p-4 hover:text-green-600'>About</li>
-        </Link>
+        </Link>         
         <li><IoMdNotifications className='text-3xl hover:text-green-600' /></li>
         <Link to="/signed">
         <li className='text-black border-2 m-auto w-[115px] h-[50px] py-2 px-4 hover:border-green-600 hover:text-green-600 border-black rounded-full'>Sign Up</li>
         </Link>
         <Link to="/signin">
         <li className='text-white border m-auto bg-green-600 w-[110px] ml-2 py-2 px-4 h-[50px] text-center border-green-600 hover:bg-transparent hover:text-green-600 rounded-full'>LogIn</li>
-        </Link>
+          </Link>
+        <Link to="/signin">  
+            <button className='text-white border m-auto bg-green-600 w-[110px] ml-2 py-2 px-4 h-[50px] text-center border-green-600 hover:bg-transparent hover:text-green-600 rounded-full' onClick={ handleLogout }>Logout</button>
+        </Link>          
       </ul>
       </div>
 
@@ -58,8 +61,6 @@ const Navbar = () => {
         <Link to="/signin">
         <li className='text-white border bg-green-600 mt-2  mx-2 py-2 px-4 h-[50px] text-center border-green-600 hover:bg-transparent hover:text-green-600 rounded-full'>LogIn</li>
         </Link>
-
-        <button onClick={handleLogout}>Logout</button>
       </ul>
     </div>
   );

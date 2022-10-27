@@ -24,6 +24,7 @@ function App() {
         <Route path="/Jobs" element={<Jobs/>}/>
         {/* <Route path="/Details" element={<JobDetails/>}/> */}
       </Routes>
+      
 
   );
 }
