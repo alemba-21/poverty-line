@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 export default function UserDashboard() {
   return (
-    <div className="flex bg-slate-100">
-      <div className="flex flex-col h-screen p-3 shadow w-60">
-        <div className="space-y-9 bg-white h-screen">
+    <div className="flex bg-slate-200 ">
+      <div className="flex flex-col h-screen p-3 shadow w-60 ">
+        <div className="space-y-9 bg-white h-screen rounded-lg">
           <div className="flex justify-center mt-2">
             <span className="text-3xl font-bold">My Profile</span>
           </div>
@@ -18,7 +18,7 @@ export default function UserDashboard() {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6"
+                    className="w-6 h-6 "
                     fill="none"
                     viewBox="0 0 22 22"
                     stroke="green"
