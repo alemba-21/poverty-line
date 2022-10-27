@@ -1,60 +1,50 @@
 import React, {useState} from "react";
 import womanpic from "../assets/WomanPic.png"
 import { Navigate } from 'react-router-dom';
+import axios from '../api/axios'
 
 
 export default function Registration({onLogin}) {
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [passwordConfirmation, setPasswordConfirmation] = useState("");
   const [errors, setErrors] = useState("");
-  const [created, setCreated] = useState(false);
+  const [authenticated, setAuthenticated] = useState(false);
+
+  const [formData, setFormData] = useState({
+    email: "",
+    name: "",
+    username: "",
+    password: "",
+    password_confirmation: ""
+  });
+
+  //hangle change event
+  const handleChange = (event) => {
+    const key = event.target.name;
+    const value = event.target.value;
+
+    setFormData({ ...formData, [key]: value });
+  };
 
   function handleSubmit(e) {
     e.preventDefault();
-    setErrors([]);
-<<<<<<< HEAD
-    setCreated(true);
-    fetch('http://localhost:5000/users', {
-=======
-    setIsLoading(true);
-    fetch("/register", {
-      mode: 'no-cors',
->>>>>>> origin/mailutim
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-          Accept: 'application/json',
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        username,
-        password,
-        passwordConfirmation,
-       
-      }),
-    }).then((r) => r.json())
+
+    axios.post('/users', formData)
     .then((response) => {
-      if (response.status === 'created') {
-        setCreated(true);
-        setErrors('');
-      }
-    }).catch((response) =>
-      setErrors(
-        "Make sure your server is running!"
-      )
-    );
+      setAuthenticated(true);
+      localStorage.setItem('token', JSON.stringify(response.data.token))
+      localStorage.setItem('username', JSON.stringify(response.data.username))
+    })
   }
 
   return (
     <>
       {
-      created? (
+      authenticated? (
         <Navigate to="/signin" />
-    ):( <div className="">
+        ) : (
+          <div className="">
+            <div className="please-log-in">
+            <p>{errors}</p>
+          </div>
       <div className="flex flex-row items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
         <div className="sm:max-w-md mr-10 ">
           <a href="/">
@@ -81,10 +71,11 @@ export default function Registration({onLogin}) {
                 <input
                   type="text"
                   name="name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  value={formData?.name}
+                  onChange={handleChange}
                   placeholder=" Name"
-                  id="name"
+                          id="name"
+                          required
 
                   className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
@@ -99,10 +90,11 @@ export default function Registration({onLogin}) {
                 <input
                   type="text"
                   name="username"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  value={formData?.username}
+                  onChange={handleChange}
                   placeholder=" Username"
-                  id="username"
+                          id="username"
+                          required
 
                   className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
@@ -119,10 +111,11 @@ export default function Registration({onLogin}) {
                 <input
                   type="email"
                   name="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={formData?.email}
+                  onChange={handleChange}
                   placeholder="✉️ Email"
-                  id="email"
+                          id="email"
+                          required
 
                   className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
@@ -139,10 +132,11 @@ export default function Registration({onLogin}) {
                 <input
                   type="password"
                   name="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  value={formData?.password}
+                  onChange={handleChange}
                   placeholder="🔓 Password"
-                  id="password"
+                          id="password"
+                          required
 
                   className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
@@ -160,10 +154,11 @@ export default function Registration({onLogin}) {
                   type="password"
                   name="password_confirmation"
                   id="password_confirmation"
-                  value={passwordConfirmation}
-                  onChange={(e) => setPasswordConfirmation(e.target.value)}
+                  value={formData?.password_confirmation}
+                  onChange={handleChange}
                   placeholder="🔓 Confirm Password"
-                  autoComplete="current-password"
+                          autoComplete="current-password"
+                          required
                   className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
               </div>
@@ -180,12 +175,12 @@ export default function Registration({onLogin}) {
           <div className="mt-4 text-grey-600">
             Already have an account?{" "}
             <span>
-              <a className="text-green-600 hover:underline" href="/signin">
+              <a className="text-green-600 hover:underline" href="/login">
                 Log in
               </a>
             </span>
           </div>
-          {/* <div className="flex items-center w-full my-4">
+          <div className="flex items-center w-full my-4">
             <hr className="w-full" />
             <p className="px-3 ">OR</p>
             <hr className="w-full" />
@@ -205,7 +200,7 @@ export default function Registration({onLogin}) {
               </svg>
               <p className="text-green-600">Login with Google</p>
             </button>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>)}

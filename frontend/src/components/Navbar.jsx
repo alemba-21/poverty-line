@@ -1,15 +1,22 @@
 import React, { useState } from 'react';
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 import { IoMdNotifications } from 'react-icons/io'
 
 const Navbar = () => {
+  const navigate = useNavigate()
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
   };
+
+  const handleLogout = () => {
+    localStorage.setItem('token', JSON.stringify(""))
+    localStorage.setItem('username', JSON.stringify(""))
+    navigate('/')
+  }
 
   return (
     <div className='flex justify-between items-center h-24  mx-auto px-4 text-black bg-zinc-50 drop-shadow-lg'>
@@ -52,6 +59,8 @@ const Navbar = () => {
         <Link to="/signin">
         <li className='text-white border bg-green-600 mt-2  mx-2 py-2 px-4 h-[50px] text-center border-green-600 hover:bg-transparent hover:text-green-600 rounded-full'>LogIn</li>
         </Link>
+
+        <button onClick={handleLogout}>Logout</button>
       </ul>
     </div>
   );
