@@ -14,6 +14,7 @@ const ProfileCreation = () => {
     age: "",
     national_id: "",
     address: "",
+    phone: "",
     county: "",
     estate: "",
     career_summary: "",
@@ -113,7 +114,11 @@ const ProfileCreation = () => {
             Gender
           </label>
           <div className="relative">
-            <select className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                <select className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state"
+                
+                  name="gender"
+                  value={ formData?.gender }
+                  onChange={handleChange}>
               <option>Male</option>
               <option>Female</option>
               <option>I prefer not to say</option>
@@ -163,13 +168,32 @@ const ProfileCreation = () => {
                 value={formData?.address}
                   onChange={handleChange}
               />
+            </div>
+            
+            <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+          <label htmlFor="postalAdderess" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
+            Phone Number
+          </label>
+              <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="grid-city"
+                type="number"
+                name="phone"
+                value={formData?.phone}
+                  onChange={handleChange}
+              />
         </div>
+        
         <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
           <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
             County
           </label>
           <div className="relative">
-            <select className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                <select className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state"
+                type="county"
+                name="county"
+                value={formData?.county}
+                  onChange={handleChange}
+                >
               <option>Nairobi</option>
               <option>Mombasa</option>
               <option>Kisumu</option>
@@ -243,7 +267,7 @@ const ProfileCreation = () => {
               <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 id="grid-password"
                 type="date"
-                name="date"
+                name="education_date"
                 value={formData?.education_date}
                   onChange={handleChange}
               />

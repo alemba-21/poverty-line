@@ -1,6 +1,6 @@
 class UserProfile < ApplicationRecord
 
-    validates :firstname,:lastname, :email, :dob, :national_id, :address, :county, presence: true
+    # validates :firstname,:lastname, :email, :dob, :national_id, :address, :county, presence: true
     validates :national_id, length: { is: 8 }
     validates :email, uniqueness: true   
     validates :email, format: {with: URI::MailTo::EMAIL_REGEXP }
