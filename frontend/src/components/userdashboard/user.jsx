@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function UserDashboard() {
   return (
@@ -180,6 +181,7 @@ export default function UserDashboard() {
             </span>
           </div>
           <div className="flex justify-end shadow-2xl ">
+            <Link to="/Jobs">
             <button className="bg-green-600 text-3xl text-black py-2 px-3 flex rounded-full">
               Apply Today
               <svg
@@ -197,6 +199,8 @@ export default function UserDashboard() {
                 />
               </svg>
             </button>
+            </Link>
+     
           </div>
         </div>
       </div>

@@ -8,6 +8,7 @@ import SignIn from "./Links/SignIn";
 import SignedUp from "./Links/SignedUp";
 import About from "./Links/About";
 import React from "react";
+import User from "./Links/User";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/profile" element={<Profile/>} />
         <Route path="/create" element={<Profile />} />
+        <Route path="/user-dashboard" element={<User/>} />
         <Route path="/Jobs" element={<Jobs/>}/>
         <Route path="/Details" element={<JobDetails/>}/>
         <Route path="/Apply" element={<Apply/>}/>
