@@ -7,6 +7,9 @@ import Profile from "./Links/Profile";
 import SignIn from "./Links/SignIn";
 import SignedUp from "./Links/SignedUp";
 import About from "./Links/About";
+import Admin from "./Links/Admin";
+
+export default 
 
 function App() {
   return (
@@ -20,6 +23,7 @@ function App() {
         <Route path="/Jobs" element={<Jobs/>}/>
         <Route path="/Details" element={<JobDetails/>}/>
         <Route path="/Apply" element={<Apply/>}/>
+        <Route path="/admin" element={<Admin/>}/>
       </Routes>
 
   );
