@@ -9,7 +9,6 @@ import SignedUp from "./Links/SignedUp";
 import About from "./Links/About";
 import Admin from "./Links/Admin";
 
-export default 
 
 function App() {
   return (
