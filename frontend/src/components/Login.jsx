@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import picsignup from "../assets/signup.png"
-import { Navigate } from 'react-router-dom'
+import { Navigate, Link } from 'react-router-dom'
 import axios from '../api/axios'
 
 
@@ -109,9 +109,12 @@ export default function Login() {
         <p className="mt-8 text-xs font-light text-center text-gray-700">
           {" "}
           Don't have an account?{" "}
-          <a href="/signup" className="font-medium text-green-600 hover:underline">
-          Sign Up
-          </a>
+          <Link to="/signed">
+            <a href="/signup" className="font-medium text-green-600 hover:underline">
+            Sign Up
+            </a>                    
+          </Link>
+          
         </p>
       </div>
     </div>)}

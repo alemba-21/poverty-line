@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import womanpic from "../assets/WomanPic.png"
-import { Navigate } from 'react-router-dom';
+import { Navigate, Link } from 'react-router-dom';
 import axios from '../api/axios'
 
 
@@ -174,10 +174,12 @@ export default function Registration({onLogin}) {
           </form>
           <div className="mt-4 text-grey-600">
             Already have an account?{" "}
-            <span>
+            <span>                      
+            <Link to="/signin">
               <a className="text-green-600 hover:underline" href="/login">
                 Log in
-              </a>
+              </a>                        
+            </Link>              
             </span>
           </div>
           <div className="flex items-center w-full my-4">

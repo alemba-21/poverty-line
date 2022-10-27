@@ -38,7 +38,7 @@ const Navbar = () => {
         <li className='text-white border m-auto bg-green-600 w-[110px] ml-2 py-2 px-4 h-[50px] text-center border-green-600 hover:bg-transparent hover:text-green-600 rounded-full'>LogIn</li>
           </Link>
         <Link to="/signin">  
-            <button className='text-white border m-auto bg-green-600 w-[110px] ml-2 py-2 px-4 h-[50px] text-center border-green-600 hover:bg-transparent hover:text-green-600 rounded-full' onClick={ handleLogout }>Logout</button>
+            <button className='text-white border m-auto bg-red-600 w-[110px] ml-2 py-2 px-4 h-[50px] text-center border-green-600 hover:bg-transparent hover:text-green-600 rounded-full' onClick={ handleLogout }>Logout</button>
         </Link>          
       </ul>
       </div>
