@@ -13,7 +13,6 @@ import React from "react";
 function App() {
   return (
       <Routes>
-       
         <Route path="/" element={<Home />} />
         <Route path="/View" element={<ProfView />} />
         <Route path="/About" element={<About />}/>

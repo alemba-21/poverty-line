@@ -52,7 +52,6 @@ const Navbar = () => {
         <li className='p-4 hover:text-green-600 border-b border-gray-300'>About Us</li>
         </Link>
         <li className='p-4 hover:text-green-600 border-b border-gray-300'>Notifications</li>  
-         
          <Link to='/signed'>
         <li className='text-black border-2 h-[50px] mt-8 py-2 mx-2 px-4 hover:border-green-600 text-center hover:text-green-600 border-black rounded-full' >Sign Up</li>
         </Link>
