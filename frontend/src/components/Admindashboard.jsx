@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function UserDashboard() {
+export default function AdminDashboard() {
   return (
     <div className="flex bg-slate-200 ">
       <div className="flex flex-col h-screen p-3 shadow w-60 ">
@@ -166,7 +166,7 @@ export default function UserDashboard() {
           </div>
           <div className="w-full  px-20 py-20  bg-white rounded-lg shadow transform motion-safe:hover:scale-105 text-center">
             <div className="text-5xl font-medium text-black-500 truncate">
-              Unsuccessful
+              Draft Jobs
             </div>
             <div className="mt-1 text-4xl font-semibold text-red-600">2</div>
           </div>
@@ -174,7 +174,7 @@ export default function UserDashboard() {
         <div className="w-full px-8 py-8 bg-white rounded-lg shadow mx-auto mt-4 flex justify-center space-x-40 ">
           <div>
             <h1 className="text-2xl font-medium text-black-500 truncate">
-              Get Your Dream Job
+              Start Posting jobs and say bye to Poverty
             </h1>
             <span>
               Our Partners Are Ranked as the Leading Employers in the Region
@@ -183,7 +183,7 @@ export default function UserDashboard() {
           <div className="flex justify-end shadow-2xl ">
             <Link to="/Jobs">
             <button className="bg-green-600 text-3xl text-black py-2 px-3 flex rounded-full">
-              Apply Today
+              Post a Job
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
