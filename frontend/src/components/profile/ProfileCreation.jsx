@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import axios from '../../api/axios'
 
 const ProfileCreation = () => {
-  const [errors, setErrors] = useState("");
-  const [authenticated, setAuthenticated] = useState(false);
+  // const [errors, setErrors] = useState("");
+  // const [authenticated, setAuthenticated] = useState(false);
 
   const [formData, setFormData] = useState({
     firstname: "",
