@@ -9,6 +9,7 @@ import ProfView from './Links/ProfView'
 import React from "react";
 import Message from "./Links/Message";
 import ApplyJob from './Links/ApplyJob'
+import Createjob from './Links/Createjob'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/profile" element={<Profile/>} />
         <Route path="/create" element={<Profile />} />
         <Route path="/Apply" element={<ApplyJob />} />
+        <Route path="/Post" element={<Createjob />} />
         <Route path="/Jobs" element={<Jobs/>}/>
         {/* <Route path="/Details" element={<JobDetails/>}/> */}
       </Routes>
