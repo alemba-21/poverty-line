@@ -27,10 +27,6 @@ const SearchBar = () => {
           <MenuItem value= "Contract">Graphics designer</MenuItem>
           <MenuItem value= "Contract">Mpesa Agent</MenuItem>
         </Select>
-        {/* <Select disableUnderline variant='filled' defaultValue="Remote">
-          <MenuItem value="Remote" >Remote</MenuItem>
-          <MenuItem value="HyBrid">Hybrid</MenuItem>
-        </Select> */}
         <Button variant='contained' class="normal-case text-2xl border-4 border-indigo-100/100 text-black" >Search</Button>
       </Box>
   )
@@ -38,8 +34,3 @@ const SearchBar = () => {
 
 export default SearchBar
 
-    // <Grid container class="flex justify-center p-2 -mt-7">
-    //   <Grid item xs={10} >
-
-        //   </Grid>
-    // </Grid>

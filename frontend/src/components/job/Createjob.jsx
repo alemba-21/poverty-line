@@ -89,11 +89,6 @@ const Createjob = () => {
               value={formData?.job_description}
               onChange={handleChange}
             />
-              {/* <input
-                class= 'job'
-                type='textarea'
-                placeholder='Job Description'
-              />   */}
           </div>
 
           <div className='title'>
