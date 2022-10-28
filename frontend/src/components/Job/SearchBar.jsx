@@ -20,14 +20,17 @@ const SearchBar = () => {
   return (
       <Box p={2} mt={-4.5} mb={5} className={classes.wrapper}>
         <Select disableUnderline variant='filled' defaultValue="Full Time">
-          <MenuItem value="Full Time">Full Time</MenuItem>
-          <MenuItem value="Part Time">Part Time</MenuItem>
-          <MenuItem value= "Contract">Contract</MenuItem>
+          <MenuItem value="Full Time">Software Development</MenuItem>
+          <MenuItem value="Part Time">Teaching</MenuItem>
+          <MenuItem value= "Contract">Building and construction</MenuItem>
+          <MenuItem value= "Contract">Accountant</MenuItem>
+          <MenuItem value= "Contract">Graphics designer</MenuItem>
+          <MenuItem value= "Contract">Mpesa Agent</MenuItem>
         </Select>
-        <Select disableUnderline variant='filled' defaultValue="Remote">
+        {/* <Select disableUnderline variant='filled' defaultValue="Remote">
           <MenuItem value="Remote" >Remote</MenuItem>
           <MenuItem value="HyBrid">Hybrid</MenuItem>
-        </Select>
+        </Select> */}
         <Button variant='contained' class="normal-case text-2xl border-4 border-indigo-100/100 text-black" >Search</Button>
       </Box>
   )

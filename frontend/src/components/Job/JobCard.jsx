@@ -1,4 +1,5 @@
 import React from 'react'
+// import {useState, useEffect} from 'react'
 import {Box, Grid, Button, makeStyles} from '@material-ui/core';
 
 const skills = [ "JavaScript", "React.js", "Node.js"];
@@ -36,8 +37,28 @@ const skills = [ "JavaScript", "React.js", "Node.js"];
   });
 
 const JobCard = () => {
+//   const [jobs, setJobs] = useState([])
+
+
+//   useEffect(() => {    
+//     const getJobs = async () => {
+//       const jobsFromserver = await fetchJobs()
+//       setJobs(jobsFromserver)
+//     }
+
+//     getJobs()
+//   }, [])
+
+//   // fetch Jobs
+
+//   const fetchJobs = async () => {
+//     const res = await fetch('http://localhost:5000/jobs')
+//     const data = await res.json()
+
+//     return data
+//   }
   
-   const classes = useStyles()
+  const classes = useStyles()
   return (
     <Box p={2} className={classes.wrapper}>
         <Grid container alignItems='center'>
