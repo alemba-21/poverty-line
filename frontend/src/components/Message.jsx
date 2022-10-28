@@ -7,7 +7,7 @@ import { AiOutlineSend } from 'react-icons/ai';
 
 const Message = () => {
   return (
-    <div className='bg-white mb-4'>
+    <div className='bg-slate-50 mb-4'>
       <h1 className="text-4xl font-bold text-center">Messages</h1>
       <div className='bg-green-50 h-screen max-w-[1000px] mx-auto p-4 my-4 rounded-lg border-dashed shadow-md shadow-green-600'>
         <div className='flex flex-wrap gap-4 p-4 '>
@@ -36,11 +36,11 @@ const Message = () => {
             </div>
              <img className='border border-green-600  shadow-md p-1 rounded-full w-20 bg-transparent' src={Ceo} alt="/" />
           </div>
-          <div className='flex m-auto w-96 flex-row rounded-xl gap-1 place-content-center absolute inset-x-0 bottom-0 p-2   '>
-          <textarea className='h-16 rounded-xl w-96 shadow-green-600 border p-2 border-green-600'>
+          <div className='p-2 gap-2 mt-56 flex w-full bg-green-50 rounded-xl shadow-md shadow-green-300'>
+          <textarea className='w-full bg-slate-50 h-full text-green-600 font-semibold rounded-xl shadow-green-600 border p-2 border-green-600'>
             Type your message here...
           </textarea>
-          <AiOutlineSend className='h-12 text-3xl font-bold text-center text-green-600' />
+          <AiOutlineSend className='h-16 hover:cursor-pointer text-3xl font-bold text-center text-green-600' />
           </div>
 
 
