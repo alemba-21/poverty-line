@@ -12,9 +12,9 @@ const Jobs = () => {
           <Grid item xs={10}>
             <SearchBar/>
             <JobCard/>
+            {/* <JobCard/>
             <JobCard/>
-            <JobCard/>
-            <JobCard/>
+            <JobCard/> */}
           </Grid>
         </Grid>
         

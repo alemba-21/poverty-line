@@ -34,6 +34,7 @@ const Createjob = () => {
     deadline: "",
     required_skills: "",
     job_link: "",
+    job_type: ""
   });
 
   //hangle change event
@@ -67,6 +68,17 @@ const Createjob = () => {
               onChange={handleChange}
             />
              
+          </div>
+          <div className='title'>
+              <h1>Company name</h1>
+            <textarea class="block p-2.5 w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              id="grid-password"
+              type="text"
+              name="company_name"
+              value={formData?.company_name}
+              onChange={handleChange}
+            />
+             
             </div>
             <div className='des'>
               <h1>Job Description</h1>
@@ -82,7 +94,20 @@ const Createjob = () => {
                 type='textarea'
                 placeholder='Job Description'
               />   */}
-            </div>
+          </div>
+
+          <div className='title'>
+                <h1>Job Type</h1>
+              <textarea class="block p-2.5 w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                id="grid-password"
+                type="text"
+                name="job_type"
+                value={formData?.job_type}
+                onChange={handleChange}
+            />
+            
+          </div>
+          
             <div className='skills'>
               <h1>Required Skills</h1>
             <textarea onKeyUp={ event => event.key === "Enter" ? addTags(event) : null } class="block p-2.5 w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
