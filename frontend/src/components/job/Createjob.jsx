@@ -61,8 +61,8 @@ const Createjob = () => {
               
             </div>
         <div className="flex space-between m-auto gap-2 px-4">
-          <button className='bg-green-600 w-[200px] rounded-full font-medium my-6  py-3 text-black'>Submit Post</button>
-          <button className='bg-red-600 w-[200px] rounded-full font-medium my-6  py-3 text-black'>Cancel</button>
+          <button className='bg-green-600 w-[200px] rounded-full font-med ium my-6  py-3 text-black'>Submit Post</button>
+          <button className='bg-slate-200 border-2 border-red-600 hover:text-red-600 w-[200px] rounded-full font-medium my-6  py-3 text-black'>Cancel</button>
         </div>
       </form>
     </div>

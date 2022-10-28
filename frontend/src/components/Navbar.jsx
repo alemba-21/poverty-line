@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <div className='flex justify-between items-center h-24  mx-auto px-4 text-black bg-zinc-50 drop-shadow-lg'>
-      <h1 className='w-full text-3xl font-bold text-green-600'>PovertyLine.</h1>
+      <h1 className='text-3xl font-bold text-green-600'>PovertyLine.</h1>
 
       <div className='hidden md:flex basis-3/8 font-bold items-center mx-6'>
       <ul className='hidden md:flex flex-row text-xl md:justify-center'>
@@ -37,8 +37,7 @@ const Navbar = () => {
         <Link to="/signin">
         <li className='text-white border m-auto bg-green-600 w-[110px] ml-2 py-2 px-4 h-[50px] text-center border-green-600 hover:bg-transparent hover:text-green-600 rounded-full'>LogIn</li>
           </Link>
-        <Link to="/signin">  
-            <button className='text-white border m-auto bg-red-600 w-[110px] ml-2 py-2 px-4 h-[50px] text-center border-green-600 hover:bg-transparent hover:text-green-600 rounded-full' onClick={ handleLogout }>Logout</button>
+        <Link to="/signin"> 
         </Link>          
       </ul>
       </div>

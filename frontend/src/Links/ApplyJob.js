@@ -1,14 +1,14 @@
 import React from 'react'
-import Chat from '../components/Message'
 import Navbar from '../components/Navbar'
+import Apply from '../components/job/ApplyJob'
 
-const Message = () => {
+const ApplyJob = () => {
   return (
     <div>
       <Navbar />
-      <Chat />      
+      <Apply />
     </div>
   )
 }
 
-export default Message
+export default ApplyJob

@@ -2,7 +2,6 @@ import React from 'react'
 import Joe from '../../assets/joe.png'
 import { BsGenderAmbiguous, BsCalendarDate } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
-import { FaLanguage } from 'react-icons/fa';
 
 
 const ProfileView = () => {
