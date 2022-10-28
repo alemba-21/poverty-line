@@ -8,7 +8,7 @@ import About from "./Links/About";
 import ProfView from './Links/ProfView'
 import React from "react";
 import Message from "./components/Message";
-import ApplyJob from './components/ApplyJob'
+import ApplyJob from './Links/ApplyJob'
 
 
 function App() {

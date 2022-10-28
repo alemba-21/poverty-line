@@ -1,8 +1,8 @@
 import React from 'react'
 import {Grid} from "@material-ui/core"
-import JobCard from '../components/Job/JobCard';
-import Header from '../components/Job/Header'
-import SearchBar from '../components/Job/SearchBar'
+import JobCard from '../components/job/JobCard';
+import Header from '../components/job/Header'
+import SearchBar from '../components/job/SearchBar'
 
 const Jobs = () => {
   return (
