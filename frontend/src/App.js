@@ -7,7 +7,7 @@ import SignedUp from "./Links/SignedUp";
 import About from "./Links/About";
 import ProfView from './Links/ProfView'
 import React from "react";
-import Message from "./components/Message";
+import Message from "./Links/Message";
 import ApplyJob from './Links/ApplyJob'
 
 
