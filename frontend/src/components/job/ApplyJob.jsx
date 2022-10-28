@@ -17,7 +17,7 @@ const ApplyJob = () => {
               <h1 className='text-center font-bold text-2xl mt-2 '>Attatchment</h1>
               <form class="flex flex-row justify-center w-full space-x-6 bg-green-50 rounded-3xl p-4 border-dashed border-4 border-green-600">
                 <div class="shrink-0">
-                <GrAttachment className='h-6 text-Pink-600' />
+                <GrAttachment className='h-8 w-8' />
                 </div>
                 <label class="block">
                   <input type="file" class="block w-full text-sm text-slate-500
