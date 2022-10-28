@@ -63,7 +63,7 @@ const JobCard = () => {
           </Grid>
           <Grid item container direction="column" alignItems="flex-end" xs>
               <Grid item>
-              <p variant="caption" class="text-sm">1237 min ago | { job.job_type}</p>
+                <p variant="caption" class="text-sm">Before 12-12-2022 { job.deadline }| { job.job_type}</p>
               </Grid>
               <Grid item>
                 <Box mt={2}>
