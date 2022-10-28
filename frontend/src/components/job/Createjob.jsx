@@ -26,7 +26,6 @@ const Createjob = () => {
       };
     } 
     
-    const [authenticated, setAuthenticated] = useState(false);
   const [formData, setFormData] = useState({
     job_title: "",
     company_name: "",
@@ -51,7 +50,6 @@ const Createjob = () => {
     axios.post('/jobs', formData)
       .then((response) => {
         console.log(response)
-        setAuthenticated(true);
       })
   }
 
