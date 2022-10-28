@@ -13,7 +13,7 @@ class JobApplicationsController < ApplicationController
     end
 
     def create
-        @job_application = JobApplication.create!(job_params)
+        @job_application = JobApplication.create!(job_application_params)
         render json: @job_application, status: :created
     end
 
@@ -23,7 +23,7 @@ class JobApplicationsController < ApplicationController
     end
 
     private
-    def job_params
+    def job_application_params
         params.permit(:cover_letter, :attachment)
     end
 
