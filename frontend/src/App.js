@@ -1,4 +1,4 @@
-import {Routes, Route} from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Jobs from "./Links/Jobs";
 import Home from "./Links/Home"
 import Profile from "./Links/Profile";
@@ -10,10 +10,13 @@ import React from "react";
 import Message from "./Links/Message";
 import ApplyJob from './Links/ApplyJob'
 import Createjob from './Links/Createjob'
+import Navbar from './components/Navbar'
 
 
 function App() {
   return (
+    <Router>
+       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/view" element={<ProfView />} />
@@ -28,6 +31,9 @@ function App() {
         <Route path="/Jobs" element={<Jobs/>}/>
         {/* <Route path="/Details" element={<JobDetails/>}/> */}
       </Routes>
+
+    </Router>
+      
       
 
   );

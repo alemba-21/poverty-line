@@ -163,9 +163,6 @@ export default function Registration({onLogin}) {
                 />
               </div>
             </div>
-            <a href="/" className="text-xs text-green-600 hover:underline">
-              Forget Password?
-            </a>
             <div className="flex items-center mt-4">
               <button type="submit" className="w-full px-4 py-2 tracking-wide text-black transition-colors duration-200 transform bg-green-700 rounded-md hover:bg-green-800 focus:outline-none focus:bg-purple-600">
                 Register
