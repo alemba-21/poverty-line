@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from '../../api/axios'
 import './createjob.css'
+import {Link} from 'react-router-dom'
 
 const Createjob = () => {
   const selectedTags = tags => {
@@ -129,8 +130,11 @@ const Createjob = () => {
             
               
             </div>
-        <div className="flex space-between m-auto gap-2 px-4">
-          <button onClick={handleSubmit} className='bg-green-600 w-[200px] rounded-full font-med ium my-6  py-3 text-black'>Submit Post</button>
+          <div className="flex space-between m-auto gap-2 px-4">
+            <Link to="/jobs">
+              <button onClick={handleSubmit} className='bg-green-600 w-[200px] rounded-full font-med ium my-6  py-3 text-black'>Submit Post</button>
+            </Link>
+          
           <button className='bg-slate-200 border-2 border-red-600 hover:text-red-600 w-[200px] rounded-full font-medium my-6  py-3 text-black'>Cancel</button>
         </div>
       </form>
