@@ -6,7 +6,6 @@ import Navbar from "../components/Navbar";
 const ProfView = () => {
   return (
     <div>
-      <Navbar />
       <View />
     </div>
   )

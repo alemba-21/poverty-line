@@ -20,15 +20,15 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/view" element={<ProfView />} />
-        <Route path="/About" element={<About />}/>
-        <Route path="/Chat" element={<Message />} />
+        <Route path="/about" element={<About />}/>
+        <Route path="/chat" element={<Message />} />
         <Route path="/signed" element={<SignedUp />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/profile" element={<Profile/>} />
         <Route path="/create" element={<Profile />} />
-        <Route path="/Apply" element={<ApplyJob />} />
-        <Route path="/Post" element={<Createjob />} />
-        <Route path="/Jobs" element={<Jobs/>}/>
+        <Route path="/apply" element={<ApplyJob />} />
+        <Route path="/post" element={<Createjob />} />
+        <Route path="/jobs" element={<Jobs/>}/>
         {/* <Route path="/Details" element={<JobDetails/>}/> */}
       </Routes>
 

@@ -29,8 +29,7 @@ const SearchBar = () => {
           <MenuItem value= "Contract">Waiter</MenuItem>
           <MenuItem value= "Contract">Security guard</MenuItem>
           <MenuItem value= "Contract">Hotel Manager</MenuItem>
-          <MenuItem value= "Contract">Real Estate</MenuItem>
-          
+          <MenuItem value= "Contract">Real Estate</MenuItem>          
         </Select>
         <Button variant='contained' class="normal-case text-2xl border-4 border-indigo-100/100 text-black" >Search</Button>
       </Box>

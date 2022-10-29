@@ -5,7 +5,6 @@ import Apply from '../components/job/ApplyJob'
 const ApplyJob = () => {
   return (
     <div>
-      <Navbar />
       <Apply />
     </div>
   )

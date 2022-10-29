@@ -7,7 +7,7 @@ const Createjob = () => {
   const selectedTags = tags => {
 		console.log(tags);
   };
-  
+
   return (
 		<div className="App">
 			<TagsInput selectedTags={selectedTags}  tags={['Nodejs', 'MongoDB']}/>
