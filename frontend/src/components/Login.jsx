@@ -49,7 +49,6 @@ export default function Login() {
       <div className="sm:max-w-md mr-10 ">
         <a href="/">
           <h3 className="text-8xl font-bold text-black-600">Poverty-</h3>
-          {/* <img src={line} alt="/" /> */}
 
           <h3 className="text-8xl text-end font-bold text-green-600">Line</h3>
         </a>

@@ -55,11 +55,6 @@ const Navbar = () => {
               </Link>
               )
           )}
-        
-        
-               
-        <Link to="/signin"> 
-        </Link>          
       </ul>
       </div>
 

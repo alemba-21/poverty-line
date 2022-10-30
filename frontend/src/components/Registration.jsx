@@ -8,6 +8,7 @@ export default function Registration({onLogin}) {
   const [errors, setErrors] = useState("");
   const [authenticated, setAuthenticated] = useState(false);
   
+  
 
   const [formData, setFormData] = useState({
     email: "",
@@ -35,6 +36,7 @@ export default function Registration({onLogin}) {
       localStorage.setItem('username', JSON.stringify(response.data.username))
       localStorage.setItem('user_id', JSON.stringify(response.data.user_id))
       localStorage.setItem('authenticated', JSON.stringify(true)) 
+      console.log(response)
     })
   }
 
@@ -44,21 +46,20 @@ export default function Registration({onLogin}) {
       authenticated ? (
         <Navigate to="/signin" />
         ) : (
-          <div className="">
-            <div className="please-log-in">
-            <p>{errors}</p>
-          </div>
       <div className="flex flex-row items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
         <div className="sm:max-w-md mr-10 ">
           <a href="/">
             <h3 className="text-8xl font-bold text-black-600">Poverty-</h3>
-            {/* <img src={line}/> */}
 
             <h3 className="text-8xl text-end font-bold text-green-600">Line</h3>
           </a>
           <img src={womanpic} alt="/"/>
         </div>
-        <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-lg sm:max-w-sm sm:rounded-lg">
+              <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-lg sm:max-w-sm sm:rounded-lg">
+              <div className="">
+                <div className="please-log-in">
+              <p>{errors}</p>
+          </div>
         <a href="/">
             <h3 className="text-3xl font-bold text-green-600">Register</h3>
           </a>
