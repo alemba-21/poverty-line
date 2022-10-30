@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {Link, useNavigate} from "react-router-dom"
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 import { IoMdNotifications } from 'react-icons/io'
 
 const Navbar = () => {
+  const [auth, setAuthenticated] = useState(false)
   const navigate = useNavigate()
   const [nav, setNav] = useState(false);
 
@@ -15,8 +16,15 @@ const Navbar = () => {
   const handleLogout = () => {
     localStorage.setItem('token', JSON.stringify(""))
     localStorage.setItem('username', JSON.stringify(""))
+    localStorage.setItem('user_id', JSON.stringify(0))
+    localStorage.setItem('authenticated', JSON.stringify(false))
     navigate('/')
   }
+
+  useEffect(() => {
+    const authenticated = JSON.parse(localStorage.getItem("authenticated") || 0)
+    setAuthenticated(authenticated)
+  })
 
   return (
     <div className='flex justify-between items-center h-24  mx-auto px-4 text-black bg-zinc-50 drop-shadow-lg'>
@@ -30,16 +38,25 @@ const Navbar = () => {
         <Link to='/About'>
         <li className='p-4 hover:text-green-600'>About</li>
         </Link>         
-        <li><IoMdNotifications className='text-3xl hover:text-green-600' /></li>
-        <Link to="/signed">
-        <li className='text-black border-2 m-auto w-[115px] h-[40px] py-1 px-4 hover:border-green-600 hover:text-green-600 border-black rounded-full'>Sign Up</li>
-        </Link>
-        <Link to="/signin">
-        <li className='text-white border m-auto bg-green-600 w-[110px] ml-2 py-1 px-4 h-[40px] text-center border-green-600 hover:bg-transparent hover:text-green-600 rounded-full'>LogIn</li>
-          </Link>
-        <Link to="/signin">
-          <button onClick={handleLogout} className='text-white border m-auto bg-red-600 w-[110px] ml-2 py-1 px-4 h-[40px] text-center border-green-600 hover:bg-transparent hover:text-green-600 rounded-full'>Logout</button>
-        </Link>          
+          <li><IoMdNotifications className='text-3xl hover:text-green-600' /></li>
+          { auth ? (
+          <Link to="/signin">
+            <button onClick={handleLogout} className='text-white border m-auto bg-red-600 w-[110px] ml-2 py-1 px-4 h-[40px] text-center border-green-600 hover:bg-transparent hover:text-green-600 rounded-full'>Logout</button>
+          </Link>   
+          
+          ): (
+            (<Link to="/signed">
+            <li className='text-black border-2 m-auto w-[115px] h-[40px] py-1 px-4 hover:border-green-600 hover:text-green-600 border-black rounded-full'>Sign Up</li>
+              </Link>),
+              (
+              <Link to="/signin">
+              <li className='text-white border m-auto bg-green-600 w-[110px] ml-2 py-1 px-4 h-[40px] text-center border-green-600 hover:bg-transparent hover:text-green-600 rounded-full'>LogIn</li>
+                </Link>
+              )
+          )}
+        
+        
+               
         <Link to="/signin"> 
         </Link>          
       </ul>
@@ -57,12 +74,14 @@ const Navbar = () => {
         <li className='p-4 hover:text-green-600 border-b border-gray-300'>About Us</li>
         </Link>
         <li className='p-4 hover:text-green-600 border-b border-gray-300'>Notifications</li>  
-         <Link to='/signed'>
-        <li className='text-black border-2 h-[50px] mt-8 py-2 mx-2 px-4 hover:border-green-600 text-center hover:text-green-600 border-black rounded-full' >Sign Up</li>
-        </Link>
-        <Link to="/signin">
+        { auth ? (<Link to="/signin">
         <li className='text-white border bg-green-600 mt-2  mx-2 py-2 px-4 h-[50px] text-center border-green-600 hover:bg-transparent hover:text-green-600 rounded-full'>LogIn</li>
-        </Link>
+        </Link>): (
+           <Link to='/signed'>
+           <li className='text-black border-2 h-[50px] mt-8 py-2 mx-2 px-4 hover:border-green-600 text-center hover:text-green-600 border-black rounded-full' >Sign Up</li>
+           </Link>
+        )}
+        
         
       </ul>
     </div>

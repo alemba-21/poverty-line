@@ -9,7 +9,7 @@ class UserProfilesController < ApplicationController
     end    
     
     def create
-        @user_profile = UserProfile.create!(user_profile_params.merge(user: @current_user))
+        @user_profile = UserProfile.create!(user_profile_params)
         render json:@user_profile, status: :created
     end
 
@@ -31,7 +31,7 @@ class UserProfilesController < ApplicationController
 
     private
     def user_profile_params
-        params.permit(:firstname, :middlename, :lastname, :email, :gender, :age, :national_id, :address, :phone, :county, :estate, :career_summary, :experience_date, :experience, :education_date, :education, :skills_and_hobbies, :languages)
+        params.permit(:firstname, :middlename, :lastname, :email, :gender, :age, :national_id, :address, :phone, :county, :estate, :career_summary, :experience_date, :experience, :education_date, :education, :skills_and_hobbies, :languages, :user_id)
     end
 
     def render_not_found_response

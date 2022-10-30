@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from '../../api/axios'
 import { Navigate } from "react-router-dom";
 
 const ProfileCreation = () => {
   // const [errors, setErrors] = useState("");
   const [authenticated, setAuthenticated] = useState(false);
-
+  const [userID, setUserID] = useState(0)
   const [formData, setFormData] = useState({
     firstname: "",
     middlename: "",
@@ -34,11 +34,15 @@ const ProfileCreation = () => {
     setFormData({ ...formData, [key]: value });
   };
 
+  useEffect(() => {
+    const user_id = JSON.parse(localStorage.getItem("user_id") || 0)
+    setUserID(user_id)
+  })
+
   function handleSubmit(e) {
     e.preventDefault();
 
-    axios.post('/user_profiles', formData)
-      .then((response) => {
+    axios.post('/user_profiles', {...formData, user_id:userID}).then((response) => {
         console.log(response)
         setAuthenticated(true);
       })

@@ -32,6 +32,8 @@ export default function Registration({onLogin}) {
       setAuthenticated(true);
       localStorage.setItem('token', JSON.stringify(response.data.token))
       localStorage.setItem('username', JSON.stringify(response.data.username))
+      localStorage.setItem('user_id', JSON.stringify(response.data.user_id))
+      localStorage.setItem('authenticated', JSON.stringify(true)) 
     })
   }
 
