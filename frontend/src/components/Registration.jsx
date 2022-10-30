@@ -7,6 +7,7 @@ import axios from '../api/axios'
 export default function Registration({onLogin}) {
   const [errors, setErrors] = useState("");
   const [authenticated, setAuthenticated] = useState(false);
+  
 
   const [formData, setFormData] = useState({
     email: "",
@@ -40,7 +41,7 @@ export default function Registration({onLogin}) {
   return (
     <>
       {
-      authenticated? (
+      authenticated ? (
         <Navigate to="/signin" />
         ) : (
           <div className="">

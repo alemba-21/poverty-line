@@ -45,13 +45,14 @@ const Navbar = () => {
           </Link>   
           
           ): (
-            (<Link to="/signed">
-            <li className='text-black border-2 m-auto w-[115px] h-[40px] py-1 px-4 hover:border-green-600 hover:text-green-600 border-black rounded-full'>Sign Up</li>
-              </Link>),
+              (
+                <Link to="/signed">
+                    <li className='text-black border-2 m-auto w-[115px] h-[40px] py-1 px-4 hover:border-green-600 hover:text-green-600 border-black rounded-full'>Sign Up</li>
+                </Link>),
               (
               <Link to="/signin">
-              <li className='text-white border m-auto bg-green-600 w-[110px] ml-2 py-1 px-4 h-[40px] text-center border-green-600 hover:bg-transparent hover:text-green-600 rounded-full'>LogIn</li>
-                </Link>
+                  <li className='text-white border m-auto bg-green-600 w-[110px] ml-2 py-1 px-4 h-[40px] text-center border-green-600 hover:bg-transparent hover:text-green-600 rounded-full'>LogIn</li>
+              </Link>
               )
           )}
         
