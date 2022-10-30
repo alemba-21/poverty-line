@@ -8,17 +8,18 @@ body {
 
   .box {
     width: 800px;
-    height: 600px;
+    height: 700px;
     background-color: lightgray;
     margin: auto;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     padding: 10px;
     justify-content: center;
     align-items: center;
+	margin-top: 20px;
   }
   h1 {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
   }
 

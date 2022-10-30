@@ -3,7 +3,7 @@ import axios from '../../api/axios'
 import {useState, useEffect} from 'react'
 import {Box, Grid, Button, makeStyles} from '@material-ui/core';
 
-const skills = [ "JavaScript", "React.js", "Node.js"];
+const skills = [""];
 
  const useStyles = makeStyles({
    wrapper: {
