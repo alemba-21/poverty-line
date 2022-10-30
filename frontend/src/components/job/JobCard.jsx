@@ -9,6 +9,7 @@ const skills = [ "JavaScript", "React.js", "Node.js"];
    wrapper: {
      border: "1px solid green",
      cursor: "pointer",
+     padding: "5px",
 
      "&:hover": {
       BoxShadow: "0px 5px 25px rgba(0, 0, 0,0.1)",

@@ -2,7 +2,8 @@ import React from 'react'
 import {Box, Button, Select, MenuItem, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles({
-  wrapper: {
+  wrapper: {    
+    marginBottom: "20px",
     backgroundColor: "fff",
     display: "flex",
     boxShadow: "0px 5px 20px rgba(0, 0, 0, 0.7)",
