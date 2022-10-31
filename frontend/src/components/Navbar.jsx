@@ -28,7 +28,9 @@ const Navbar = () => {
 
   return (
     <div className='flex justify-between items-center h-24  mx-auto px-4 text-black bg-zinc-50 drop-shadow-lg'>
+      <Link to="/">
       <h1 className='text-3xl font-bold text-green-600'>PovertyLine.</h1>
+      </Link>
 
       <div className='hidden md:flex basis-3/8 font-bold items-center mx-6'>
       <ul className='hidden md:flex flex-row text-xl md:justify-center'>

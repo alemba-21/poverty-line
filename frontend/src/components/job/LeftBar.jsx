@@ -1,8 +1,8 @@
 import React from 'react'
 import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
-import CollectionsBookmarkOutlinedIcon from '@mui/icons-material/CollectionsBookmarkOutlined';
-import MarkUnreadChatAltOutlinedIcon from '@mui/icons-material/MarkUnreadChatAltOutlined';
+import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark';
+import MarkChatUnreadIcon from '@mui/icons-material/MarkChatUnread';
 
 
 export const LeftBarData = [
@@ -18,12 +18,12 @@ export const LeftBarData = [
   },
   {
     title: 'My Jobs',
-    icon: <CollectionsBookmarkOutlinedIcon/>,
+    icon: <CollectionsBookmarkIcon/>,
     link:'/Jobs',
   },
   {
     title: 'Messages',
-    icon: <MarkUnreadChatAltOutlinedIcon/>,
+    icon: <MarkChatUnreadIcon/>,
     link:'/Home',
   },
 ];

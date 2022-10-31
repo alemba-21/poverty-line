@@ -1,9 +1,8 @@
-  .searchInputs {
-    margin-top: -35px;
+.searchInputs {
     display: flex;
   }
   
-  .search input {
+.search input {
     background-color: white;
     border: 0;
     border-radius: 20px;
@@ -15,7 +14,7 @@
     width: 715px; 
   }
   
-  .searchIcon {
+.searchIcon {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     height: 70px;

@@ -9,7 +9,7 @@ const Jobs = () => {
     <div className="keja">
       <Header/>
       <div className='home'>
-          <div className='container'>
+          <div id='container'>
               <LeftBar/>
               <CenterBar/>
               <RightBar/>
