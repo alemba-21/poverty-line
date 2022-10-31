@@ -8,9 +8,11 @@ import About from "./Links/About";
 import ProfView from './Links/ProfView'
 import React from "react";
 import Message from "./Links/Message";
-import ApplyJob from './Links/ApplyJob'
+import ApplyJob from './Links/ApplyJob';
+import User from './Links/User';
 import Createjob from './Links/Createjob'
 import Navbar from './components/Navbar'
+
 
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/view" element={<ProfView />} />
+        <Route path="/UserDashboard" element={<User />} />
         <Route path="/about" element={<About />}/>
         <Route path="/chat" element={<Message />} />
         <Route path="/signed" element={<SignedUp />} />
