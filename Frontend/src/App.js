@@ -33,8 +33,8 @@ function App() {
         <Route path="/apply" element={<ApplyJob />} />
         <Route path="/post" element={<Createjob />} />
         <Route path="/Jobs" element={<Jobs/>}/>
-        {/* <Route path="/Details" element={<JobDetails/>}/> */}
         <Route path="/admin" element={<Admin/>} />
+        {/* Hey Earnest */}
       </Routes>
     </Router>
       
