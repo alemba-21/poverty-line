@@ -30,6 +30,10 @@ class AdminsController < ApplicationController
 
     private 
 
+    def admin_params
+        params.permit(:first_name, :last_name, :email, :password_digest)
+    end
+
     def render_not_found_response
         render json: { error: "Admin not found" }, status: :not_found
     end
