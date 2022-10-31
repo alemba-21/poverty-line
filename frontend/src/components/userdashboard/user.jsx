@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function UserDashboard() {
+  // const [jobs, setJobs] = useState([])
+  
   return (
     <div className="flex bg-slate-200 ">
       <div className="flex flex-col h-screen p-3 shadow w-60 ">

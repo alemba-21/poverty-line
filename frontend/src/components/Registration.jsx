@@ -5,7 +5,7 @@ import axios from '../api/axios'
 
 
 export default function Registration({onLogin}) {
-  const [errors, setErrors] = useState("");
+  const [errors, setErrors] = useState([]);
   const [authenticated, setAuthenticated] = useState(false);
   
   
@@ -35,9 +35,11 @@ export default function Registration({onLogin}) {
       localStorage.setItem('token', JSON.stringify(response.data.token))
       localStorage.setItem('username', JSON.stringify(response.data.username))
       localStorage.setItem('user_id', JSON.stringify(response.data.user_id))
-      localStorage.setItem('authenticated', JSON.stringify(true)) 
-      console.log(response)
-    })
+    }).catch((error) => {
+      if( error.response ){
+          console.log(error.response.data); 
+      }
+  });
   }
 
   return (
@@ -57,13 +59,13 @@ export default function Registration({onLogin}) {
         </div>
               <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-lg sm:max-w-sm sm:rounded-lg">
               <div className="">
-                <div className="please-log-in">
-              <p>{errors}</p>
-          </div>
         <a href="/">
             <h3 className="text-3xl font-bold text-green-600">Register</h3>
           </a>
-          <form className="register-form mt-6" onSubmit={handleSubmit}>
+          <form className="register-form mt-6" onSubmit={ handleSubmit }>
+          <div className="please-log-in" style={{color: "red", display: "flex", alignItems: "center", justifyContent: "center", paddingTop: "5px"}}>
+                      <p>{errors}</p>
+          </div>
             <div>
               <label
                 htmlFor="name"
