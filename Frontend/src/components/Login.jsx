@@ -32,21 +32,21 @@ export default function Login() {
         localStorage.setItem('username', JSON.stringify(response.data.username))
         localStorage.setItem('user_id', JSON.stringify(response.data.user_id))
         localStorage.setItem('authenticated', JSON.stringify(true))        
-      })
-      
+      }).catch(error => {
+        // Handle error
+        setErrors(error.response.data.error);
+    });      
   }
 
   return (
     <>
       {
       authenticated ? (
-      <Navigate to="/profile" />
-        ) : (
+          <Navigate to="/userdashboard" />          
+        ) : (            
         <div className="flex flex-row items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
-          <div className="please-log-in">
-            <p>{errors}</p>
-          </div>
-      <div className="sm:max-w-md mr-10 ">
+          
+        <div className="sm:max-w-md mr-10 ">
         <a href="/">
           <h3 className="text-8xl font-bold text-black-600">Poverty-</h3>
 
@@ -57,7 +57,11 @@ export default function Login() {
       <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-lg sm:max-w-sm sm:rounded-lg">
         <h1 className="text-3xl font-semibold text-center text-green-700 underline">
           Log in
-        </h1>
+          </h1>
+          
+          <div className="please-log-in" style={{color: "red", display: "flex", alignItems: "center", justifyContent: "center", paddingTop: "5px"}}>
+            <p>{errors}</p>
+          </div>
         <form className="login-form mt-6" onSubmit={handleSubmit}>
           <div className="mb-2">
             <label
