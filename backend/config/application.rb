@@ -20,6 +20,7 @@ Bundler.require(*Rails.groups)
 
 module PovertyLine
   class Application < Rails::Application
+    config.autoload_paths 
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 

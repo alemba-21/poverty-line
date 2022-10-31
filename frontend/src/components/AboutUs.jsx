@@ -10,7 +10,6 @@ import Footer from './Footer';
 const About = () => {
   return (
     <div>
-        <Navbar/>
         <OurPartners/>
         <PartnersList/>
     <div className='w-full py-[10rem] px-4 bg-white'>

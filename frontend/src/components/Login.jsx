@@ -1,38 +1,54 @@
 import React, {useState} from "react";
 import picsignup from "../assets/signup.png"
-import {Link} from 'react-router-dom'
+import { Navigate, Link } from 'react-router-dom'
+import axios from '../api/axios'
 
-function Login({onLogin}) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [errors, setErrors] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+
+
+export default function Login() {
+  const [errors, setErrors] = useState("");
+  const [authenticated, setAuthenticated] = useState(false);
+
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  //hangle change event
+  const handleChange = (event) => {
+    const key = event.target.name;
+    const value = event.target.value;
+
+    setFormData({ ...formData, [key]: value });
+  };
 
   function handleSubmit(e) {
     e.preventDefault();
-    setIsLoading(true);
-    fetch("/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, password }),
-    }).then((r) => {
-      setIsLoading(false);
-      if (r.ok) {
-        r.json().then((user) => onLogin(user));
-      } else {
-        r.json().then((err) => setErrors(err.errors));
-      }
-    });
+
+    axios.post('/auth/login', formData)
+      .then((response) => {
+        setAuthenticated(true);
+        localStorage.setItem('token', JSON.stringify(response.data.token))
+        localStorage.setItem('username', JSON.stringify(response.data.username))
+        localStorage.setItem('user_id', JSON.stringify(response.data.user_id))
+        localStorage.setItem('authenticated', JSON.stringify(true))        
+      })
+      
   }
 
   return (
-    <div className="flex flex-row items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
+    <>
+      {
+      authenticated ? (
+      <Navigate to="/profile" />
+        ) : (
+        <div className="flex flex-row items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
+          <div className="please-log-in">
+            <p>{errors}</p>
+          </div>
       <div className="sm:max-w-md mr-10 ">
         <a href="/">
           <h3 className="text-8xl font-bold text-black-600">Poverty-</h3>
-          {/* <img src={line} alt="/" /> */}
 
           <h3 className="text-8xl text-end font-bold text-green-600">Line</h3>
         </a>
@@ -48,15 +64,16 @@ function Login({onLogin}) {
               for="email"
               className="block text-sm font-semibold text-gray-800"
             >
-              Email
+              email
             </label>
             <input
-             value={email}
-             onChange={(e) => setEmail(e.target.value)}
+             value={formData?.email}
+             onChange={handleChange}
              type="email"
              placeholder="Email"
              id="email"
-             name="email"
+                      name="email"
+                      required
               className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
             />
           </div>
@@ -68,12 +85,13 @@ function Login({onLogin}) {
               Password
             </label>
             <input
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  value={formData?.password}
+                  onChange={handleChange}
                   type="password"
                   placeholder="Password"
                   id="password"
-                  name="password"
+                      name="password"
+                      required
               className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
             />
           </div>
@@ -81,26 +99,27 @@ function Login({onLogin}) {
             Forget Password?
           </a>
           <div className="mt-6">
-          <Link to="/profile">
-            <button type="submit"
+            <button type="submit" onClick={handleSubmit}
             className=" formButton w-full px-4 py-2 tracking-wide text-black
              transition-colors duration-200 transform bg-green-700 rounded-md hover:bg-green-800 focus:outline-none focus:bg-purple-600">
               Login
             </button>
-          </Link>
           </div>
         </form>
 
         <p className="mt-8 text-xs font-light text-center text-gray-700">
           {" "}
           Don't have an account?{" "}
-          <a href="/signed" className="font-medium text-green-600 hover:underline">
-          Sign Up
-          </a>
+          <Link to="/signed">
+            <a href="/signup" className="font-medium text-green-600 hover:underline">
+            Sign Up
+            </a>                    
+          </Link>
+          
         </p>
       </div>
-    </div>
+    </div>)}
+    </>
+    
   );
 }
-
-export default Login;

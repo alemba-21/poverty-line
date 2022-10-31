@@ -1,55 +1,65 @@
 import React, {useState} from "react";
 import womanpic from "../assets/WomanPic.png"
+import { Navigate, Link } from 'react-router-dom';
+import axios from '../api/axios'
 
 
 export default function Registration({onLogin}) {
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
-  const [passwordConfirmation, setPasswordConfirmation] = useState("");
   const [errors, setErrors] = useState("");
-  const [isLoading, setIsLoading] = useState("");
+  const [authenticated, setAuthenticated] = useState(false);
+  
+  
+
+  const [formData, setFormData] = useState({
+    email: "",
+    name: "",
+    username: "",
+    password: "",
+    password_confirmation: ""
+  });
+
+  //hangle change event
+  const handleChange = (event) => {
+    const key = event.target.name;
+    const value = event.target.value;
+
+    setFormData({ ...formData, [key]: value });
+  };
 
   function handleSubmit(e) {
     e.preventDefault();
-    setErrors([]);
-    setIsLoading(true);
-    fetch("/register", {
-      mode: 'no-cors',
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        password,
-        passwordConfirmation,
-       
-      }),
-    }).then((r) => {
-      setIsLoading(false);
-      if (r.ok) {
-        r.json().then((user) => onLogin(user));
-      } else {
-        r.json().then((err) => setErrors(err.errors));
-      }
-    });
+
+    axios.post('/users', formData)
+    .then((response) => {
+      setAuthenticated(true);
+      localStorage.setItem('token', JSON.stringify(response.data.token))
+      localStorage.setItem('username', JSON.stringify(response.data.username))
+      localStorage.setItem('user_id', JSON.stringify(response.data.user_id))
+      localStorage.setItem('authenticated', JSON.stringify(true)) 
+      console.log(response)
+    })
   }
 
   return (
-    <div className="">
+    <>
+      {
+      authenticated ? (
+        <Navigate to="/signin" />
+        ) : (
       <div className="flex flex-row items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
         <div className="sm:max-w-md mr-10 ">
           <a href="/">
             <h3 className="text-8xl font-bold text-black-600">Poverty-</h3>
-            {/* <img src={line}/> */}
 
             <h3 className="text-8xl text-end font-bold text-green-600">Line</h3>
           </a>
           <img src={womanpic} alt="/"/>
         </div>
-        <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-lg sm:max-w-sm sm:rounded-lg">
+              <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-lg sm:max-w-sm sm:rounded-lg">
+              <div className="">
+                <div className="please-log-in">
+              <p>{errors}</p>
+          </div>
         <a href="/">
             <h3 className="text-3xl font-bold text-green-600">Register</h3>
           </a>
@@ -59,16 +69,36 @@ export default function Registration({onLogin}) {
                 htmlFor="name"
                 className="block text-sm font-medium text-gray-700 undefined"
               >
-                Name
+                Full Names
               </label>
               <div className="flex flex-col items-start">
                 <input
                   type="text"
                   name="name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  value={formData?.name}
+                  onChange={handleChange}
                   placeholder=" Name"
-                  id="name"
+                          id="name"
+                          required
+
+                  className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                />
+              <label
+                htmlFor="username"
+                className="block text-sm font-medium text-gray-700 undefined"
+              >
+                Username
+              </label>
+              </div>
+              <div className="flex flex-col items-start">
+                <input
+                  type="text"
+                  name="username"
+                  value={formData?.username}
+                  onChange={handleChange}
+                  placeholder=" Username"
+                          id="username"
+                          required
 
                   className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
@@ -85,10 +115,11 @@ export default function Registration({onLogin}) {
                 <input
                   type="email"
                   name="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={formData?.email}
+                  onChange={handleChange}
                   placeholder="✉️ Email"
-                  id="email"
+                          id="email"
+                          required
 
                   className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
@@ -105,10 +136,11 @@ export default function Registration({onLogin}) {
                 <input
                   type="password"
                   name="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  value={formData?.password}
+                  onChange={handleChange}
                   placeholder="🔓 Password"
-                  id="password"
+                          id="password"
+                          required
 
                   className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
@@ -126,32 +158,32 @@ export default function Registration({onLogin}) {
                   type="password"
                   name="password_confirmation"
                   id="password_confirmation"
-                  value={passwordConfirmation}
-                  onChange={(e) => setPasswordConfirmation(e.target.value)}
+                  value={formData?.password_confirmation}
+                  onChange={handleChange}
                   placeholder="🔓 Confirm Password"
-                  autoComplete="current-password"
+                          autoComplete="current-password"
+                          required
                   className="block w-full px-4 py-2 mt-2 text-green-700 bg-white border rounded-md focus:border-green-400 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 />
               </div>
             </div>
-            <a href="/" className="text-xs text-green-600 hover:underline">
-              Forget Password?
-            </a>
             <div className="flex items-center mt-4">
-              <button className="w-full px-4 py-2 tracking-wide text-black transition-colors duration-200 transform bg-green-700 rounded-md hover:bg-green-800 focus:outline-none focus:bg-purple-600">
+              <button type="submit" className="w-full px-4 py-2 tracking-wide text-black transition-colors duration-200 transform bg-green-700 rounded-md hover:bg-green-800 focus:outline-none focus:bg-purple-600">
                 Register
               </button>
             </div>
           </form>
           <div className="mt-4 text-grey-600">
             Already have an account?{" "}
-            <span>
-              <a className="text-green-600 hover:underline" href="/signin">
+            <span>                      
+            <Link to="/signin">
+              <a className="text-green-600 hover:underline" href="/login">
                 Log in
-              </a>
+              </a>                        
+            </Link>              
             </span>
           </div>
-          {/* <div className="flex items-center w-full my-4">
+          <div className="flex items-center w-full my-4">
             <hr className="w-full" />
             <p className="px-3 ">OR</p>
             <hr className="w-full" />
@@ -171,9 +203,11 @@ export default function Registration({onLogin}) {
               </svg>
               <p className="text-green-600">Login with Google</p>
             </button>
-          </div> */}
+          </div>
         </div>
       </div>
-    </div>
+    </div>)}
+    </>
+    
   );
 }
