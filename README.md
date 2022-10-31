@@ -15,7 +15,7 @@
 
 ## Project Description
 
-This is online software application for Poverty-line. Poverty~Line helps growing businesses by finding talents and connecting them with top-notch agencies. Users can sign up, post projects and review proposals to find the right independent contractor or agency for them
+This is an online software application for Poverty-line. Poverty~Line helps growing businesses by finding talents and connecting them with top-notch agencies. Users can sign up, post projects and review proposals to find the right independent contractor or agency for them
 
 ---
 
@@ -33,7 +33,7 @@ This is online software application for Poverty-line. Poverty~Line helps growing
 
 ### Getting Files
 
-- Fork the repo [LINK.](https://github.com/AchayoEarnest?tab=repositories)
+- Fork the repo [LINK.]()
 
 * Create a new branch in your terminal (git checkout -b improve-feature)
 * Install the prerequisites
@@ -42,7 +42,7 @@ This is online software application for Poverty-line. Poverty~Line helps growing
 * Add the changes and commit them (git commit -am "Improve App")
 * Push to the branch (git push origin improve-app)
 * Create a Pull request
-* Remember to also for the server from [LINK.](https://github.com/AchayoEarnest/phase-3-personal-blog-react-sinatra-project-api) and run it under its README.md instructions
+* Remember to also for the server from [LINK.]() and run it under its README.md instructions
 
 - Open the folder location on terminal and use the following command to run app:
 

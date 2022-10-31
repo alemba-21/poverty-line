@@ -1,11 +1,11 @@
 class JobsController < ApplicationController
-    before_action :authorized
+    # before_action :authorized
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
 
     def index
-        jobs = Job.all
-        render json: jobs, status: :ok
+        @jobs = Job.all
+        render json: @jobs, status: :ok
     end
 
     def show
@@ -25,7 +25,7 @@ class JobsController < ApplicationController
 
     private
     def job_params
-        params.permit(:job_title, :job_description, :required_skills, :job_link, :admin_id)
+        params.permit(:job_title, :company_name, :job_description, :deadline, :job_type, :required_skills, :job_link, :admin_id)
     end
 
     def render_not_found_response

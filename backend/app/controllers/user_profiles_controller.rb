@@ -1,11 +1,11 @@
 class UserProfilesController < ApplicationController
-    before_action :authorized
+    before_action :authorize_request
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
 
     def index
-        user_profiles = UserProfile.all
-        render json: user_profiles
+        @user_profiles = UserProfile.all
+        render json: @user_profiles
     end    
     
     def create
@@ -31,7 +31,7 @@ class UserProfilesController < ApplicationController
 
     private
     def user_profile_params
-        params.permit(:firstname, :middlename, :lastname, :email, :gender, :dob, :national_id, :address, :county, :estate, :user_id, :career_summary, :experience, :education, :skills_and_hobbies, :languages)
+        params.permit(:firstname, :middlename, :lastname, :email, :gender, :age, :national_id, :address, :phone, :county, :estate, :career_summary, :experience_date, :experience, :education_date, :education, :skills_and_hobbies, :languages, :user_id)
     end
 
     def render_not_found_response

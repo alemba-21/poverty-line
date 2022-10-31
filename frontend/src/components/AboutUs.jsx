@@ -2,9 +2,16 @@ import React from 'react';
 import Single from '../assets/single.png'
 import Double from '../assets/double.png'
 import Triple from '../assets/triple.png'
+import OurPartners from './OurPartners';
+import PartnersList from './PartnersList';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 const About = () => {
   return (
+    <div>
+        <OurPartners/>
+        <PartnersList/>
     <div className='w-full py-[10rem] px-4 bg-white'>
        <div className='text-center'>
                 <h2 className='text-5xl font-bold'>All-In-One Platform</h2>
@@ -60,6 +67,8 @@ const About = () => {
               </div>
           </div>
       </div>
+    </div>
+    <Footer/>
     </div>
   );
 };
