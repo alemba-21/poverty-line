@@ -24,7 +24,7 @@ export const LeftBarData = [
   {
     title: 'Messages',
     icon: <MarkChatUnreadIcon/>,
-    link:'/Home',
+    link:'/chat',
   },
 ];
 

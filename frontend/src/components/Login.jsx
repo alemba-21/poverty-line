@@ -40,7 +40,7 @@ export default function Login() {
     <>
       {
       authenticated ? (
-      <Navigate to="/profile" />
+      <Navigate to="/User" />
         ) : (
         <div className="flex flex-row items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
           <div className="please-log-in">
