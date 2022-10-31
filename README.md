@@ -15,13 +15,13 @@
 
 ## Project Description
 
-This is an online software application for Poverty-line. Poverty~Line helps growing businesses by finding talents and connecting them with top-notch agencies. Users can sign up, post projects and review proposals to find the right independent contractor or agency for them
+This is the front End for the Poverty-line website. Poverty~Line helps growing businesses find and work with top-notch talent and agencies. Users can sign up, post projects and review proposals to find the right independent contractor or agency for you
 
 ---
 
 ## SCREENSHOTS
 
-![image](./frontend/public/images/Screenshot%20from%202022-10-19%2022-56-29.png)
+![image](./public/images/Screenshot%20from%202022-10-19%2022-56-29.png)
 
 ---
 
@@ -33,7 +33,7 @@ This is an online software application for Poverty-line. Poverty~Line helps grow
 
 ### Getting Files
 
-- Fork the repo [LINK.]()
+- Fork the repo [LINK.](https://github.com/AchayoEarnest?tab=repositories)
 
 * Create a new branch in your terminal (git checkout -b improve-feature)
 * Install the prerequisites
@@ -42,7 +42,7 @@ This is an online software application for Poverty-line. Poverty~Line helps grow
 * Add the changes and commit them (git commit -am "Improve App")
 * Push to the branch (git push origin improve-app)
 * Create a Pull request
-* Remember to also for the server from [LINK.]() and run it under its README.md instructions
+* Remember to also for the server from [LINK.](https://github.com/AchayoEarnest/phase-3-personal-blog-react-sinatra-project-api) and run it under its README.md instructions
 
 - Open the folder location on terminal and use the following command to run app:
 
@@ -72,9 +72,6 @@ Or you can access the web application directly via this [LINK.]('https://github.
 1. React
 2. JSX
 3. Tailwind
-4. Json
-5. Postgresql
-6. Rails
 
 ---
 
