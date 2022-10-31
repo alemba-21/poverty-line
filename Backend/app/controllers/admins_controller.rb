@@ -11,8 +11,25 @@ class AdminsController < ApplicationController
         render json: @user
     end
 
-    private  
-    
+    def create
+        @user = Admin.create!(user_params)
+        render json: @user, status: :created
+    end 
+
+    def update
+        @user = Admin.find(params[:id])
+        @user.update!(user_params)
+        render json: @user, status: :accepted
+    end 
+
+    def destroy
+        @user = Admin.find(params[:id])
+        @user.destroy
+        head :no_content
+    end 
+
+    private 
+
     def render_not_found_response
         render json: { error: "Admin not found" }, status: :not_found
     end
