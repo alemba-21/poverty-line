@@ -12,6 +12,7 @@ import ApplyJob from './Links/ApplyJob';
 import User from './Links/User';
 import Createjob from './Links/Createjob'
 import Navbar from './components/Navbar'
+import Admin from './Links/Admin';
 
 
 
@@ -33,6 +34,7 @@ function App() {
         <Route path="/post" element={<Createjob />} />
         <Route path="/Jobs" element={<Jobs/>}/>
         {/* <Route path="/Details" element={<JobDetails/>}/> */}
+        <Route path="/admin" element={<Admin/>} />
       </Routes>
     </Router>
       
