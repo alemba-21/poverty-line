@@ -7,7 +7,6 @@ import SignedUp from "./Links/SignedUp";
 import About from "./Links/About";
 import Profview from './Links/ProfView'
 import React from "react";
-
 import Message from "./Links/Message";
 import ApplyJob from './Links/ApplyJob';
 import User from './Links/User';
@@ -32,7 +31,6 @@ function App() {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/profile" element={<Profile/>} />
         <Route path="/create" element={<Profile />} />
-
         <Route path="/apply" element={<ApplyJob />} />
         <Route path="/post" element={<Createjob />} />
         <Route path="/Jobs" element={<Jobs/>}/>
