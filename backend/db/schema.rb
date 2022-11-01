@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_28_165455) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_01_045236) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -45,15 +45,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_28_165455) do
     t.string "estate"
     t.integer "user_id"
     t.text "career_summary"
-    t.text "experience_date"
     t.text "experience"
     t.text "education"
-    t.text "education_date"
     t.text "skills_and_hobbies"
     t.string "languages"
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "experience_start_date"
+    t.string "experience_end_date"
+    t.string "education_start_date"
+    t.string "education_end_date"
   end
 
   create_table "users", force: :cascade do |t|

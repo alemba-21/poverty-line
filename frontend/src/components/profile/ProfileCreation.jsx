@@ -19,11 +19,15 @@ const ProfileCreation = () => {
     county: "",
     estate: "",
     career_summary: "",
-    experience_date: "",
+    experience_start_date: "",
+    experience_end_date: "",
     experience: "",
-    education_date: "",
+    education_start_date: "",
+    education_end_date: "",
     education: "",
     skills_and_hobbies: "",
+    languages: "",
+    image: "",
   });
 
   //hangle change event
