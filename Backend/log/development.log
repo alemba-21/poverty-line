@@ -1075,3 +1075,23 @@ Filter chain halted as :authorize_request rendered or redirected
 Completed 401 Unauthorized in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 202)
 
 
+Started GET "/user_profiles" for ::1 at 2022-11-01 09:01:33 +0300
+Processing by UserProfilesController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mUserProfile Load (0.6ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.79ms)
+Completed 200 OK in 56ms (Views: 5.2ms | ActiveRecord: 20.1ms | Allocations: 4301)
+
+
+Started GET "/user_profiles" for ::1 at 2022-11-01 09:01:33 +0300
+Processing by UserProfilesController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mUserProfile Load (0.5ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 1.1ms | Allocations: 1344)
+
+
