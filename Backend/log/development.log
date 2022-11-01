@@ -1,0 +1,1097 @@
+Started GET "/" for 127.0.0.1 at 2022-10-28 12:31:51 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.1ms | Allocations: 666)
+Completed 200 OK in 23ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 3640)
+
+
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/users" for ::1 at 2022-10-28 12:50:46 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"scottjoe@gmail.com", "name"=>"Scott", "username"=>"joe", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"joe", "email"=>"scottjoe@gmail.com", "name"=>"Scott"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007fbbb041b658>, params: {"email"=>"scottjoe@gmail.com", "name"=>"Scott", "username"=>"joe", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"username"=>"joe", "email"=>"scottjoe@gmail.com", "name"=>"Scott"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (2.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "joe"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Started POST "/users" for ::1 at 2022-10-28 12:50:47 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"scottjoe@gmail.com", "name"=>"Scott", "username"=>"joe", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"joe", "email"=>"scottjoe@gmail.com", "name"=>"Scott"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x000055db563415e8>, params: {"email"=>"scottjoe@gmail.com", "name"=>"Scott", "username"=>"joe", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"username"=>"joe", "email"=>"scottjoe@gmail.com", "name"=>"Scott"}} }[0m
+  [1m[36mTRANSACTION (10.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (3.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (7.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "joe"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (8.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 422 Unprocessable Entity in 2984ms (Views: 6.2ms | ActiveRecord: 13.9ms | Allocations: 1200274)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 422 Unprocessable Entity in 4037ms (Views: 0.8ms | ActiveRecord: 145.4ms | Allocations: 1750190)
+
+
+Started POST "/users" for ::1 at 2022-10-28 12:50:58 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"scottjoe@gmail.com", "name"=>"Scott", "username"=>"joe", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"joe", "email"=>"scottjoe@gmail.com", "name"=>"Scott"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007fbba0016068>, params: {"email"=>"scottjoe@gmail.com", "name"=>"Scott", "username"=>"joe", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"username"=>"joe", "email"=>"scottjoe@gmail.com", "name"=>"Scott"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "joe"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 422 Unprocessable Entity in 304ms (Views: 0.6ms | ActiveRecord: 2.1ms | Allocations: 3292)
+
+
+Started POST "/users" for ::1 at 2022-10-28 12:51:01 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"scottjoe@gmail.com", "name"=>"Scott", "username"=>"joe", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"joe", "email"=>"scottjoe@gmail.com", "name"=>"Scott"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007fbba400d3b0>, params: {"email"=>"scottjoe@gmail.com", "name"=>"Scott", "username"=>"joe", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"username"=>"joe", "email"=>"scottjoe@gmail.com", "name"=>"Scott"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "joe"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 422 Unprocessable Entity in 300ms (Views: 0.8ms | ActiveRecord: 1.6ms | Allocations: 3294)
+
+
+Started POST "/users" for ::1 at 2022-10-28 12:51:14 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"scottjoe@gmail.com", "name"=>"Scott", "username"=>"joe", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"joe", "email"=>"scottjoe@gmail.com", "name"=>"Scott"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007fbb989f8368>, params: {"email"=>"scottjoe@gmail.com", "name"=>"Scott", "username"=>"joe", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"username"=>"joe", "email"=>"scottjoe@gmail.com", "name"=>"Scott"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "joe"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 422 Unprocessable Entity in 296ms (Views: 0.7ms | ActiveRecord: 1.2ms | Allocations: 3276)
+
+
+Started POST "/users" for ::1 at 2022-10-28 12:53:02 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"brianmaina@gmail.com", "name"=>"brian", "username"=>"maina", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"maina", "email"=>"brianmaina@gmail.com", "name"=>"brian"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007fbb924cca70>, params: {"email"=>"brianmaina@gmail.com", "name"=>"brian", "username"=>"maina", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"username"=>"maina", "email"=>"brianmaina@gmail.com", "name"=>"brian"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "brianmaina@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "maina"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 422 Unprocessable Entity in 300ms (Views: 1.2ms | ActiveRecord: 1.9ms | Allocations: 3280)
+
+
+Started POST "/users" for ::1 at 2022-10-28 12:53:02 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"brianmaina@gmail.com", "name"=>"brian", "username"=>"maina", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"maina", "email"=>"brianmaina@gmail.com", "name"=>"brian"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007fbba0088460>, params: {"email"=>"brianmaina@gmail.com", "name"=>"brian", "username"=>"maina", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"username"=>"maina", "email"=>"brianmaina@gmail.com", "name"=>"brian"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "brianmaina@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "maina"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 422 Unprocessable Entity in 310ms (Views: 1.3ms | ActiveRecord: 1.9ms | Allocations: 3279)
+
+
+Started POST "/users" for ::1 at 2022-10-28 12:53:12 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"brianmaina@gmail.com", "name"=>"brian", "username"=>"maina", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"maina", "email"=>"brianmaina@gmail.com", "name"=>"brian"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007fbba4093aa0>, params: {"email"=>"brianmaina@gmail.com", "name"=>"brian", "username"=>"maina", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"username"=>"maina", "email"=>"brianmaina@gmail.com", "name"=>"brian"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "brianmaina@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "maina"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (2.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "maina"], ["email", "brianmaina@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2022-10-28 09:53:12.714304"], ["updated_at", "2022-10-28 09:53:12.714304"], ["name", "brian"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 321ms (Views: 0.8ms | ActiveRecord: 7.3ms | Allocations: 4160)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/auth/login" for ::1 at 2022-10-28 12:54:55 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"brianmaina@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"brianmaina@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "brianmaina@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 285ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 1377)
+
+
+Started POST "/user_profiles" for ::1 at 2022-10-28 12:57:22 +0300
+Processing by UserProfilesController#create as */*
+  Parameters: {"firstname"=>"Brian", "middlename"=>"Maina", "lastname"=>"joe", "email"=>"bria", "gender"=>"Female", "age"=>"25", "national_id"=>"12345678", "address"=>"12", "phone"=>"0792539733", "county"=>"Mombasa", "estate"=>"Hunt", "career_summary"=>"The numerical value of anyth in Chaldean Numerology is: 7. Pythagorean Numerology. The numerical value of anyth in Pythagorean Numerology is: 5 ...", "experience_date"=>"2021-04-01", "experience"=>"Fullstack Developer", "education_date"=>"2021-06-17", "education"=>"Moi University", "skills_and_hobbies"=>"Typing\n", "user_profile"=>{"firstname"=>"Brian", "middlename"=>"Maina", "lastname"=>"joe", "email"=>"bria", "phone"=>"0792539733", "gender"=>"Female", "national_id"=>"12345678", "address"=>"12", "county"=>"Mombasa", "estate"=>"Hunt", "career_summary"=>"The numerical value of anyth in Chaldean Numerology is: 7. Pythagorean Numerology. The numerical value of anyth in Pythagorean Numerology is: 5 ...", "experience"=>"Fullstack Developer", "education"=>"Moi University", "skills_and_hobbies"=>"Typing\n"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 1.4ms | ActiveRecord: 4.0ms | Allocations: 309)
+
+
+Started POST "/user_profiles" for ::1 at 2022-10-28 12:57:23 +0300
+Processing by UserProfilesController#create as */*
+  Parameters: {"firstname"=>"Brian", "middlename"=>"Maina", "lastname"=>"joe", "email"=>"bria", "gender"=>"Female", "age"=>"25", "national_id"=>"12345678", "address"=>"12", "phone"=>"0792539733", "county"=>"Mombasa", "estate"=>"Hunt", "career_summary"=>"The numerical value of anyth in Chaldean Numerology is: 7. Pythagorean Numerology. The numerical value of anyth in Pythagorean Numerology is: 5 ...", "experience_date"=>"2021-04-01", "experience"=>"Fullstack Developer", "education_date"=>"2021-06-17", "education"=>"Moi University", "skills_and_hobbies"=>"Typing\n", "user_profile"=>{"firstname"=>"Brian", "middlename"=>"Maina", "lastname"=>"joe", "email"=>"bria", "phone"=>"0792539733", "gender"=>"Female", "national_id"=>"12345678", "address"=>"12", "county"=>"Mombasa", "estate"=>"Hunt", "career_summary"=>"The numerical value of anyth in Chaldean Numerology is: 7. Pythagorean Numerology. The numerical value of anyth in Pythagorean Numerology is: 5 ...", "experience"=>"Fullstack Developer", "education"=>"Moi University", "skills_and_hobbies"=>"Typing\n"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 203)
+
+
+Started POST "/user_profiles" for ::1 at 2022-10-28 12:57:30 +0300
+Processing by UserProfilesController#create as */*
+  Parameters: {"firstname"=>"Brian", "middlename"=>"Maina", "lastname"=>"joe", "email"=>"bria", "gender"=>"Female", "age"=>"25", "national_id"=>"12345678", "address"=>"12", "phone"=>"0792539733", "county"=>"Mombasa", "estate"=>"Hunt", "career_summary"=>"The numerical value of anyth in Chaldean Numerology is: 7. Pythagorean Numerology. The numerical value of anyth in Pythagorean Numerology is: 5 ...", "experience_date"=>"2021-04-01", "experience"=>"Fullstack Developer", "education_date"=>"2021-06-17", "education"=>"Moi University", "skills_and_hobbies"=>"Typing\n", "user_profile"=>{"firstname"=>"Brian", "middlename"=>"Maina", "lastname"=>"joe", "email"=>"bria", "phone"=>"0792539733", "gender"=>"Female", "national_id"=>"12345678", "address"=>"12", "county"=>"Mombasa", "estate"=>"Hunt", "career_summary"=>"The numerical value of anyth in Chaldean Numerology is: 7. Pythagorean Numerology. The numerical value of anyth in Pythagorean Numerology is: 5 ...", "experience"=>"Fullstack Developer", "education"=>"Moi University", "skills_and_hobbies"=>"Typing\n"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 203)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-29 12:01:31 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20221028165455_create_job_applications.rb
+
+
+):
+  
+activerecord (7.0.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2022-10-29 12:01:32 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20221028165455_create_job_applications.rb
+
+
+):
+  
+activerecord (7.0.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-10-29 12:01:32 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20221028165455_create_job_applications.rb
+
+
+):
+  
+activerecord (7.0.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-10-29 12:01:33 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20221028165455_create_job_applications.rb
+
+
+):
+  
+activerecord (7.0.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/rails/actions" for 127.0.0.1 at 2022-10-29 12:01:41 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1655429459639930310)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateJobApplications (20221028165455)
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (29.5ms)[0m  [1m[35mCREATE TABLE "job_applications" ("id" bigserial primary key, "cover_letter" character varying, "attachment" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221028165455"]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1655429459639930310)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-10-29 12:01:41 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.4ms | Allocations: 361)
+Completed 200 OK in 11ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 1347)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1655429459639930310)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1655429459639930310)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-10-29 12:02:34 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.7ms | Allocations: 353)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 1169)
+
+
+Started POST "/users" for ::1 at 2022-10-29 12:06:18 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"scottjoe100@gmail.com", "name"=>"morar", "username"=>"joez", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"joez", "email"=>"scottjoe100@gmail.com", "name"=>"morar"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f55c893f998>, params: {"email"=>"scottjoe100@gmail.com", "name"=>"morar", "username"=>"joez", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"username"=>"joez", "email"=>"scottjoe100@gmail.com", "name"=>"morar"}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (7.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe100@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "joez"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "joez"], ["email", "scottjoe100@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2022-10-29 09:06:18.905517"], ["updated_at", "2022-10-29 09:06:18.905517"], ["name", "morar"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 200 OK in 319ms (Views: 2.2ms | ActiveRecord: 18.0ms | Allocations: 19422)
+
+
+Started POST "/auth/login" for ::1 at 2022-10-29 12:06:22 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"scottjoe100@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"scottjoe100@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe100@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 200 OK in 297ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 1226)
+
+
+Started POST "/user_profiles" for ::1 at 2022-10-29 12:08:04 +0300
+Processing by UserProfilesController#create as */*
+  Parameters: {"firstname"=>"Maiiiii", "middlename"=>"Joee", "lastname"=>"Morrr", "email"=>"scottjoe100@gmail.com", "gender"=>"Female", "age"=>"46", "national_id"=>"34567809", "address"=>"40500", "phone"=>"0792539733", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience_date"=>"2022-09-28", "experience"=>"Welcome to your personal dashboard, where you can find an introduction to ", "education_date"=>"2022-10-06", "education"=>"Welcome to your personal dashboard, where you can find an introduction to ", "skills_and_hobbies"=>"Eating", "user_profile"=>{"firstname"=>"Maiiiii", "middlename"=>"Joee", "lastname"=>"Morrr", "email"=>"scottjoe100@gmail.com", "phone"=>"0792539733", "gender"=>"Female", "national_id"=>"34567809", "address"=>"40500", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience"=>"Welcome to your personal dashboard, where you can find an introduction to ", "education"=>"Welcome to your personal dashboard, where you can find an introduction to ", "skills_and_hobbies"=>"Eating"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+[31mUnpermitted parameter: :user_profile. Context: { controller: UserProfilesController, action: create, request: #<ActionDispatch::Request:0x00007f55b028f228>, params: {"firstname"=>"Maiiiii", "middlename"=>"Joee", "lastname"=>"Morrr", "email"=>"scottjoe100@gmail.com", "gender"=>"Female", "age"=>"46", "national_id"=>"34567809", "address"=>"40500", "phone"=>"0792539733", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience_date"=>"2022-09-28", "experience"=>"Welcome to your personal dashboard, where you can find an introduction to ", "education_date"=>"2022-10-06", "education"=>"Welcome to your personal dashboard, where you can find an introduction to ", "skills_and_hobbies"=>"Eating", "controller"=>"user_profiles", "action"=>"create", "user_profile"=>{"firstname"=>"Maiiiii", "middlename"=>"Joee", "lastname"=>"Morrr", "email"=>"scottjoe100@gmail.com", "phone"=>"0792539733", "gender"=>"Female", "national_id"=>"34567809", "address"=>"40500", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience"=>"Welcome to your personal dashboard, where you can find an introduction to ", "education"=>"Welcome to your personal dashboard, where you can find an introduction to ", "skills_and_hobbies"=>"Eating"}} }[0m
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 5.3ms | Allocations: 21469)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'age' for UserProfile.):
+  
+app/controllers/user_profiles_controller.rb:12:in `create'
+Started POST "/user_profiles" for ::1 at 2022-10-29 12:08:32 +0300
+Processing by UserProfilesController#create as */*
+  Parameters: {"firstname"=>"Maiiiii", "middlename"=>"Joee", "lastname"=>"Morrr", "email"=>"scottjoe100@gmail.com", "gender"=>"Female", "age"=>"46", "national_id"=>"34567809", "address"=>"40500", "phone"=>"0792539733", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience_date"=>"2022-09-28", "experience"=>"Welcome to your personal dashboard, where you can find an introduction to ", "education_date"=>"2022-10-06", "education"=>"Welcome to your personal dashboard, where you can find an introduction to ", "skills_and_hobbies"=>"Eating", "user_profile"=>{"firstname"=>"Maiiiii", "middlename"=>"Joee", "lastname"=>"Morrr", "email"=>"scottjoe100@gmail.com", "phone"=>"0792539733", "gender"=>"Female", "national_id"=>"34567809", "address"=>"40500", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience"=>"Welcome to your personal dashboard, where you can find an introduction to ", "education"=>"Welcome to your personal dashboard, where you can find an introduction to ", "skills_and_hobbies"=>"Eating"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+[31mUnpermitted parameter: :user_profile. Context: { controller: UserProfilesController, action: create, request: #<ActionDispatch::Request:0x00007f55c8c8edd8>, params: {"firstname"=>"Maiiiii", "middlename"=>"Joee", "lastname"=>"Morrr", "email"=>"scottjoe100@gmail.com", "gender"=>"Female", "age"=>"46", "national_id"=>"34567809", "address"=>"40500", "phone"=>"0792539733", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience_date"=>"2022-09-28", "experience"=>"Welcome to your personal dashboard, where you can find an introduction to ", "education_date"=>"2022-10-06", "education"=>"Welcome to your personal dashboard, where you can find an introduction to ", "skills_and_hobbies"=>"Eating", "controller"=>"user_profiles", "action"=>"create", "user_profile"=>{"firstname"=>"Maiiiii", "middlename"=>"Joee", "lastname"=>"Morrr", "email"=>"scottjoe100@gmail.com", "phone"=>"0792539733", "gender"=>"Female", "national_id"=>"34567809", "address"=>"40500", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience"=>"Welcome to your personal dashboard, where you can find an introduction to ", "education"=>"Welcome to your personal dashboard, where you can find an introduction to ", "skills_and_hobbies"=>"Eating"}} }[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms | Allocations: 1069)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'age' for UserProfile.):
+  
+app/controllers/user_profiles_controller.rb:12:in `create'
+Started POST "/user_profiles" for ::1 at 2022-10-29 12:08:37 +0300
+Processing by UserProfilesController#create as */*
+  Parameters: {"firstname"=>"Maiiiii", "middlename"=>"Joee", "lastname"=>"Morrr", "email"=>"scottjoe100@gmail.com", "gender"=>"Female", "age"=>"46", "national_id"=>"34567809", "address"=>"40500", "phone"=>"0792539733", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience_date"=>"2022-09-28", "experience"=>"Welcome to your personal dashboard, where you can find an introduction to ", "education_date"=>"2022-10-06", "education"=>"Welcome to your personal dashboard, where you can find an introduction to ", "skills_and_hobbies"=>"Eating", "user_profile"=>{"firstname"=>"Maiiiii", "middlename"=>"Joee", "lastname"=>"Morrr", "email"=>"scottjoe100@gmail.com", "phone"=>"0792539733", "gender"=>"Female", "national_id"=>"34567809", "address"=>"40500", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience"=>"Welcome to your personal dashboard, where you can find an introduction to ", "education"=>"Welcome to your personal dashboard, where you can find an introduction to ", "skills_and_hobbies"=>"Eating"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+[31mUnpermitted parameter: :user_profile. Context: { controller: UserProfilesController, action: create, request: #<ActionDispatch::Request:0x00007f55c41cb580>, params: {"firstname"=>"Maiiiii", "middlename"=>"Joee", "lastname"=>"Morrr", "email"=>"scottjoe100@gmail.com", "gender"=>"Female", "age"=>"46", "national_id"=>"34567809", "address"=>"40500", "phone"=>"0792539733", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience_date"=>"2022-09-28", "experience"=>"Welcome to your personal dashboard, where you can find an introduction to ", "education_date"=>"2022-10-06", "education"=>"Welcome to your personal dashboard, where you can find an introduction to ", "skills_and_hobbies"=>"Eating", "controller"=>"user_profiles", "action"=>"create", "user_profile"=>{"firstname"=>"Maiiiii", "middlename"=>"Joee", "lastname"=>"Morrr", "email"=>"scottjoe100@gmail.com", "phone"=>"0792539733", "gender"=>"Female", "national_id"=>"34567809", "address"=>"40500", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience"=>"Welcome to your personal dashboard, where you can find an introduction to ", "education"=>"Welcome to your personal dashboard, where you can find an introduction to ", "skills_and_hobbies"=>"Eating"}} }[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms | Allocations: 1069)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'age' for UserProfile.):
+  
+app/controllers/user_profiles_controller.rb:12:in `create'
+Started POST "/user_profiles" for ::1 at 2022-10-29 12:09:54 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UserProfilesController#create as */*
+  Parameters: {"firstname"=>"Maiiiii", "middlename"=>"Joee", "lastname"=>"Morrr", "email"=>"scottjoe100@gmail.com", "gender"=>"Female", "age"=>"46", "national_id"=>"34567809", "address"=>"40500", "phone"=>"0792539733", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience_date"=>"2022-09-28", "experience"=>"Welcome to your personal dashboard, where you can find an introduction to ", "education_date"=>"2022-10-06", "education"=>"Welcome to your personal dashboard, where you can find an introduction to ", "skills_and_hobbies"=>"Eating", "user_profile"=>{"firstname"=>"Maiiiii", "middlename"=>"Joee", "lastname"=>"Morrr", "email"=>"scottjoe100@gmail.com", "phone"=>"0792539733", "gender"=>"Female", "national_id"=>"34567809", "address"=>"40500", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience"=>"Welcome to your personal dashboard, where you can find an introduction to ", "education"=>"Welcome to your personal dashboard, where you can find an introduction to ", "skills_and_hobbies"=>"Eating"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+[31mUnpermitted parameter: :user_profile. Context: { controller: UserProfilesController, action: create, request: #<ActionDispatch::Request:0x00007fd31868a2c0>, params: {"firstname"=>"Maiiiii", "middlename"=>"Joee", "lastname"=>"Morrr", "email"=>"scottjoe100@gmail.com", "gender"=>"Female", "age"=>"46", "national_id"=>"34567809", "address"=>"40500", "phone"=>"0792539733", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience_date"=>"2022-09-28", "experience"=>"Welcome to your personal dashboard, where you can find an introduction to ", "education_date"=>"2022-10-06", "education"=>"Welcome to your personal dashboard, where you can find an introduction to ", "skills_and_hobbies"=>"Eating", "controller"=>"user_profiles", "action"=>"create", "user_profile"=>{"firstname"=>"Maiiiii", "middlename"=>"Joee", "lastname"=>"Morrr", "email"=>"scottjoe100@gmail.com", "phone"=>"0792539733", "gender"=>"Female", "national_id"=>"34567809", "address"=>"40500", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience"=>"Welcome to your personal dashboard, where you can find an introduction to ", "education"=>"Welcome to your personal dashboard, where you can find an introduction to ", "skills_and_hobbies"=>"Eating"}} }[0m
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 9.0ms | Allocations: 55456)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'age' for UserProfile.):
+  
+app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1655429459639930310)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateJobApplications (20221028165455)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.8ms)[0m  [1m[35mDROP TABLE "job_applications"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20221028165455"]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(1655429459639930310)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1655429459639930310)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNameToUsers (20221025075143)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "name"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20221025075143"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1655429459639930310)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1655429459639930310)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20221022054110)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (2.0ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20221022054110"]]
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1655429459639930310)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1655429459639930310)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateJobs (20221020094411)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "jobs"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20221020094411"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(1655429459639930310)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1655429459639930310)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUserProfiles (20221019114153)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE "user_profiles"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20221019114153"]]
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1655429459639930310)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1655429459639930310)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(1655429459639930310)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1655429459639930310)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUserProfiles (20221019114153)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (30.7ms)[0m  [1m[35mCREATE TABLE "user_profiles" ("id" bigserial primary key, "firstname" character varying, "middlename" character varying, "lastname" character varying, "email" character varying, "gender" character varying, "age" character varying, "national_id" integer, "address" character varying, "phone" integer, "county" character varying, "estate" character varying, "user_id" integer, "career_summary" text, "experience_date" text, "experience" text, "education" text, "education_date" text, "skills_and_hobbies" text, "languages" character varying, "image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221019114153"]]
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateJobs (20221020094411)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.9ms)[0m  [1m[35mCREATE TABLE "jobs" ("id" bigserial primary key, "job_title" character varying, "company_name" character varying, "job_description" text, "deadline" date, "job_type" text, "required_skills" text, "job_link" character varying, "admin_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221020094411"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsers (20221022054110)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (18.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221022054110"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToUsers (20221025075143)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "name" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221025075143"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateJobApplications (20221028165455)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "job_applications" ("id" bigserial primary key, "cover_letter" character varying, "attachment" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221028165455"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1655429459639930310)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/users" for ::1 at 2022-10-29 12:14:59 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"scottjoe100@gmail.com", "name"=>"Scott", "username"=>"joe", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"joe", "email"=>"scottjoe100@gmail.com", "name"=>"Scott"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x0000561b9b150920>, params: {"email"=>"scottjoe100@gmail.com", "name"=>"Scott", "username"=>"joe", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"username"=>"joe", "email"=>"scottjoe100@gmail.com", "name"=>"Scott"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe100@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "joe"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "joe"], ["email", "scottjoe100@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2022-10-29 09:14:59.713321"], ["updated_at", "2022-10-29 09:14:59.713321"], ["name", "Scott"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 314ms (Views: 1.9ms | ActiveRecord: 7.9ms | Allocations: 6979)
+
+
+Started POST "/auth/login" for ::1 at 2022-10-29 12:15:01 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"scottjoe100@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"scottjoe100@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe100@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 200 OK in 281ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 1219)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/user_profiles" for ::1 at 2022-10-29 12:17:19 +0300
+Processing by UserProfilesController#create as */*
+  Parameters: {"firstname"=>"Joseph", "middlename"=>"Doe", "lastname"=>"Maina", "email"=>"scottjoe100@gmail.com", "gender"=>"Female", "age"=>"12", "national_id"=>"35591526", "address"=>"40500", "phone"=>"0792539733", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience_date"=>"2022-10-06", "experience"=>"Welcome to your personal dashboard, where you can find an introduction", "education_date"=>"2022-10-14", "education"=>"Welcome to your personal dashboard, where you can find an introduction", "skills_and_hobbies"=>"Eating", "user_profile"=>{"firstname"=>"Joseph", "middlename"=>"Doe", "lastname"=>"Maina", "email"=>"scottjoe100@gmail.com", "gender"=>"Female", "age"=>"12", "national_id"=>"35591526", "address"=>"40500", "phone"=>"0792539733", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience_date"=>"2022-10-06", "experience"=>"Welcome to your personal dashboard, where you can find an introduction", "education"=>"Welcome to your personal dashboard, where you can find an introduction", "education_date"=>"2022-10-14", "skills_and_hobbies"=>"Eating"}}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 9ms (Views: 0.7ms | ActiveRecord: 3.4ms | Allocations: 905)
+
+
+Started POST "/user_profiles" for ::1 at 2022-10-29 12:17:29 +0300
+Processing by UserProfilesController#create as */*
+  Parameters: {"firstname"=>"Joseph", "middlename"=>"Doe", "lastname"=>"Maina", "email"=>"scottjoe100@gmail.com", "gender"=>"Female", "age"=>"12", "national_id"=>"35591526", "address"=>"40500", "phone"=>"0792539733", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience_date"=>"2022-10-06", "experience"=>"Welcome to your personal dashboard, where you can find an introduction", "education_date"=>"2022-10-14", "education"=>"Welcome to your personal dashboard, where you can find an introduction", "skills_and_hobbies"=>"Eating", "user_profile"=>{"firstname"=>"Joseph", "middlename"=>"Doe", "lastname"=>"Maina", "email"=>"scottjoe100@gmail.com", "gender"=>"Female", "age"=>"12", "national_id"=>"35591526", "address"=>"40500", "phone"=>"0792539733", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience_date"=>"2022-10-06", "experience"=>"Welcome to your personal dashboard, where you can find an introduction", "education"=>"Welcome to your personal dashboard, where you can find an introduction", "education_date"=>"2022-10-14", "skills_and_hobbies"=>"Eating"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 740)
+
+
+Started POST "/auth/login" for ::1 at 2022-10-29 12:20:17 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"scottjoe100@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"scottjoe100@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe100@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 333ms (Views: 1.7ms | ActiveRecord: 4.8ms | Allocations: 36749)
+
+
+Started POST "/user_profiles" for ::1 at 2022-10-29 12:22:04 +0300
+Processing by UserProfilesController#create as */*
+  Parameters: {"firstname"=>"Joseph", "middlename"=>"Maina", "lastname"=>"Morara", "email"=>"scottjoe100@gmail.com", "gender"=>"Female", "age"=>"10", "national_id"=>"35591526", "address"=>"40500", "phone"=>"0792539733", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience_date"=>"2022-10-07", "experience"=>"Welcome to your personal dashboard, where you can find an introduction", "education_date"=>"2022-10-12", "education"=>"Welcome to your personal dashboard, where you can find an introduction", "skills_and_hobbies"=>"Eating", "user_profile"=>{"firstname"=>"Joseph", "middlename"=>"Maina", "lastname"=>"Morara", "email"=>"scottjoe100@gmail.com", "gender"=>"Female", "age"=>"10", "national_id"=>"35591526", "address"=>"40500", "phone"=>"0792539733", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience_date"=>"2022-10-07", "experience"=>"Welcome to your personal dashboard, where you can find an introduction", "education"=>"Welcome to your personal dashboard, where you can find an introduction", "education_date"=>"2022-10-12", "skills_and_hobbies"=>"Eating"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.8ms | ActiveRecord: 4.2ms | Allocations: 313)
+
+
+Started POST "/user_profiles" for ::1 at 2022-10-29 12:22:17 +0300
+Processing by UserProfilesController#create as */*
+  Parameters: {"firstname"=>"Joseph", "middlename"=>"Maina", "lastname"=>"Morara", "email"=>"scottjoe100@gmail.com", "gender"=>"Female", "age"=>"10", "national_id"=>"35591526", "address"=>"40500", "phone"=>"0792539733", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience_date"=>"2022-10-07", "experience"=>"Welcome to your personal dashboard, where you can find an introduction", "education_date"=>"2022-10-12", "education"=>"Welcome to your personal dashboard, where you can find an introduction", "skills_and_hobbies"=>"Eating", "user_profile"=>{"firstname"=>"Joseph", "middlename"=>"Maina", "lastname"=>"Morara", "email"=>"scottjoe100@gmail.com", "gender"=>"Female", "age"=>"10", "national_id"=>"35591526", "address"=>"40500", "phone"=>"0792539733", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience_date"=>"2022-10-07", "experience"=>"Welcome to your personal dashboard, where you can find an introduction", "education"=>"Welcome to your personal dashboard, where you can find an introduction", "education_date"=>"2022-10-12", "skills_and_hobbies"=>"Eating"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 205)
+
+
+Started POST "/user_profiles" for ::1 at 2022-10-29 12:25:40 +0300
+Processing by UserProfilesController#create as */*
+  Parameters: {"firstname"=>"Joseph", "middlename"=>"Maina", "lastname"=>"Morara", "email"=>"scottjoe100@gmail.com", "gender"=>"Female", "age"=>"10", "national_id"=>"35591526", "address"=>"40500", "phone"=>"0792539733", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience_date"=>"2022-10-07", "experience"=>"Welcome to your personal dashboard, where you can find an introduction", "education_date"=>"2022-10-12", "education"=>"Welcome to your personal dashboard, where you can find an introduction", "skills_and_hobbies"=>"Eating", "user_profile"=>{"firstname"=>"Joseph", "middlename"=>"Maina", "lastname"=>"Morara", "email"=>"scottjoe100@gmail.com", "gender"=>"Female", "age"=>"10", "national_id"=>"35591526", "address"=>"40500", "phone"=>"0792539733", "county"=>"", "estate"=>"Hunters", "career_summary"=>"Welcome to your personal dashboard, where you can find an introduction to how GitHub works, tools to help you build software, and help merging your first lines of code.", "experience_date"=>"2022-10-07", "experience"=>"Welcome to your personal dashboard, where you can find an introduction", "education"=>"Welcome to your personal dashboard, where you can find an introduction", "education_date"=>"2022-10-12", "skills_and_hobbies"=>"Eating"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.9ms | ActiveRecord: 1.7ms | Allocations: 451)
+
+
+Started POST "/job_applications" for ::1 at 2022-10-29 12:26:57 +0300
+Processing by JobApplicationsController#create as */*
+  Parameters: {"cover_letter"=>"Welcome to your personal dashboard, where you can find an introduction", "attachment"=>"C:\\fakepath\\Export.pdf", "job_application"=>{"cover_letter"=>"Welcome to your personal dashboard, where you can find an introduction", "attachment"=>"C:\\fakepath\\Export.pdf"}}
+[31mUnpermitted parameter: :job_application. Context: { controller: JobApplicationsController, action: create, request: #<ActionDispatch::Request:0x00007f749c689a30>, params: {"cover_letter"=>"Welcome to your personal dashboard, where you can find an introduction", "attachment"=>"C:\\fakepath\\Export.pdf", "controller"=>"job_applications", "action"=>"create", "job_application"=>{"cover_letter"=>"Welcome to your personal dashboard, where you can find an introduction", "attachment"=>"C:\\fakepath\\Export.pdf"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/job_applications_controller.rb:16:in `create'
+  [1m[36mJobApplication Create (1.0ms)[0m  [1m[32mINSERT INTO "job_applications" ("cover_letter", "attachment", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["cover_letter", "Welcome to your personal dashboard, where you can find an introduction"], ["attachment", "C:\\fakepath\\Export.pdf"], ["created_at", "2022-10-29 09:26:57.034682"], ["updated_at", "2022-10-29 09:26:57.034682"]]
+  ↳ app/controllers/job_applications_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/job_applications_controller.rb:16:in `create'
+[active_model_serializers] Rendered JobApplicationSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 38ms (Views: 13.2ms | ActiveRecord: 6.8ms | Allocations: 17928)
+
+
+Started POST "/jobs" for ::1 at 2022-10-29 12:30:13 +0300
+Processing by JobsController#create as */*
+  Parameters: {"job_title"=>"CUSTOMER SUPPORT AGENT", "company_name"=>"World Ltd Company", "job_description"=>"CUSTOMER SUPPORT AGENT\n\nNairobi CBD Nairobi Details Employer Tire World Ltd Company Industry Logistics & Transportation Work Type Contract Job Level Mid level Minimum Qualification Diploma Years Experience 2 years Number of Positions 4 Description\n\nWe are looking for a customer support agent who can help us in increasing our customer base, meet the customer’s needs, provide product and service information, manage calls, SMS, chats and emails, and resolve product and service problems.\n\nSomeone who is flexible and willing to improve on themselves and work as a team.\n\nPigiaMe Disclaimer : AVOID SCAMS\n\nAVOID SCAMS\n\nNEVER PAY TO HAVE YOUR CV / APPLICATION PUSHED FORWARD. Any job vacancy requesting payment for any reason is a scam. If you are requested to make a payment for any reason please report abuse using the button on this page.", "deadline"=>"", "required_skills"=>"Java\n", "job_link"=>"", "job_type"=>"Fulltime ", "job"=>{"job_title"=>"CUSTOMER SUPPORT AGENT", "company_name"=>"World Ltd Company", "job_description"=>"CUSTOMER SUPPORT AGENT\n\nNairobi CBD Nairobi Details Employer Tire World Ltd Company Industry Logistics & Transportation Work Type Contract Job Level Mid level Minimum Qualification Diploma Years Experience 2 years Number of Positions 4 Description\n\nWe are looking for a customer support agent who can help us in increasing our customer base, meet the customer’s needs, provide product and service information, manage calls, SMS, chats and emails, and resolve product and service problems.\n\nSomeone who is flexible and willing to improve on themselves and work as a team.\n\nPigiaMe Disclaimer : AVOID SCAMS\n\nAVOID SCAMS\n\nNEVER PAY TO HAVE YOUR CV / APPLICATION PUSHED FORWARD. Any job vacancy requesting payment for any reason is a scam. If you are requested to make a payment for any reason please report abuse using the button on this page.", "deadline"=>"", "job_type"=>"Fulltime ", "required_skills"=>"Java\n", "job_link"=>""}}
+[31mUnpermitted parameter: :job. Context: { controller: JobsController, action: create, request: #<ActionDispatch::Request:0x00007f749c96cab8>, params: {"job_title"=>"CUSTOMER SUPPORT AGENT", "company_name"=>"World Ltd Company", "job_description"=>"CUSTOMER SUPPORT AGENT\n\nNairobi CBD Nairobi Details Employer Tire World Ltd Company Industry Logistics & Transportation Work Type Contract Job Level Mid level Minimum Qualification Diploma Years Experience 2 years Number of Positions 4 Description\n\nWe are looking for a customer support agent who can help us in increasing our customer base, meet the customer’s needs, provide product and service information, manage calls, SMS, chats and emails, and resolve product and service problems.\n\nSomeone who is flexible and willing to improve on themselves and work as a team.\n\nPigiaMe Disclaimer : AVOID SCAMS\n\nAVOID SCAMS\n\nNEVER PAY TO HAVE YOUR CV / APPLICATION PUSHED FORWARD. Any job vacancy requesting payment for any reason is a scam. If you are requested to make a payment for any reason please report abuse using the button on this page.", "deadline"=>"", "required_skills"=>"Java\n", "job_link"=>"", "job_type"=>"Fulltime ", "controller"=>"jobs", "action"=>"create", "job"=>{"job_title"=>"CUSTOMER SUPPORT AGENT", "company_name"=>"World Ltd Company", "job_description"=>"CUSTOMER SUPPORT AGENT\n\nNairobi CBD Nairobi Details Employer Tire World Ltd Company Industry Logistics & Transportation Work Type Contract Job Level Mid level Minimum Qualification Diploma Years Experience 2 years Number of Positions 4 Description\n\nWe are looking for a customer support agent who can help us in increasing our customer base, meet the customer’s needs, provide product and service information, manage calls, SMS, chats and emails, and resolve product and service problems.\n\nSomeone who is flexible and willing to improve on themselves and work as a team.\n\nPigiaMe Disclaimer : AVOID SCAMS\n\nAVOID SCAMS\n\nNEVER PAY TO HAVE YOUR CV / APPLICATION PUSHED FORWARD. Any job vacancy requesting payment for any reason is a scam. If you are requested to make a payment for any reason please report abuse using the button on this page.", "deadline"=>"", "job_type"=>"Fulltime ", "required_skills"=>"Java\n", "job_link"=>""}} }[0m
+  [1m[36mTRANSACTION (23.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+  [1m[36mJob Create (1.5ms)[0m  [1m[32mINSERT INTO "jobs" ("job_title", "company_name", "job_description", "deadline", "job_type", "required_skills", "job_link", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["job_title", "CUSTOMER SUPPORT AGENT"], ["company_name", "World Ltd Company"], ["job_description", "CUSTOMER SUPPORT AGENT\n\nNairobi CBD Nairobi Details Employer Tire World Ltd Company Industry Logistics & Transportation Work Type Contract Job Level Mid level Minimum Qualification Diploma Years Experience 2 years Number of Positions 4 Description\n\nWe are looking for a customer support agent who can help us in increasing our customer base, meet the customer’s needs, provide product and service information, manage calls, SMS, chats and emails, and resolve product and service problems.\n\nSomeone who is flexible and willing to improve on themselves and work as a team.\n\nPigiaMe Disclaimer : AVOID SCAMS\n\nAVOID SCAMS\n\nNEVER PAY TO HAVE YOUR CV / APPLICATION PUSHED FORWARD. Any job vacancy requesting payment for any reason is a scam. If you are requested to make a payment for any reason please report abuse using the button on this page."], ["deadline", nil], ["job_type", "Fulltime "], ["required_skills", "Java\n"], ["job_link", ""], ["admin_id", nil], ["created_at", "2022-10-29 09:30:13.662507"], ["updated_at", "2022-10-29 09:30:13.662507"]]
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+[active_model_serializers] Rendered JobSerializer with ActiveModelSerializers::Adapter::Attributes (0.92ms)
+Completed 201 Created in 122ms (Views: 3.7ms | ActiveRecord: 29.5ms | Allocations: 18609)
+
+
+Started GET "/jobs" for ::1 at 2022-10-29 12:30:43 +0300
+Processing by JobsController#index as */*
+  [1m[36mJob Load (1.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.05ms)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 1.3ms | Allocations: 1152)
+
+
+Started GET "/jobs" for ::1 at 2022-10-29 12:31:24 +0300
+Processing by JobsController#index as */*
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.05ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.4ms | Allocations: 974)
+
+
+Started POST "/jobs" for ::1 at 2022-10-29 12:32:57 +0300
+Processing by JobsController#create as */*
+  Parameters: {"job_title"=>"KEPRO Chief Administrative Officer", "company_name"=>"5-Star Hotel", "job_description"=>"Designation: KEPRO Chief Administrative Officer\nReporting to: KEPRO Board\nContract Type: One-Year Renewable Contract\nLocation: Nairobi\nReporting Date: Immediate\n\nJob Purpose:\nWhile working closely with the KEPRO board, this role shall support the Kenya Extended Producer Responsibility Organization (KEPRO) in developing and implementing programmes and activities within the following themes:\na. Strategy development and implementation in line with KEPRO’s objectives\nb. Membership recruitment and retention\nc. Resource mobilization and management\nd. Oversight KEPRO Leadership and governance\ne. Relationship and stakeholder management\nf. Formal Representation of KEPRO\ng. Communication and Information dissemination", "deadline"=>"", "required_skills"=>"Cooking\n", "job_link"=>"", "job_type"=>"Short", "job"=>{"job_title"=>"KEPRO Chief Administrative Officer", "company_name"=>"5-Star Hotel", "job_description"=>"Designation: KEPRO Chief Administrative Officer\nReporting to: KEPRO Board\nContract Type: One-Year Renewable Contract\nLocation: Nairobi\nReporting Date: Immediate\n\nJob Purpose:\nWhile working closely with the KEPRO board, this role shall support the Kenya Extended Producer Responsibility Organization (KEPRO) in developing and implementing programmes and activities within the following themes:\na. Strategy development and implementation in line with KEPRO’s objectives\nb. Membership recruitment and retention\nc. Resource mobilization and management\nd. Oversight KEPRO Leadership and governance\ne. Relationship and stakeholder management\nf. Formal Representation of KEPRO\ng. Communication and Information dissemination", "deadline"=>"", "job_type"=>"Short", "required_skills"=>"Cooking\n", "job_link"=>""}}
+[31mUnpermitted parameter: :job. Context: { controller: JobsController, action: create, request: #<ActionDispatch::Request:0x00007f749c2b1bd8>, params: {"job_title"=>"KEPRO Chief Administrative Officer", "company_name"=>"5-Star Hotel", "job_description"=>"Designation: KEPRO Chief Administrative Officer\nReporting to: KEPRO Board\nContract Type: One-Year Renewable Contract\nLocation: Nairobi\nReporting Date: Immediate\n\nJob Purpose:\nWhile working closely with the KEPRO board, this role shall support the Kenya Extended Producer Responsibility Organization (KEPRO) in developing and implementing programmes and activities within the following themes:\na. Strategy development and implementation in line with KEPRO’s objectives\nb. Membership recruitment and retention\nc. Resource mobilization and management\nd. Oversight KEPRO Leadership and governance\ne. Relationship and stakeholder management\nf. Formal Representation of KEPRO\ng. Communication and Information dissemination", "deadline"=>"", "required_skills"=>"Cooking\n", "job_link"=>"", "job_type"=>"Short", "controller"=>"jobs", "action"=>"create", "job"=>{"job_title"=>"KEPRO Chief Administrative Officer", "company_name"=>"5-Star Hotel", "job_description"=>"Designation: KEPRO Chief Administrative Officer\nReporting to: KEPRO Board\nContract Type: One-Year Renewable Contract\nLocation: Nairobi\nReporting Date: Immediate\n\nJob Purpose:\nWhile working closely with the KEPRO board, this role shall support the Kenya Extended Producer Responsibility Organization (KEPRO) in developing and implementing programmes and activities within the following themes:\na. Strategy development and implementation in line with KEPRO’s objectives\nb. Membership recruitment and retention\nc. Resource mobilization and management\nd. Oversight KEPRO Leadership and governance\ne. Relationship and stakeholder management\nf. Formal Representation of KEPRO\ng. Communication and Information dissemination", "deadline"=>"", "job_type"=>"Short", "required_skills"=>"Cooking\n", "job_link"=>""}} }[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+  [1m[36mJob Create (1.5ms)[0m  [1m[32mINSERT INTO "jobs" ("job_title", "company_name", "job_description", "deadline", "job_type", "required_skills", "job_link", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["job_title", "KEPRO Chief Administrative Officer"], ["company_name", "5-Star Hotel"], ["job_description", "Designation: KEPRO Chief Administrative Officer\nReporting to: KEPRO Board\nContract Type: One-Year Renewable Contract\nLocation: Nairobi\nReporting Date: Immediate\n\nJob Purpose:\nWhile working closely with the KEPRO board, this role shall support the Kenya Extended Producer Responsibility Organization (KEPRO) in developing and implementing programmes and activities within the following themes:\na. Strategy development and implementation in line with KEPRO’s objectives\nb. Membership recruitment and retention\nc. Resource mobilization and management\nd. Oversight KEPRO Leadership and governance\ne. Relationship and stakeholder management\nf. Formal Representation of KEPRO\ng. Communication and Information dissemination"], ["deadline", nil], ["job_type", "Short"], ["required_skills", "Cooking\n"], ["job_link", ""], ["admin_id", nil], ["created_at", "2022-10-29 09:32:57.693881"], ["updated_at", "2022-10-29 09:32:57.693881"]]
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+[active_model_serializers] Rendered JobSerializer with ActiveModelSerializers::Adapter::Attributes (1.18ms)
+Completed 201 Created in 22ms (Views: 3.2ms | ActiveRecord: 4.9ms | Allocations: 2286)
+
+
+Started POST "/jobs" for ::1 at 2022-10-29 12:33:55 +0300
+Processing by JobsController#create as */*
+  Parameters: {"job_title"=>"KEPRO Chief Administrative Officer", "company_name"=>"5-Star Hotel", "job_description"=>"Designation: KEPRO Chief Administrative Officer\nReporting to: KEPRO Board\nContract Type: One-Year Renewable Contract\nLocation: Nairobi\nReporting Date: Immediate\n\nJob Purpose:\nWhile working closely with the KEPRO board, this role shall support the Kenya Extended Producer Responsibility Organization (KEPRO) in developing and implementing programmes and activities within the following themes:\na. Strategy development and implementation in line with KEPRO’s objectives\nb. Membership recruitment and retention\nc. Resource mobilization and management\nd. Oversight KEPRO Leadership and governance\ne. Relationship and stakeholder management\nf. Formal Representation of KEPRO\ng. Communication and Information dissemination", "deadline"=>"", "required_skills"=>"Cooking\n\n\n", "job_link"=>"", "job_type"=>"Short", "job"=>{"job_title"=>"KEPRO Chief Administrative Officer", "company_name"=>"5-Star Hotel", "job_description"=>"Designation: KEPRO Chief Administrative Officer\nReporting to: KEPRO Board\nContract Type: One-Year Renewable Contract\nLocation: Nairobi\nReporting Date: Immediate\n\nJob Purpose:\nWhile working closely with the KEPRO board, this role shall support the Kenya Extended Producer Responsibility Organization (KEPRO) in developing and implementing programmes and activities within the following themes:\na. Strategy development and implementation in line with KEPRO’s objectives\nb. Membership recruitment and retention\nc. Resource mobilization and management\nd. Oversight KEPRO Leadership and governance\ne. Relationship and stakeholder management\nf. Formal Representation of KEPRO\ng. Communication and Information dissemination", "deadline"=>"", "job_type"=>"Short", "required_skills"=>"Cooking\n\n\n", "job_link"=>""}}
+[31mUnpermitted parameter: :job. Context: { controller: JobsController, action: create, request: #<ActionDispatch::Request:0x00005566d31ab140>, params: {"job_title"=>"KEPRO Chief Administrative Officer", "company_name"=>"5-Star Hotel", "job_description"=>"Designation: KEPRO Chief Administrative Officer\nReporting to: KEPRO Board\nContract Type: One-Year Renewable Contract\nLocation: Nairobi\nReporting Date: Immediate\n\nJob Purpose:\nWhile working closely with the KEPRO board, this role shall support the Kenya Extended Producer Responsibility Organization (KEPRO) in developing and implementing programmes and activities within the following themes:\na. Strategy development and implementation in line with KEPRO’s objectives\nb. Membership recruitment and retention\nc. Resource mobilization and management\nd. Oversight KEPRO Leadership and governance\ne. Relationship and stakeholder management\nf. Formal Representation of KEPRO\ng. Communication and Information dissemination", "deadline"=>"", "required_skills"=>"Cooking\n\n\n", "job_link"=>"", "job_type"=>"Short", "controller"=>"jobs", "action"=>"create", "job"=>{"job_title"=>"KEPRO Chief Administrative Officer", "company_name"=>"5-Star Hotel", "job_description"=>"Designation: KEPRO Chief Administrative Officer\nReporting to: KEPRO Board\nContract Type: One-Year Renewable Contract\nLocation: Nairobi\nReporting Date: Immediate\n\nJob Purpose:\nWhile working closely with the KEPRO board, this role shall support the Kenya Extended Producer Responsibility Organization (KEPRO) in developing and implementing programmes and activities within the following themes:\na. Strategy development and implementation in line with KEPRO’s objectives\nb. Membership recruitment and retention\nc. Resource mobilization and management\nd. Oversight KEPRO Leadership and governance\ne. Relationship and stakeholder management\nf. Formal Representation of KEPRO\ng. Communication and Information dissemination", "deadline"=>"", "job_type"=>"Short", "required_skills"=>"Cooking\n\n\n", "job_link"=>""}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+  [1m[36mJob Create (0.5ms)[0m  [1m[32mINSERT INTO "jobs" ("job_title", "company_name", "job_description", "deadline", "job_type", "required_skills", "job_link", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["job_title", "KEPRO Chief Administrative Officer"], ["company_name", "5-Star Hotel"], ["job_description", "Designation: KEPRO Chief Administrative Officer\nReporting to: KEPRO Board\nContract Type: One-Year Renewable Contract\nLocation: Nairobi\nReporting Date: Immediate\n\nJob Purpose:\nWhile working closely with the KEPRO board, this role shall support the Kenya Extended Producer Responsibility Organization (KEPRO) in developing and implementing programmes and activities within the following themes:\na. Strategy development and implementation in line with KEPRO’s objectives\nb. Membership recruitment and retention\nc. Resource mobilization and management\nd. Oversight KEPRO Leadership and governance\ne. Relationship and stakeholder management\nf. Formal Representation of KEPRO\ng. Communication and Information dissemination"], ["deadline", nil], ["job_type", "Short"], ["required_skills", "Cooking\n\n\n"], ["job_link", ""], ["admin_id", nil], ["created_at", "2022-10-29 09:33:56.004587"], ["updated_at", "2022-10-29 09:33:56.004587"]]
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+[active_model_serializers] Rendered JobSerializer with ActiveModelSerializers::Adapter::Attributes (0.56ms)
+Completed 201 Created in 15ms (Views: 1.5ms | ActiveRecord: 5.3ms | Allocations: 2277)
+
+
+Started GET "/jobs" for ::1 at 2022-10-29 12:34:06 +0300
+Processing by JobsController#index as */*
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.78ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.5ms | Allocations: 1337)
+
+
+Started POST "/auth/login" for ::1 at 2022-10-30 15:26:42 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"scottjoe@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"scottjoe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.28ms)
+Completed 401 Unauthorized in 57ms (Views: 3.8ms | ActiveRecord: 3.5ms | Allocations: 21199)
+
+
+Started POST "/auth/login" for ::1 at 2022-10-30 15:26:47 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"scottjoe@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"scottjoe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 401 Unauthorized in 4ms (Views: 0.6ms | ActiveRecord: 0.8ms | Allocations: 647)
+
+
+Started POST "/auth/login" for ::1 at 2022-10-30 15:26:48 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"scottjoe@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"scottjoe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 644)
+
+
+Started POST "/auth/login" for ::1 at 2022-10-30 15:26:48 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"scottjoe@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"scottjoe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 401 Unauthorized in 3ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 628)
+
+
+Started POST "/auth/login" for ::1 at 2022-10-30 15:26:48 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"scottjoe@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"scottjoe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 3ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 628)
+
+
+Started POST "/auth/login" for ::1 at 2022-10-30 15:26:48 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"scottjoe@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"scottjoe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 401 Unauthorized in 5ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 628)
+
+
+Started POST "/users" for ::1 at 2022-10-30 15:27:22 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"scottjoe@gmail.com", "name"=>"Joseph", "username"=>"Maina", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Maina", "email"=>"scottjoe@gmail.com", "name"=>"Joseph"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f047c226aa0>, params: {"email"=>"scottjoe@gmail.com", "name"=>"Joseph", "username"=>"Maina", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"username"=>"Maina", "email"=>"scottjoe@gmail.com", "name"=>"Joseph"}} }[0m
+Started POST "/users" for ::1 at 2022-10-30 15:27:24 +0300
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe@gmail.com"], ["LIMIT", 1]]
+Processing by UsersController#create as */*
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  Parameters: {"email"=>"scottjoe@gmail.com", "name"=>"Joseph", "username"=>"Maina", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Maina", "email"=>"scottjoe@gmail.com", "name"=>"Joseph"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f048b630d58>, params: {"email"=>"scottjoe@gmail.com", "name"=>"Joseph", "username"=>"Maina", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"username"=>"Maina", "email"=>"scottjoe@gmail.com", "name"=>"Joseph"}} }[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Maina"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 422 Unprocessable Entity in 1644ms (Views: 1.1ms | ActiveRecord: 9.5ms | Allocations: 1039013)
+
+
+Started POST "/users" for ::1 at 2022-10-30 15:27:24 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"scottjoe@gmail.com", "name"=>"Joseph", "username"=>"Maina", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Maina", "email"=>"scottjoe@gmail.com", "name"=>"Joseph"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f048b6ea3c0>, params: {"email"=>"scottjoe@gmail.com", "name"=>"Joseph", "username"=>"Maina", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"username"=>"Maina", "email"=>"scottjoe@gmail.com", "name"=>"Joseph"}} }[0m
+Started POST "/users" for ::1 at 2022-10-30 15:27:24 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"scottjoe@gmail.com", "name"=>"Joseph", "username"=>"Maina", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Maina", "email"=>"scottjoe@gmail.com", "name"=>"Joseph"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f0474066650>, params: {"email"=>"scottjoe@gmail.com", "name"=>"Joseph", "username"=>"Maina", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"username"=>"Maina", "email"=>"scottjoe@gmail.com", "name"=>"Joseph"}} }[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Maina"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 422 Unprocessable Entity in 328ms (Views: 1.8ms | ActiveRecord: 3.1ms | Allocations: 7843)
+
+
+Started POST "/users" for ::1 at 2022-10-30 15:27:24 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"scottjoe@gmail.com", "name"=>"Joseph", "username"=>"Maina", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Maina", "email"=>"scottjoe@gmail.com", "name"=>"Joseph"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f047cc51ac0>, params: {"email"=>"scottjoe@gmail.com", "name"=>"Joseph", "username"=>"Maina", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"username"=>"Maina", "email"=>"scottjoe@gmail.com", "name"=>"Joseph"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Maina"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 422 Unprocessable Entity in 376ms (Views: 1.0ms | ActiveRecord: 1.9ms | Allocations: 9135)
+
+
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Maina"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 422 Unprocessable Entity in 401ms (Views: 0.9ms | ActiveRecord: 1.2ms | Allocations: 11315)
+
+
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Maina"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 422 Unprocessable Entity in 343ms (Views: 0.7ms | ActiveRecord: 1.2ms | Allocations: 10144)
+
+
+Started POST "/users" for ::1 at 2022-10-30 15:27:43 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"scottjoe@gmail.com", "name"=>"Joseph", "username"=>"Maina", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"Maina", "email"=>"scottjoe@gmail.com", "name"=>"Joseph"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f0478011570>, params: {"email"=>"scottjoe@gmail.com", "name"=>"Joseph", "username"=>"Maina", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"username"=>"Maina", "email"=>"scottjoe@gmail.com", "name"=>"Joseph"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Maina"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Maina"], ["email", "scottjoe@gmail.com"], ["password_digest", "[FILTERED]"], ["created_at", "2022-10-30 12:27:44.249019"], ["updated_at", "2022-10-30 12:27:44.249019"], ["name", "Joseph"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 200 OK in 308ms (Views: 0.9ms | ActiveRecord: 5.2ms | Allocations: 4154)
+
+
+Started POST "/auth/login" for ::1 at 2022-10-30 15:27:48 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"scottjoe@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"scottjoe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 200 OK in 278ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 795)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-30 21:49:19 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.6ms | Allocations: 666)
+Completed 200 OK in 25ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 3640)
+
+
+Started POST "/auth/login" for ::1 at 2022-10-31 10:30:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"scottjoe100@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"scottjoe100@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe100@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 403ms (Views: 2.1ms | ActiveRecord: 11.1ms | Allocations: 36732)
+
+
+Started POST "/auth/login" for ::1 at 2022-10-31 10:31:21 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"scottjoe100@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"scottjoe100@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe100@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 305ms (Views: 0.7ms | ActiveRecord: 1.0ms | Allocations: 783)
+
+
+Started GET "/jobs" for ::1 at 2022-10-31 10:31:39 +0300
+Processing by JobsController#index as */*
+  [1m[36mJob Load (3.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.55ms)
+Completed 200 OK in 62ms (Views: 48.4ms | ActiveRecord: 8.5ms | Allocations: 20558)
+
+
+Started GET "/jobs" for ::1 at 2022-10-31 10:31:40 +0300
+Processing by JobsController#index as */*
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.39ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.4ms | Allocations: 1337)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-31 12:26:43 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.0ms | Allocations: 666)
+Completed 200 OK in 22ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 3640)
+
+
+Started POST "/auth/login" for ::1 at 2022-10-31 12:27:20 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"scottjoe@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"scottjoe@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 200 OK in 435ms (Views: 4.1ms | ActiveRecord: 16.2ms | Allocations: 21297)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-01 08:25:17 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.5ms | Allocations: 666)
+Completed 200 OK in 20ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 3640)
+
+
+Started GET "/user_profiles" for ::1 at 2022-11-01 08:25:27 +0300
+Processing by UserProfilesController#index as */*
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mUserProfile Load (0.9ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.21ms)
+Completed 200 OK in 86ms (Views: 13.3ms | ActiveRecord: 9.6ms | Allocations: 24938)
+
+
+Started GET "/user_profiles" for ::1 at 2022-11-01 08:25:27 +0300
+Processing by UserProfilesController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mUserProfile Load (0.6ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 9ms (Views: 2.7ms | ActiveRecord: 1.3ms | Allocations: 1346)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-01 08:25:56 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"scottjoe100@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"scottjoe100@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scottjoe100@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 287ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 1653)
+
+
+Started GET "/user_profiles" for ::1 at 2022-11-01 08:26:32 +0300
+Processing by UserProfilesController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mUserProfile Load (1.3ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 200 OK in 10ms (Views: 3.5ms | ActiveRecord: 1.8ms | Allocations: 1360)
+
+
+Started GET "/user_profiles" for ::1 at 2022-11-01 08:26:32 +0300
+Processing by UserProfilesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mUserProfile Load (0.5ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 9ms (Views: 3.3ms | ActiveRecord: 0.9ms | Allocations: 1344)
+
+
+Started GET "/user_profiles" for ::1 at 2022-11-01 08:26:54 +0300
+Processing by UserProfilesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mUserProfile Load (0.4ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.7ms | Allocations: 1344)
+
+
+Started GET "/user_profiles" for ::1 at 2022-11-01 08:26:54 +0300
+Processing by UserProfilesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mUserProfile Load (0.4ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 9ms (Views: 2.4ms | ActiveRecord: 0.8ms | Allocations: 1344)
+
+
+Started GET "/user_profiles" for ::1 at 2022-11-01 08:29:04 +0300
+Processing by UserProfilesController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 214)
+
+
+Started GET "/user_profiles" for ::1 at 2022-11-01 08:29:14 +0300
+Processing by UserProfilesController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.26ms)
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 202)
+
+
+Started GET "/user_profiles" for ::1 at 2022-11-01 09:01:33 +0300
+Processing by UserProfilesController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mUserProfile Load (0.6ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.79ms)
+Completed 200 OK in 56ms (Views: 5.2ms | ActiveRecord: 20.1ms | Allocations: 4301)
+
+
+Started GET "/user_profiles" for ::1 at 2022-11-01 09:01:33 +0300
+Processing by UserProfilesController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mUserProfile Load (0.5ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 1.1ms | Allocations: 1344)
+
+

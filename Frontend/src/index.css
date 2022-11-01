@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  li {
+    @apply p-4
+  }
+
+  button {
+    @apply text-white border bg-green-600 border-green-600
+    hover:bg-transparent hover:text-green-600 rounded-md
+  }
+}
+
+ .home{
+  background-color: rgb(169, 169, 169, 0.2);
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#container{
+  width: 100%;
+  height: 90%;
+  display: flex;
+}
+.leftbar{
+  flex: 1;
+  border-right: 2px solid black;
+}
+.centerbar{
+  flex: 2;
+  border-right: 1px solid black;
+}
+.rightbar{flex: 1;}
+
+.sidebarlist{
+  height: auto;
+  padding: 60px;
+  width: 100%;
+}
+
+.sidebarlist .row:hover{
+  cursor: pointer;
+  background-color: green;
+}
+
+.row{
+  width: 100%;
+  height: 50%;
+  list-style-type: none;
+  margin: 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.row #icon{
+  flex: 30%;
+  display: grid;
+  place-items: center;
+}
+
+.row #nav-title{
+  flex: 70%;
+}
+
+.companyicon{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  width: 50%;
+}
+
+.jobtitle{
+  font-size: 20px;
+  text-align: center;
+}
+.companyname{
+  text-align: center;
+  margin-bottom: 20px;
+} 
