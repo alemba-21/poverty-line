@@ -19,7 +19,7 @@ import Admin from './Links/Admin';
 
 function App() {
   return (
-    <Router>
+    <>
        <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -38,7 +38,7 @@ function App() {
         <Route path="/admin" element={<Admin/>} />
         {/* Hey Earnest */}
       </Routes>
-    </Router>
+    </>
       
       
 
