@@ -1,5 +1,10 @@
 .searchInputs {
     display: flex;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+
   }
   
 .search input {
