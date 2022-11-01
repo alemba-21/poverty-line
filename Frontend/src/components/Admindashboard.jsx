@@ -126,10 +126,21 @@ export default function AdminDashboard() {
                     />
                   </svg>
                   <Link to="/signin">
-                  <span className="text-2xl ">Logout</span>
+                        <span className="text-2xl ">Logout</span>
                   </Link>
                 </a>
               </li>
+              <li>
+                <Link to="/usersdata" >
+                    <span className="text-2xl ">Users</span>
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/signin">
+                  <span className="text-2xl ">Profiles</span>
+                  </Link>                    
+                </li>              
             </ul>
           </div>
         </div>
