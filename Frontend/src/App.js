@@ -14,6 +14,7 @@ import Createjob from './Links/Createjob'
 import Navbar from './components/Navbar'
 import Admin from './Links/Admin';
 import AdminLogin from './components/admin/AdminLogin'
+import UsersData from './components/admin/UsersData';
 
 
 
@@ -35,7 +36,8 @@ function App() {
         <Route path="/post" element={<Createjob />} />
         <Route path="/Jobs" element={<Jobs/>}/>
         <Route path="/admin" element={ <Admin /> } />
-        <Route path="/adminlogin" element={<AdminLogin/>} />
+        <Route path="/adminlogin" element={ <AdminLogin /> } />
+        <Route path="/usersdata" element={<UsersData/>} />
       </Routes>
     </>      
   );
