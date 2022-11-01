@@ -16,6 +16,7 @@ import Admin from './Links/Admin';
 import AdminLogin from './components/admin/AdminLogin'
 import UsersData from './components/admin/UsersData';
 import UpdateUser from './components/admin/UpdateUser';
+import UsersProfiles from './components/admin/UsersProfiles'
 
 
 
@@ -39,7 +40,8 @@ function App() {
         <Route path="/admin" element={ <Admin /> } />
         <Route path="/adminlogin" element={ <AdminLogin /> } />
         <Route path="/usersdata" element={ <UsersData /> } />
-        <Route path="/updateuser" element={<UpdateUser/>} />
+        <Route path="/updateuser" element={ <UpdateUser /> } />
+        <Route path="/usersprofiles" element={<UsersProfiles/>} />
       </Routes>
     </>      
   );
