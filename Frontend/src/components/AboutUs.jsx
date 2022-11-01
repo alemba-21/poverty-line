@@ -67,11 +67,10 @@ const About = () => {
                 your career to the next level..
               </p>
               <Link to="/Jobs">
-              <button className="bg-green-600 w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3">
-                Find Now
-              </button>
+                <button className="bg-green-600 w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3">
+                  Find Now
+                </button>
               </Link>
-              
             </div>
           </div>
           <div className="w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300">
@@ -83,7 +82,6 @@ const About = () => {
             <h2 className="text-2xl font-bold text-center py-8">Community</h2>
             <div className="text-center font-medium">
               <p className="py-2 border-b mx-8 mt-8">
-            
                 We are a team of 148,000 people – people with purpose who thrive
                 in our unique culture and make a real and lasting difference to
                 the planet, our society and their careers
