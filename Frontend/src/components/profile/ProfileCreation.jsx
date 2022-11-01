@@ -227,7 +227,7 @@ const ProfileCreation = () => {
           </div>
         </div>
   
-        <div className="flex flex-row -mx-3 mb-6">
+        <div className="flex flex-row -mx-2 mb-6">
           <div className="w-full px-3">
             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
               Career Summary
@@ -244,10 +244,10 @@ const ProfileCreation = () => {
   
         <div className="flex flex-row -mx-3 mb-6">
           <div className='flex-1/4'>
-          <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-              Date
-          </label>
-                <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                Date Started
+            </label>
+                <input className="appearance-none block w-2/3 bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-password"
                   type="date"
                   name="experience_date"
@@ -255,6 +255,20 @@ const ProfileCreation = () => {
                     onChange={handleChange}
                 />
           </div>
+
+          <div className='flex-1/4'>
+            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                Date Completed
+            </label>
+                <input className="appearance-none block w-2/3 bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  id="grid-password"
+                  type="date"
+                  name="experience_date"
+                  value={formData?.experience_date}
+                    onChange={handleChange}
+                />
+          </div>
+          
           <div className="w-full flex-3/4 px-3">
             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
               Experience
@@ -270,11 +284,11 @@ const ProfileCreation = () => {
         </div>
         
         <div className="flex flex-row -mx-3 mb-6">
-          <div className='flex-1/4'>
-          <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-              Date
-          </label>
-                <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          <div>
+            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                Date Started
+            </label>
+                <input className="appearance-none block w-2/3 bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-password"
                   type="date"
                   name="education_date"
@@ -282,6 +296,20 @@ const ProfileCreation = () => {
                     onChange={handleChange}
                 />
           </div>
+
+          <div>
+            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                Date Completed
+            </label>
+                <input className="appearance-none block w-2/3 bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  id="grid-password"
+                  type="date"
+                  name="education_date"
+                  value={formData?.education_date}
+                    onChange={handleChange}
+                />
+          </div>
+
           <div className="w-full flex-3/4 px-3">
             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
               Education
@@ -294,6 +322,8 @@ const ProfileCreation = () => {
                     onChange={handleChange}
                 />
           </div>
+
+          
         </div>
   
         <div className="w-full px-3">
@@ -307,7 +337,19 @@ const ProfileCreation = () => {
                 value={formData?.skills_and_hobbies}
                     onChange={handleChange}
               />
-            </div>
+        </div>
+        <div className="w-full px-3">
+            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+              Languages
+            </label>
+              <textarea className="block p-2.5 w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                id="grid-password"
+                type="text"
+                name="languages"
+                value={formData?.languages}
+                    onChange={handleChange}
+              />
+        </div>
   
   
         <button type="submit" onClick={handleSubmit} className='bg-green-600 w-[200px] rounded-full font-medium my-6 ml-32  py-3 text-black'>SAVE</button>
