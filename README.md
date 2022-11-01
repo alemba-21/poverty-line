@@ -83,10 +83,11 @@ This is the front End for the Poverty-line website. Poverty~Line helps growing b
 ### Live Link
 
 -Click this link to view the application Frontend: http://poverty-line.vercel.app/
+
+
 -Click this link to view the application Backend: https://powerful-dusk-77185.herokuapp.com/
 
 ---
-http://poverty-line.vercel.app/
 
 ### Technologies Used
 
