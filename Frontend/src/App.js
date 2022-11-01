@@ -20,7 +20,6 @@ function App() {
   return (
     <>
       <Navbar/>
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/view" element={<Profview />} />
@@ -35,10 +34,8 @@ function App() {
         <Route path="/post" element={<Createjob />} />
         <Route path="/Jobs" element={<Jobs/>}/>
         <Route path="/admin" element={<Admin/>} />
-        {/* Hey Earnest */}
       </Routes>
-    </>
-      
+    </>      
   );
 }
 
