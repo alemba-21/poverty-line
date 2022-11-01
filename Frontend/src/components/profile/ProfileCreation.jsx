@@ -259,7 +259,7 @@ const ProfileCreation = () => {
                   id="grid-password"
                   type="date"
                   name="experience_date"
-                  value={formData?.experience_date}
+                  value={formData?.experience_start_date}
                     onChange={handleChange}
                 />
           </div>
@@ -272,7 +272,7 @@ const ProfileCreation = () => {
                   id="grid-password"
                   type="date"
                   name="experience_date"
-                  value={formData?.experience_date}
+                  value={formData?.experience_end_date}
                     onChange={handleChange}
                 />
           </div>
@@ -300,7 +300,7 @@ const ProfileCreation = () => {
                   id="grid-password"
                   type="date"
                   name="education_date"
-                  value={formData?.education_date}
+                  value={formData?.education_start_date}
                     onChange={handleChange}
                 />
           </div>
@@ -313,7 +313,7 @@ const ProfileCreation = () => {
                   id="grid-password"
                   type="date"
                   name="education_date"
-                  value={formData?.education_date}
+                  value={formData?.education_end_date}
                     onChange={handleChange}
                 />
           </div>

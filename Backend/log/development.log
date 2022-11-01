@@ -1095,3 +1095,83 @@ Processing by UserProfilesController#index as */*
 Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 1.1ms | Allocations: 1344)
 
 
+Started POST "/auth/login" for ::1 at 2022-11-01 11:20:48 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"kennedybosire@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"kennedybosire@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kennedybosire@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 351ms (Views: 1.7ms | ActiveRecord: 13.8ms | Allocations: 36729)
+
+
+Started POST "/auth/login" for ::1 at 2022-11-01 12:22:44 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"kennedybosire@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"kennedybosire@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kennedybosire@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 200 OK in 287ms (Views: 1.2ms | ActiveRecord: 6.1ms | Allocations: 36727)
+
+
+Started GET "/user_profiles" for ::1 at 2022-11-01 12:23:34 +0300
+Processing by UserProfilesController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mUserProfile Load (1.9ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (14.7ms)
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 5.2ms | Allocations: 35076)
+
+
+  
+NoMethodError (undefined method `experience_date' for #<UserProfile id: 1, firstname: "June", middlename: "Kemunto", lastname: "Bosire", email: "june@gmail.com", gender: "Female", age: "16", national_id: 89708965, address: "988", phone: 796851024, county: "Mombasa", estate: "Kileleshwa", user_id: 3, career_summary: "In publishing and graphic design, Lorem ipsum is a...", experience: "Twiga Food Limited - Stock Controller", education: "Moi University", skills_and_hobbies: "Swimming.\nDancing.", languages: nil, image: nil, created_at: "2022-10-31 01:20:51.514550000 +0000", updated_at: "2022-10-31 01:20:51.514550000 +0000", experience_start_date: nil, experience_end_date: nil, education_start_date: nil, education_end_date: nil>
+Did you mean?  experience_was
+               experience_end_date
+               experience_change):
+  
+app/controllers/user_profiles_controller.rb:8:in `index'
+Started POST "/auth/login" for ::1 at 2022-11-01 12:24:27 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"kennedybosire@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"kennedybosire@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kennedybosire@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 255ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 783)
+
+
+Started GET "/user_profiles" for ::1 at 2022-11-01 12:25:07 +0300
+Processing by UserProfilesController#index as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mUserProfile Load (0.5ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (28.17ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 1.6ms | Allocations: 7005)
+
+
+  
+NoMethodError (undefined method `experience_date' for #<UserProfile id: 1, firstname: "June", middlename: "Kemunto", lastname: "Bosire", email: "june@gmail.com", gender: "Female", age: "16", national_id: 89708965, address: "988", phone: 796851024, county: "Mombasa", estate: "Kileleshwa", user_id: 3, career_summary: "In publishing and graphic design, Lorem ipsum is a...", experience: "Twiga Food Limited - Stock Controller", education: "Moi University", skills_and_hobbies: "Swimming.\nDancing.", languages: nil, image: nil, created_at: "2022-10-31 01:20:51.514550000 +0000", updated_at: "2022-10-31 01:20:51.514550000 +0000", experience_start_date: nil, experience_end_date: nil, education_start_date: nil, education_end_date: nil>
+Did you mean?  experience_was
+               experience_end_date
+               experience_change):
+  
+app/controllers/user_profiles_controller.rb:8:in `index'
+Started GET "/user_profiles" for ::1 at 2022-11-01 12:25:20 +0300
+Processing by UserProfilesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mUserProfile Load (0.4ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (29.74ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.7ms | Allocations: 7003)
+
+
+  
+NoMethodError (undefined method `experience_date' for #<UserProfile id: 1, firstname: "June", middlename: "Kemunto", lastname: "Bosire", email: "june@gmail.com", gender: "Female", age: "16", national_id: 89708965, address: "988", phone: 796851024, county: "Mombasa", estate: "Kileleshwa", user_id: 3, career_summary: "In publishing and graphic design, Lorem ipsum is a...", experience: "Twiga Food Limited - Stock Controller", education: "Moi University", skills_and_hobbies: "Swimming.\nDancing.", languages: nil, image: nil, created_at: "2022-10-31 01:20:51.514550000 +0000", updated_at: "2022-10-31 01:20:51.514550000 +0000", experience_start_date: nil, experience_end_date: nil, education_start_date: nil, education_end_date: nil>
+Did you mean?  experience_was
+               experience_end_date
+               experience_change):
+  
+app/controllers/user_profiles_controller.rb:8:in `index'
