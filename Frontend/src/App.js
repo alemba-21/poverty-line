@@ -13,6 +13,7 @@ import User from './Links/User';
 import Createjob from './Links/Createjob'
 import Navbar from './components/Navbar'
 import Admin from './Links/Admin';
+import AdminLogin from './components/admin/AdminLogin'
 
 
 
@@ -33,7 +34,8 @@ function App() {
         <Route path="/apply" element={<ApplyJob />} />
         <Route path="/post" element={<Createjob />} />
         <Route path="/Jobs" element={<Jobs/>}/>
-        <Route path="/admin" element={<Admin/>} />
+        <Route path="/admin" element={ <Admin /> } />
+        <Route path="/adminlogin" element={<AdminLogin/>} />
       </Routes>
     </>      
   );
