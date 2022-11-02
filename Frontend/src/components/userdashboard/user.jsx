@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Table from "../job/Table";
+import UserApplications from "../job/UserApplications";
 // import axios from '../../api/axios'
 // import { useEffect, useState } from "react";
 
@@ -157,7 +157,7 @@ export default function UserDashboard() {
           </svg>
           <h3 className="text-2xl font-medium ml-2 ">My Applications</h3>
         </div>
-       <Table/>
+       <UserApplications/>
   
 
         {/* <div className="grid gap-4 grid-cols-2 ">
