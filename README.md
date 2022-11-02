@@ -4,7 +4,20 @@
 
 ## SCREENSHOTS
 
-![image](./public/images/Screenshot%20from%202022-10-19%2022-56-29.png)
+![image](./Frontend/public/images/1.png)
+![image](./Frontend/public/images/2.png)
+![image](./Frontend/public/images/3.png)
+![image](./Frontend/public/images/8.png)
+![image](./Frontend/public/images/4.png)
+![image](./Frontend/public/images/5.png)
+![image](./Frontend/public/images/6.png)
+![image](./Frontend/public/images/7.png)
+![image](./Frontend/public/images/8.png)
+![image](./Frontend/public/images/9.png)
+![image](./Frontend/public/images/10.png)
+![image](./Frontend/public/images/11.png)
+![image](./Frontend/public/images/12.png)
+![image](./Frontend/public/images/13.png)
 
 ---
 

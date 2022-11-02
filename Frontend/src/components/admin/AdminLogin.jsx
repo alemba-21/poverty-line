@@ -42,7 +42,7 @@ export default function Login() {
     <>
       {
       authenticated ? (
-          <Navigate to="/user" />          
+          <Navigate to="/admin" />          
         ) : (            
         <div className="flex flex-row items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
           
@@ -100,7 +100,7 @@ export default function Login() {
             />
           </div>
           <a href="/" className="text-xs text-green-600 hover:underline">
-            Forget Password? Please contact your boss for reset!
+            Forget Password? Please contact your system experts!
           </a>
           <div className="mt-6">
             <button type="submit" onClick={handleSubmit}

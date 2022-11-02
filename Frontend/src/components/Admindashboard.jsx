@@ -108,7 +108,7 @@ export default function AdminDashboard() {
               </li>
               <li className="rounded-sm object-bottom">
                 <a
-                  href="/logout"
+                  href="/adminlogin"
                   className="flex items-center p-2 space-x-3 rounded-md"
                 >
                   <svg
@@ -125,7 +125,7 @@ export default function AdminDashboard() {
                       d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
                     />
                   </svg>
-                  <Link to="/signin">
+                  <Link to="/adminlogin">
                         <span className="text-2xl ">Logout</span>
                   </Link>
                 </a>
@@ -137,7 +137,7 @@ export default function AdminDashboard() {
                 </li>
 
                 <li>
-                  <Link to="/signin">
+                  <Link to="/usersprofiles">
                   <span className="text-2xl ">Profiles</span>
                   </Link>                    
                 </li>              

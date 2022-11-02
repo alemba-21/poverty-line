@@ -89,8 +89,8 @@ function UsersData() {
                         <Table.HeaderCell>Education_date</Table.HeaderCell>
                         <Table.HeaderCell>Education</Table.HeaderCell>
                         <Table.HeaderCell>Skills and hobies</Table.HeaderCell>
-                        <Table.HeaderCell >Update</Table.HeaderCell>
-                        <Table.HeaderCell>Delete</Table.HeaderCell>
+                        {/* <Table.HeaderCell >Update</Table.HeaderCell>
+                        <Table.HeaderCell>Delete</Table.HeaderCell> */}
                     </Table.Row>
                 </Table.Header>
 
@@ -117,14 +117,14 @@ function UsersData() {
                                     <Table.Cell>{data.education_date }</Table.Cell>
                                     <Table.Cell>{data.education}</Table.Cell>
                                     <Table.Cell>{data.skills_and_hobbies}</Table.Cell>
-                                    <Table.Cell className='btn-delete-cell'>
+                                    {/* <Table.Cell className='btn-delete-cell'>
                                         <Link to = '/updateuserprofiles'>
                                             <Button color='blue' onClick={()=>setData(data.id, data.firstname, data.middlename, data.lastname, data.email, data.gender, data.age, data.national_id, data.address, data.phone, data.county, data.estate, data.career_summary, data.name, data.username, data.email, data.experience_date, data.experience, data.education_date, data.education, data.skills_and_hobbies) }>Update</Button>
                                         </Link>                                        
                                     </Table.Cell>
                                     <Table.Cell>                                
                                             <Button color='red' onClick={ () => onDelete(data.id) }>Delete</Button>                                        
-                                    </Table.Cell>                    
+                                    </Table.Cell>                     */}
                                 </Table.Row> 
                             )
                         })}                             
