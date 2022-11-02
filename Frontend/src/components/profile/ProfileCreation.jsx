@@ -3,7 +3,6 @@ import axios from '../../api/axios'
 import { Navigate } from "react-router-dom";
 import Prof from '../../assets/profile.png'
 
-
 const ProfileCreation = () => {
   // const [errors, setErrors] = useState("");
   const [authenticated, setAuthenticated] = useState(false);
