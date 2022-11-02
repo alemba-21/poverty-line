@@ -26,7 +26,7 @@
 | Name | Operation | LinkedIn | Email |
 |:----:|:--:|:--------:|:-----:|
 |Alemba Alex | Frontend and UI/UX | http://www.linkedin.com/in/alex-kiragu-754690219 | alembakiragu@gmail.com |
-| Earnest Achayo | write your operation | LinkedIn profile link | Your Email |
+| Earnest Achayo | Backend developer | https://www.linkedin.com/in/earnest-achayo-3a8295244 | earnytechlive@gmail.com |
 | Snaida Kabalika | write your operation | LinkedIn profile link | Your Email |
 | Bryan Bosire | write your operation | LinkedIn profile link | Your Email |
 | Tim Mailu | write your operation | LinkedIn profile link | Your Email |
