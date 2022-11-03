@@ -32,7 +32,7 @@ const Navbar = () => {
 
       <div className='hidden md:flex basis-3/8 font-bold items-center mx-6'>
       <ul className='hidden md:flex flex-row text-xl md:justify-center'>
-        <Link to="/Jobs">
+        <Link to="/Job">
         <li className='p-4 hover:text-green-600'>Jobs</li>
         </Link>
         <Link to='/About'>
