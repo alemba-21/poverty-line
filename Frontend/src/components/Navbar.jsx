@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import {Link, useNavigate} from "react-router-dom"
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
-import { IoMdNotifications } from 'react-icons/io'
-
 const Navbar = () => {
   const [auth, setAuthenticated] = useState(false)
   const navigate = useNavigate()
@@ -40,7 +38,6 @@ const Navbar = () => {
         <Link to='/About'>
         <li className='p-4 hover:text-green-600'>About</li>
         </Link>         
-          <li><IoMdNotifications className='text-3xl hover:text-green-600' /></li>
           { auth ? (
           <Link to="/signin">
             <button onClick={handleLogout} className='text-white border m-auto bg-red-600 w-[110px] ml-2 py-1 px-4 h-[40px] text-center border-green-600 hover:bg-transparent hover:text-green-600 rounded-full'>Logout</button>
