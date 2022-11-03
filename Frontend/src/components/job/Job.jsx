@@ -11,12 +11,13 @@ const Job = () => {
             <table class="border-collapse table-fixed p-2 ml-[-20px] w-full rounded-md shadow-lg mr-12">
               <thead className='bg-green-50'>
                 <tr>
-                  <th class="border border-green-600 ...">Company</th>
-                  <th class="border border-green-600 ...">Job Title</th>
-                  <th class="border border-green-600 ...">Job Type</th>
-                  <th class="border border-green-600 ...">Time Posted</th>
+                  <th class="border border-green-600 ...">🏩 Company</th>
+                  <th class="border border-green-600 ...">📝 Job Title</th>
+                  <th class="border border-green-600 ...">📅 Job Type</th>
+                  <th class="border border-green-600 ...">⏰ Time Posted</th>
                 </tr>
               </thead>
+              {/* Map Company name, Job Title, Job Type and Time Postes here👇*/}
               <tbody className='bg-green-50'>
                 <tr>
                   <td class="border border-green-600 ..."><p className='text-center'>KRA Kenya</p></td>
@@ -35,14 +36,22 @@ const Job = () => {
             </div>
             {/* Content */}
             <div className='bg-white overflow-hidden transition-all duration-500 max-h-0 peer-checked:max-h-56'>
-              <div className='p-4'>
+              <div className='p-4 '>                
                 <p>
                   lorem ipsum dolor sit amet, consectetur adipiscing elit.lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   lorem ipsum dolor sit amet, consectetur adipiscing elit.lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   lorem ipsum dolor sit amet, consectetur adipiscing elit.lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   lorem ipsum dolor sit amet, consectetur adipiscing elit.lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
-                  <button className='bg-green-600 text-white px-4 py-2 rounded-3xl mt-4'>Apply</button>
+                <div className='flex flex-wrap gap-2 mt-4'>
+                    <p className='p-2 border border-green-600 rounded-lg font-bold'>Coding</p>
+                    <p className='p-2 border border-green-600 rounded-lg font-bold'>Learning</p>
+                    <p className='p-2 border border-green-600 rounded-lg font-bold'>Swimming</p>
+                    <p className='p-2 border border-green-600 rounded-lg font-bold'>Riding</p>
+                </div>
+                <div className='justify-center'>
+                  <button className='bg-green-600 text-white px-4 py-2 rounded-3xl mt-4'>Apply Now</button>
+                </div>
               </div>
             </div>          
           </div> 
