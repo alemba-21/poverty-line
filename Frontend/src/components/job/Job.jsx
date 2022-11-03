@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import axios from '../../api/axios'
+import {Link} from 'react-router-dom'
 
 const Job = () => {
 
@@ -45,8 +46,11 @@ const Job = () => {
           {/* Content */}
           <div className='bg-white overflow-hidden transition-all duration-500 max-h-0 peer-checked:max-h-56'>
             <div className='p-4'>
-                <p>{job.job_description}</p>
-                <button className='bg-green-600 text-white px-4 py-2 rounded-3xl mt-4'>Apply</button>
+                <p>{ job.job_description }</p>
+                <Link to="/apply">
+                  <button className='bg-green-600 text-white px-4 py-2 rounded-3xl mt-4'>Apply</button>
+                </Link>
+                
             </div>
           </div>          
         </div>
