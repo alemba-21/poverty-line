@@ -12,7 +12,7 @@ const Footer = () => {
     <div className='mx-auto py-16 bg-black px-20 grid lg:grid-cols-3 gap-8 text-gray-300'>
       <div>
         <h1 className='w-full text-3xl font-bold text-[#00df9a]'>PovertyLine.</h1>
-        <p className='py-4'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id odit ullam iste repellat consequatur libero reiciendis, blanditiis accusantium.</p>
+        <p className='py-4'>Your search for Easy threat detection incident management platform vacancies ends here. Poverty Line is a global job marketplace that has created a tangible and seamless bridge between job aspirants and potential employment opportunitie</p>
         <div className='flex justify-between md:w-[75%] my-6'>
             <FaFacebookSquare size={30} />
             <FaInstagram size={30} />

@@ -19,7 +19,7 @@ const ProfileView = () => {
       user_profiles.map((user_profile) => (
     <div className='bg-white mb-4'>
       <div className='bg-green-50 max-w-[1240px] mx-auto mt-20 p-4 my-4 rounded-lg border-dashed shadow-md shadow-green-600'>
-      <img className='border-4 shadow-md shadow-green-600 p-1 rounded-full w-40 mx-auto mt-[-3rem] bg-transparent' src={user_profile.image} alt="/" />
+      <img className='border-4 shadow-md shadow-green-600 p-1 rounded-full w-40 mx-auto mt-[-3rem] bg-transparent' src={Joe} alt="/" />
 
            <div className='my-4 absolute p-4  flex flex-col py-8 md:min-w-[760px] md:left-1/2 transform md:-translate-x-1/2 bg-green-50
               border border-green-600 rounded-xl text-center shadow-md shadow-green-300'>

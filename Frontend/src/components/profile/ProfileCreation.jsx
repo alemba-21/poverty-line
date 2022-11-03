@@ -28,7 +28,7 @@ const ProfileCreation = () => {
     education: "",
     skills_and_hobbies: "",
     languages: "",
-    image: "",
+    // image: "",
   });
 
   //hangle change event
@@ -61,12 +61,30 @@ const ProfileCreation = () => {
         <Navigate to="/jobs" />
       ): (
         <div className='bg-white mb-4'>
+          
         <h1 className='text-4xl font-bold text-center my-10'>Profile</h1> 
        
         <div className='bg-green-50 h-auto max-w-[1240px]  rounded-3xl mx-auto'>
-      <img className='border-4 shadow-md shadow-green-600 p-1 rounded-full w-40 mx-auto mt-[-1rem] bg-transparent' src={Prof} alt="/" />
-  
-        <form onSubmit={handleSubmit} className='w-auto max-w-[1100px] m-auto pt-8'>
+
+        {/* <form class="flex items-center space-x-6">
+          <div class="flex fle first-letter: justify-center">
+            <img class="h-16 w-16 object-cover rounded-full" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1361&q=80" alt="Current profile photo" />
+          </div>
+          <label class="block">
+            <span class="sr-only">Choose profile photo</span>
+            <input type="file" class="block w-full text-sm text-slate-500
+              file:mr-4 file:py-2 file:px-4
+              file:rounded-full file:border-0
+              file:text-sm file:font-semibold
+              file:bg-violet-50 file:text-violet-700
+              hover:file:bg-violet-100
+            "/>
+          </label>
+        </form> */}
+
+       <img className='border-4 shadow-md shadow-green-600 p-1 rounded-full w-40 mx-auto mt-[-1rem] bg-transparent' src={Prof} alt="/" />
+       <input type="text" />
+      <form onSubmit={handleSubmit} className='w-auto max-w-[1100px] m-auto pt-8'>
         <div className="flex flex-row -mx-3 mb-6">
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label htmlFor="firstname" className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
@@ -257,7 +275,7 @@ const ProfileCreation = () => {
                 <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-password"
                   type="date"
-                  name="experience_date"
+                  name="experience_start_date"
                   value={formData?.experience_start_date}
                     onChange={handleChange}
                 />
@@ -270,7 +288,7 @@ const ProfileCreation = () => {
                 <input className="appearance-none block w-2/3 bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-password"
                   type="date"
-                  name="experience_date"
+                  name="experience_end_date"
                   value={formData?.experience_end_date}
                     onChange={handleChange}
                 />
@@ -298,7 +316,7 @@ const ProfileCreation = () => {
                 <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-password"
                   type="date"
-                  name="education_date"
+                  name="education_start_date"
                   value={formData?.education_start_date}
                     onChange={handleChange}
                 />
@@ -311,7 +329,7 @@ const ProfileCreation = () => {
                 <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-password"
                   type="date"
-                  name="education_date"
+                  name="education_end_date"
                   value={formData?.education_end_date}
                     onChange={handleChange}
                 />
