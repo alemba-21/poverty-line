@@ -17,6 +17,7 @@ import AdminLogin from './components/admin/AdminLogin'
 import UsersData from './components/admin/UsersData';
 import UpdateUser from './components/admin/UpdateUser';
 import UsersProfiles from './components/admin/UsersProfiles'
+import Applications from './components/admin/Applications'
 
 
 
@@ -41,7 +42,8 @@ function App() {
         <Route path="/adminlogin" element={ <AdminLogin /> } />
         <Route path="/usersdata" element={ <UsersData /> } />
         <Route path="/updateuser" element={ <UpdateUser /> } />
-        <Route path="/usersprofiles" element={<UsersProfiles/>} />
+        <Route path="/usersprofiles" element={ <UsersProfiles /> } />
+        <Route path="/applications" element={<Applications/>} />
       </Routes>
     </>      
   );

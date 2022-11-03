@@ -4,4 +4,6 @@ class Job < ApplicationRecord
     validates :job_description, presence: true
     validates :job_type, presence: true
     validates :required_skills, presence: true
+
+    belongs_to :user_profile
 end

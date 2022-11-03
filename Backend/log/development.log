@@ -5812,3 +5812,1375 @@ Processing by UsersController#index as */*
 Completed 200 OK in 14ms (Views: 6.7ms | ActiveRecord: 3.0ms | Allocations: 2993)
 
 
+Started POST "/auth/login" for 127.0.0.1 at 2022-11-02 23:07:08 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 6 pending migrations:
+
+20221101040745_remove_experience_date_from_user_profiles.rb
+20221101040933_remove_education_date_from_user_profiles.rb
+20221101044527_add_experience_start_date_to_user_profile.rb
+20221101044931_add_experience_end_date_to_user_profiles.rb
+20221101045129_add_education_start_date_to_user_profiles.rb
+20221101045236_add_education_end_date_to_user_profiles.rb
+
+
+):
+  
+activerecord (7.0.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/auth/login" for 127.0.0.1 at 2022-11-02 23:07:34 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 6 pending migrations:
+
+20221101040745_remove_experience_date_from_user_profiles.rb
+20221101040933_remove_education_date_from_user_profiles.rb
+20221101044527_add_experience_start_date_to_user_profile.rb
+20221101044931_add_experience_end_date_to_user_profiles.rb
+20221101045129_add_education_start_date_to_user_profiles.rb
+20221101045236_add_education_end_date_to_user_profiles.rb
+
+
+):
+  
+activerecord (7.0.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/users" for 127.0.0.1 at 2022-11-02 23:08:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 6 pending migrations:
+
+20221101040745_remove_experience_date_from_user_profiles.rb
+20221101040933_remove_education_date_from_user_profiles.rb
+20221101044527_add_experience_start_date_to_user_profile.rb
+20221101044931_add_experience_end_date_to_user_profiles.rb
+20221101045129_add_education_start_date_to_user_profiles.rb
+20221101045236_add_education_end_date_to_user_profiles.rb
+
+
+):
+  
+activerecord (7.0.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/users" for 127.0.0.1 at 2022-11-02 23:08:57 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 6 pending migrations:
+
+20221101040745_remove_experience_date_from_user_profiles.rb
+20221101040933_remove_education_date_from_user_profiles.rb
+20221101044527_add_experience_start_date_to_user_profile.rb
+20221101044931_add_experience_end_date_to_user_profiles.rb
+20221101045129_add_education_start_date_to_user_profiles.rb
+20221101045236_add_education_end_date_to_user_profiles.rb
+
+
+):
+  
+activerecord (7.0.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2022-11-02 23:09:31 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 6 pending migrations:
+
+20221101040745_remove_experience_date_from_user_profiles.rb
+20221101040933_remove_education_date_from_user_profiles.rb
+20221101044527_add_experience_start_date_to_user_profile.rb
+20221101044931_add_experience_end_date_to_user_profiles.rb
+20221101045129_add_education_start_date_to_user_profiles.rb
+20221101045236_add_education_end_date_to_user_profiles.rb
+
+
+):
+  
+activerecord (7.0.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-11-02 23:09:32 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 6 pending migrations:
+
+20221101040745_remove_experience_date_from_user_profiles.rb
+20221101040933_remove_education_date_from_user_profiles.rb
+20221101044527_add_experience_start_date_to_user_profile.rb
+20221101044931_add_experience_end_date_to_user_profiles.rb
+20221101045129_add_education_start_date_to_user_profiles.rb
+20221101045236_add_education_end_date_to_user_profiles.rb
+
+
+):
+  
+activerecord (7.0.4) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.4) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.4) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1655429459639930310)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveExperienceDateFromUserProfiles (20221101040745)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.7ms)[0m  [1m[35mALTER TABLE "user_profiles" DROP COLUMN "experience_date"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221101040745"]]
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RemoveEducationDateFromUserProfiles (20221101040933)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "user_profiles" DROP COLUMN "education_date"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221101040933"]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddExperienceStartDateToUserProfile (20221101044527)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "user_profiles" ADD "experience_start_date" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221101044527"]]
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddExperienceEndDateToUserProfiles (20221101044931)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "user_profiles" ADD "experience_end_date" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221101044931"]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddEducationStartDateToUserProfiles (20221101045129)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "user_profiles" ADD "education_start_date" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221101045129"]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddEducationEndDateToUserProfiles (20221101045236)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "user_profiles" ADD "education_end_date" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221101045236"]]
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1655429459639930310)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/users" for 127.0.0.1 at 2022-11-02 23:10:14 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"nahor@povertyline.com", "name"=>"nahor", "username"=>"nahor", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"nahor", "email"=>"nahor@povertyline.com", "name"=>"nahor"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007fb22cb0e920>, params: {"email"=>"nahor@povertyline.com", "name"=>"nahor", "username"=>"nahor", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"username"=>"nahor", "email"=>"nahor@povertyline.com", "name"=>"nahor"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (3.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nahor@povertyline.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "nahor"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "nahor"], ["email", "nahor@povertyline.com"], ["password_digest", "[FILTERED]"], ["created_at", "2022-11-02 20:10:14.852628"], ["updated_at", "2022-11-02 20:10:14.852628"], ["name", "nahor"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 321ms (Views: 2.4ms | ActiveRecord: 14.6ms | Allocations: 21472)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2022-11-02 23:10:23 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"nahor@povertyline.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"nahor@povertyline.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nahor@povertyline.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 200 OK in 293ms (Views: 0.9ms | ActiveRecord: 0.8ms | Allocations: 1332)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2022-11-02 23:10:48 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"nahor@povertyline.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"nahor@povertyline.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nahor@povertyline.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 200 OK in 298ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 766)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-11-02 23:11:12 +0300
+Processing by UsersController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 325)
+
+
+Started GET "/user_profiles" for 127.0.0.1 at 2022-11-02 23:11:16 +0300
+Processing by UserProfilesController#index as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 11ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 319)
+
+
+Started GET "/applications" for 127.0.0.1 at 2022-11-02 23:13:18 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"applications"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 231)
+
+
+Started GET "/applications" for 127.0.0.1 at 2022-11-02 23:13:30 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"applications"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 185)
+
+
+Started GET "/applications" for 127.0.0.1 at 2022-11-02 23:13:41 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"applications"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 182)
+
+
+Started GET "/applications" for 127.0.0.1 at 2022-11-02 23:14:30 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"applications"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 182)
+
+
+Started GET "/applications" for 127.0.0.1 at 2022-11-02 23:14:32 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"applications"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 183)
+
+
+Started GET "/applications" for 127.0.0.1 at 2022-11-02 23:14:38 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"applications"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 182)
+
+
+Started GET "/applications" for 127.0.0.1 at 2022-11-02 23:14:41 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"applications"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 182)
+
+
+Started GET "/applications" for 127.0.0.1 at 2022-11-02 23:15:14 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"applications"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 182)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-11-02 23:15:46 +0300
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.21ms)
+Completed 200 OK in 59ms (Views: 43.5ms | ActiveRecord: 1.8ms | Allocations: 5443)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-11-02 23:16:33 +0300
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.01ms)
+Completed 200 OK in 34ms (Views: 24.1ms | ActiveRecord: 2.2ms | Allocations: 3131)
+
+
+Started GET "/" for 127.0.0.1 at 2022-11-02 23:17:06 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 27.5ms | Allocations: 357)
+Completed 200 OK in 59ms (Views: 45.0ms | ActiveRecord: 0.0ms | Allocations: 1302)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-11-02 23:24:42 +0300
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize_request'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.55ms)
+Completed 200 OK in 90ms (Views: 9.6ms | ActiveRecord: 15.1ms | Allocations: 5943)
+
+
+Started GET "/job_applications" for 127.0.0.1 at 2022-11-02 23:26:26 +0300
+Processing by JobApplicationsController#index as HTML
+  [1m[36mJobApplication Load (2.9ms)[0m  [1m[34mSELECT "job_applications".* FROM "job_applications"[0m
+  ↳ app/controllers/job_applications_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.25ms)
+Completed 200 OK in 97ms (Views: 74.4ms | ActiveRecord: 11.2ms | Allocations: 17476)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-11-02 23:26:27 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"favicon"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 178)
+
+
+Started GET "/user_profiles" for 127.0.0.1 at 2022-11-02 23:32:25 +0300
+Processing by UserProfilesController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 10ms (Views: 0.8ms | Allocations: 196)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-11-02 23:32:25 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"favicon"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 1ms (Views: 0.6ms | Allocations: 176)
+
+
+Started GET "/user_profiles" for 127.0.0.1 at 2022-11-02 23:33:02 +0300
+Processing by UserProfilesController#index as HTML
+  [1m[36mUserProfile Load (1.7ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (51.25ms)
+Completed 500 Internal Server Error in 426ms (ActiveRecord: 18.6ms | Allocations: 35454)
+
+
+  
+NoMethodError (undefined method `experience_date' for #<UserProfile id: 1, firstname: "Earnest", middlename: "Achayo", lastname: "Ominde", email: "anotelak@gmail.com", gender: "", age: "23", national_id: 23456770, address: "234 UGUNJA", phone: 723456798, county: "Kisumu", estate: "Mombala", user_id: 6, career_summary: "cahayo cahayo cahayo cahayo", experience: "cahayo cahayo cahayo cahayo", education: "cahayo cahayo cahayo cahayo", skills_and_hobbies: "cahayo cahayo cahayo cahayo", languages: nil, image: nil, created_at: "2022-10-30 20:24:25.672028000 +0000", updated_at: "2022-10-30 20:24:25.672028000 +0000", experience_start_date: nil, experience_end_date: nil, education_start_date: nil, education_end_date: nil>
+Did you mean?  experience_was
+               experience_end_date
+               experience_change):
+  
+app/controllers/user_profiles_controller.rb:8:in `index'
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-11-02 23:33:03 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"favicon"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 321)
+
+
+Started GET "/user_profiles" for 127.0.0.1 at 2022-11-02 23:38:26 +0300
+Processing by UserProfilesController#index as HTML
+  [1m[36mUserProfile Load (0.6ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (29.24ms)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 12.4ms | Allocations: 17466)
+
+
+  
+NoMethodError (undefined method `experience_date' for #<UserProfile id: 1, firstname: "Earnest", middlename: "Achayo", lastname: "Ominde", email: "anotelak@gmail.com", gender: "", age: "23", national_id: 23456770, address: "234 UGUNJA", phone: 723456798, county: "Kisumu", estate: "Mombala", user_id: 6, career_summary: "cahayo cahayo cahayo cahayo", experience: "cahayo cahayo cahayo cahayo", education: "cahayo cahayo cahayo cahayo", skills_and_hobbies: "cahayo cahayo cahayo cahayo", languages: nil, image: nil, created_at: "2022-10-30 20:24:25.672028000 +0000", updated_at: "2022-10-30 20:24:25.672028000 +0000", experience_start_date: nil, experience_end_date: nil, education_start_date: nil, education_end_date: nil>
+Did you mean?  experience_was
+               experience_end_date
+               experience_change):
+  
+app/controllers/user_profiles_controller.rb:8:in `index'
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-11-02 23:38:27 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"favicon"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 320)
+
+
+Started GET "/user_profiles" for 127.0.0.1 at 2022-11-02 23:38:29 +0300
+Processing by UserProfilesController#index as HTML
+  [1m[36mUserProfile Load (0.7ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (29.74ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.7ms | Allocations: 6505)
+
+
+  
+NoMethodError (undefined method `experience_date' for #<UserProfile id: 1, firstname: "Earnest", middlename: "Achayo", lastname: "Ominde", email: "anotelak@gmail.com", gender: "", age: "23", national_id: 23456770, address: "234 UGUNJA", phone: 723456798, county: "Kisumu", estate: "Mombala", user_id: 6, career_summary: "cahayo cahayo cahayo cahayo", experience: "cahayo cahayo cahayo cahayo", education: "cahayo cahayo cahayo cahayo", skills_and_hobbies: "cahayo cahayo cahayo cahayo", languages: nil, image: nil, created_at: "2022-10-30 20:24:25.672028000 +0000", updated_at: "2022-10-30 20:24:25.672028000 +0000", experience_start_date: nil, experience_end_date: nil, education_start_date: nil, education_end_date: nil>
+Did you mean?  experience_was
+               experience_end_date
+               experience_change):
+  
+app/controllers/user_profiles_controller.rb:8:in `index'
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-11-02 23:38:30 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"favicon"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 176)
+
+
+Started GET "/user_profiles" for 127.0.0.1 at 2022-11-02 23:38:32 +0300
+Processing by UserProfilesController#index as HTML
+  [1m[36mUserProfile Load (0.6ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (59.95ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 0.6ms | Allocations: 6504)
+
+
+  
+NoMethodError (undefined method `experience_date' for #<UserProfile id: 1, firstname: "Earnest", middlename: "Achayo", lastname: "Ominde", email: "anotelak@gmail.com", gender: "", age: "23", national_id: 23456770, address: "234 UGUNJA", phone: 723456798, county: "Kisumu", estate: "Mombala", user_id: 6, career_summary: "cahayo cahayo cahayo cahayo", experience: "cahayo cahayo cahayo cahayo", education: "cahayo cahayo cahayo cahayo", skills_and_hobbies: "cahayo cahayo cahayo cahayo", languages: nil, image: nil, created_at: "2022-10-30 20:24:25.672028000 +0000", updated_at: "2022-10-30 20:24:25.672028000 +0000", experience_start_date: nil, experience_end_date: nil, education_start_date: nil, education_end_date: nil>
+Did you mean?  experience_was
+               experience_end_date
+               experience_change):
+  
+app/controllers/user_profiles_controller.rb:8:in `index'
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-11-02 23:38:33 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"favicon"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 176)
+
+
+Started GET "/user_profiles" for 127.0.0.1 at 2022-11-02 23:39:24 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UserProfilesController#index as HTML
+  [1m[36mUserProfile Load (0.8ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (29.48ms)
+Completed 500 Internal Server Error in 162ms (ActiveRecord: 11.0ms | Allocations: 52504)
+
+
+  
+NoMethodError (undefined method `experience_date' for #<UserProfile id: 1, firstname: "Earnest", middlename: "Achayo", lastname: "Ominde", email: "anotelak@gmail.com", gender: "", age: "23", national_id: 23456770, address: "234 UGUNJA", phone: 723456798, county: "Kisumu", estate: "Mombala", user_id: 6, career_summary: "cahayo cahayo cahayo cahayo", experience: "cahayo cahayo cahayo cahayo", education: "cahayo cahayo cahayo cahayo", skills_and_hobbies: "cahayo cahayo cahayo cahayo", languages: nil, image: nil, created_at: "2022-10-30 20:24:25.672028000 +0000", updated_at: "2022-10-30 20:24:25.672028000 +0000", experience_start_date: nil, experience_end_date: nil, education_start_date: nil, education_end_date: nil>
+Did you mean?  experience_was
+               experience_end_date
+               experience_change):
+  
+app/controllers/user_profiles_controller.rb:8:in `index'
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-11-02 23:39:25 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"favicon"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.33ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 623)
+
+
+Started GET "/user_profiles" for 127.0.0.1 at 2022-11-02 23:39:28 +0300
+Processing by UserProfilesController#index as HTML
+  [1m[36mUserProfile Load (1.6ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (42.11ms)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 1.6ms | Allocations: 6524)
+
+
+  
+NoMethodError (undefined method `experience_date' for #<UserProfile id: 1, firstname: "Earnest", middlename: "Achayo", lastname: "Ominde", email: "anotelak@gmail.com", gender: "", age: "23", national_id: 23456770, address: "234 UGUNJA", phone: 723456798, county: "Kisumu", estate: "Mombala", user_id: 6, career_summary: "cahayo cahayo cahayo cahayo", experience: "cahayo cahayo cahayo cahayo", education: "cahayo cahayo cahayo cahayo", skills_and_hobbies: "cahayo cahayo cahayo cahayo", languages: nil, image: nil, created_at: "2022-10-30 20:24:25.672028000 +0000", updated_at: "2022-10-30 20:24:25.672028000 +0000", experience_start_date: nil, experience_end_date: nil, education_start_date: nil, education_end_date: nil>
+Did you mean?  experience_was
+               experience_end_date
+               experience_change):
+  
+app/controllers/user_profiles_controller.rb:8:in `index'
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-11-02 23:39:29 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"favicon"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Started GET "/user_profiles" for 127.0.0.1 at 2022-11-02 23:39:31 +0300
+Processing by UserProfilesController#index as HTML
+  [1m[36mUserProfile Load (0.5ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (63.45ms)
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 0.5ms | Allocations: 6522)
+
+
+  
+NoMethodError (undefined method `experience_date' for #<UserProfile id: 1, firstname: "Earnest", middlename: "Achayo", lastname: "Ominde", email: "anotelak@gmail.com", gender: "", age: "23", national_id: 23456770, address: "234 UGUNJA", phone: 723456798, county: "Kisumu", estate: "Mombala", user_id: 6, career_summary: "cahayo cahayo cahayo cahayo", experience: "cahayo cahayo cahayo cahayo", education: "cahayo cahayo cahayo cahayo", skills_and_hobbies: "cahayo cahayo cahayo cahayo", languages: nil, image: nil, created_at: "2022-10-30 20:24:25.672028000 +0000", updated_at: "2022-10-30 20:24:25.672028000 +0000", experience_start_date: nil, experience_end_date: nil, education_start_date: nil, education_end_date: nil>
+Did you mean?  experience_was
+               experience_end_date
+               experience_change):
+  
+app/controllers/user_profiles_controller.rb:8:in `index'
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-11-02 23:39:32 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"favicon"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.3ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 176)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (106.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "poverty_line_development"[0m
+  [1m[35m (111.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "poverty_line_test"[0m
+  [1m[35m (1294.0ms)[0m  [1m[35mCREATE DATABASE "poverty_line_development" ENCODING = 'unicode'[0m
+  [1m[35m (1222.4ms)[0m  [1m[35mCREATE DATABASE "poverty_line_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "admins" CASCADE[0m
+  [1m[35m (39.5ms)[0m  [1m[35mCREATE TABLE "admins" ("id" bigserial primary key, "first_name" character varying, "middle_name" character varying, "lastname" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "job_applications" CASCADE[0m
+  [1m[35m (27.6ms)[0m  [1m[35mCREATE TABLE "job_applications" ("id" bigserial primary key, "cover_letter" character varying, "attachment" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "jobs" CASCADE[0m
+  [1m[35m (32.4ms)[0m  [1m[35mCREATE TABLE "jobs" ("id" bigserial primary key, "job_title" character varying, "company_name" character varying, "job_description" text, "deadline" date, "job_type" text, "required_skills" text, "job_link" character varying, "admin_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_profiles" CASCADE[0m
+  [1m[35m (36.7ms)[0m  [1m[35mCREATE TABLE "user_profiles" ("id" bigserial primary key, "firstname" character varying, "middlename" character varying, "lastname" character varying, "email" character varying, "gender" character varying, "age" character varying, "national_id" integer, "address" character varying, "phone" integer, "county" character varying, "estate" character varying, "user_id" integer, "career_summary" text, "experience" text, "education" text, "skills_and_hobbies" text, "languages" character varying, "image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "experience_start_date" character varying, "experience_end_date" character varying, "education_start_date" character varying, "education_end_date" character varying)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (27.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "name" character varying)[0m
+  [1m[35m (34.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20221101045236)[0m
+  [1m[35m (6.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20221019114153),
+(20221020094411),
+(20221022054110),
+(20221025075143),
+(20221028165455),
+(20221031215044),
+(20221101040745),
+(20221101040933),
+(20221101044527),
+(20221101044931),
+(20221101045129);
+
+[0m
+  [1m[35m (28.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-11-02 20:40:45.459156"], ["updated_at", "2022-11-02 20:40:45.459156"]]
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "494e7625654677b4065e8d1340cc0513517a9a1e"], ["created_at", "2022-11-02 20:40:45.476720"], ["updated_at", "2022-11-02 20:40:45.476720"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "admins" CASCADE[0m
+  [1m[35m (43.4ms)[0m  [1m[35mCREATE TABLE "admins" ("id" bigserial primary key, "first_name" character varying, "middle_name" character varying, "lastname" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "job_applications" CASCADE[0m
+  [1m[35m (33.8ms)[0m  [1m[35mCREATE TABLE "job_applications" ("id" bigserial primary key, "cover_letter" character varying, "attachment" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "jobs" CASCADE[0m
+  [1m[35m (30.7ms)[0m  [1m[35mCREATE TABLE "jobs" ("id" bigserial primary key, "job_title" character varying, "company_name" character varying, "job_description" text, "deadline" date, "job_type" text, "required_skills" text, "job_link" character varying, "admin_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_profiles" CASCADE[0m
+  [1m[35m (32.0ms)[0m  [1m[35mCREATE TABLE "user_profiles" ("id" bigserial primary key, "firstname" character varying, "middlename" character varying, "lastname" character varying, "email" character varying, "gender" character varying, "age" character varying, "national_id" integer, "address" character varying, "phone" integer, "county" character varying, "estate" character varying, "user_id" integer, "career_summary" text, "experience" text, "education" text, "skills_and_hobbies" text, "languages" character varying, "image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "experience_start_date" character varying, "experience_end_date" character varying, "education_start_date" character varying, "education_end_date" character varying)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (33.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "name" character varying)[0m
+  [1m[35m (32.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20221101045236)[0m
+  [1m[35m (5.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20221019114153),
+(20221020094411),
+(20221022054110),
+(20221025075143),
+(20221028165455),
+(20221031215044),
+(20221101040745),
+(20221101040933),
+(20221101044527),
+(20221101044931),
+(20221101045129);
+
+[0m
+  [1m[35m (35.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-11-02 20:40:45.788950"], ["updated_at", "2022-11-02 20:40:45.788950"]]
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2022-11-02 20:40:45.803806"], ["key", "environment"]]
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "494e7625654677b4065e8d1340cc0513517a9a1e"], ["created_at", "2022-11-02 20:40:45.817859"], ["updated_at", "2022-11-02 20:40:45.817859"]]
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/user_profiles" for 127.0.0.1 at 2022-11-02 23:41:00 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UserProfilesController#index as HTML
+  [1m[36mUserProfile Load (1.1ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 200 OK in 67ms (Views: 14.0ms | ActiveRecord: 1.1ms | Allocations: 21101)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-11-02 23:41:01 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"favicon"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 616)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-11-02 23:42:11 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"earnytech@live.com", "name"=>"Earnest Achayo", "username"=>"earnest", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"earnest", "email"=>"earnytech@live.com", "name"=>"Earnest Achayo"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007fa92433df90>, params: {"email"=>"earnytech@live.com", "name"=>"Earnest Achayo", "username"=>"earnest", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"username"=>"earnest", "email"=>"earnytech@live.com", "name"=>"Earnest Achayo"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "earnytech@live.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "earnest"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "earnest"], ["email", "earnytech@live.com"], ["password_digest", "[FILTERED]"], ["created_at", "2022-11-02 20:42:11.458782"], ["updated_at", "2022-11-02 20:42:11.458782"], ["name", "Earnest Achayo"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (14.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 200 OK in 367ms (Views: 1.0ms | ActiveRecord: 27.5ms | Allocations: 20819)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2022-11-02 23:42:16 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"earnytech@live.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"earnytech@live.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "earnytech@live.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 200 OK in 333ms (Views: 0.9ms | ActiveRecord: 1.2ms | Allocations: 1323)
+
+
+Started POST "/user_profiles" for 127.0.0.1 at 2022-11-02 23:44:39 +0300
+Processing by UserProfilesController#create as */*
+  Parameters: {"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnytech@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"", "estate"=>"Mombala", "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience_start_date"=>"", "experience_end_date"=>"", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education_start_date"=>"", "education_end_date"=>"", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "image"=>"", "experience_date"=>"2022-11-02", "education_date"=>"2022-11-16", "user_id"=>1, "user_profile"=>{"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnytech@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"", "estate"=>"Mombala", "user_id"=>1, "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "image"=>"", "experience_start_date"=>"", "experience_end_date"=>"", "education_start_date"=>"", "education_end_date"=>""}}
+[31mUnpermitted parameters: :image, :experience_date, :education_date, :user_profile. Context: { controller: UserProfilesController, action: create, request: #<ActionDispatch::Request:0x00007fa92478a800>, params: {"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnytech@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"", "estate"=>"Mombala", "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience_start_date"=>"", "experience_end_date"=>"", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education_start_date"=>"", "education_end_date"=>"", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "image"=>"", "experience_date"=>"2022-11-02", "education_date"=>"2022-11-16", "user_id"=>1, "controller"=>"user_profiles", "action"=>"create", "user_profile"=>{"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnytech@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"", "estate"=>"Mombala", "user_id"=>1, "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "image"=>"", "experience_start_date"=>"", "experience_end_date"=>"", "education_start_date"=>"", "education_end_date"=>""}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mUserProfile Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "user_profiles" WHERE "user_profiles"."email" = $1 LIMIT $2[0m  [["email", "earnytech@live.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.86ms)
+Completed 422 Unprocessable Entity in 2094ms (Views: 1.5ms | ActiveRecord: 7.3ms | Allocations: 1049273)
+
+
+Started POST "/user_profiles" for 127.0.0.1 at 2022-11-02 23:44:52 +0300
+Processing by UserProfilesController#create as */*
+  Parameters: {"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnytech@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"", "estate"=>"Mombala", "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience_start_date"=>"", "experience_end_date"=>"", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education_start_date"=>"", "education_end_date"=>"", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "image"=>"", "experience_date"=>"2022-11-02", "education_date"=>"2022-11-16", "user_id"=>1, "user_profile"=>{"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnytech@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"", "estate"=>"Mombala", "user_id"=>1, "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "image"=>"", "experience_start_date"=>"", "experience_end_date"=>"", "education_start_date"=>"", "education_end_date"=>""}}
+[31mUnpermitted parameters: :image, :experience_date, :education_date, :user_profile. Context: { controller: UserProfilesController, action: create, request: #<ActionDispatch::Request:0x00007fa920029470>, params: {"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnytech@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"", "estate"=>"Mombala", "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience_start_date"=>"", "experience_end_date"=>"", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education_start_date"=>"", "education_end_date"=>"", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "image"=>"", "experience_date"=>"2022-11-02", "education_date"=>"2022-11-16", "user_id"=>1, "controller"=>"user_profiles", "action"=>"create", "user_profile"=>{"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnytech@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"", "estate"=>"Mombala", "user_id"=>1, "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "image"=>"", "experience_start_date"=>"", "experience_end_date"=>"", "education_start_date"=>"", "education_end_date"=>""}} }[0m
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mUserProfile Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "user_profiles" WHERE "user_profiles"."email" = $1 LIMIT $2[0m  [["email", "earnytech@live.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.08ms)
+Completed 422 Unprocessable Entity in 33ms (Views: 4.6ms | ActiveRecord: 10.5ms | Allocations: 4043)
+
+
+Started POST "/user_profiles" for 127.0.0.1 at 2022-11-02 23:45:10 +0300
+Processing by UserProfilesController#create as */*
+  Parameters: {"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnytech@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"Mombasa", "estate"=>"Mombala", "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience_start_date"=>"", "experience_end_date"=>"", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education_start_date"=>"", "education_end_date"=>"", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "image"=>"", "experience_date"=>"2022-11-02", "education_date"=>"2022-11-16", "user_id"=>1, "user_profile"=>{"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnytech@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"Mombasa", "estate"=>"Mombala", "user_id"=>1, "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "image"=>"", "experience_start_date"=>"", "experience_end_date"=>"", "education_start_date"=>"", "education_end_date"=>""}}
+[31mUnpermitted parameters: :image, :experience_date, :education_date, :user_profile. Context: { controller: UserProfilesController, action: create, request: #<ActionDispatch::Request:0x00007fa9140df808>, params: {"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnytech@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"Mombasa", "estate"=>"Mombala", "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience_start_date"=>"", "experience_end_date"=>"", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education_start_date"=>"", "education_end_date"=>"", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "image"=>"", "experience_date"=>"2022-11-02", "education_date"=>"2022-11-16", "user_id"=>1, "controller"=>"user_profiles", "action"=>"create", "user_profile"=>{"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnytech@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"Mombasa", "estate"=>"Mombala", "user_id"=>1, "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "image"=>"", "experience_start_date"=>"", "experience_end_date"=>"", "education_start_date"=>"", "education_end_date"=>""}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mUserProfile Exists? (5.2ms)[0m  [1m[34mSELECT 1 AS one FROM "user_profiles" WHERE "user_profiles"."email" = $1 LIMIT $2[0m  [["email", "earnytech@live.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mUserProfile Create (3.6ms)[0m  [1m[32mINSERT INTO "user_profiles" ("firstname", "middlename", "lastname", "email", "gender", "age", "national_id", "address", "phone", "county", "estate", "user_id", "career_summary", "experience", "education", "skills_and_hobbies", "languages", "image", "created_at", "updated_at", "experience_start_date", "experience_end_date", "education_start_date", "education_end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24) RETURNING "id"[0m  [["firstname", "Earnest"], ["middlename", "Odhiambo"], ["lastname", "Achayo"], ["email", "earnytech@live.com"], ["gender", ""], ["age", "25"], ["national_id", 28756543], ["address", "234 UGUNJA"], ["phone", 723459867], ["county", "Mombasa"], ["estate", "Mombala"], ["user_id", 1], ["career_summary", "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."], ["experience", "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."], ["education", "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."], ["skills_and_hobbies", "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."], ["languages", "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."], ["image", nil], ["created_at", "2022-11-02 20:45:11.015727"], ["updated_at", "2022-11-02 20:45:11.015727"], ["experience_start_date", ""], ["experience_end_date", ""], ["education_start_date", ""], ["education_end_date", ""]]
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+[active_model_serializers] Rendered UserProfileSerializer with ActiveModelSerializers::Adapter::Attributes (68.84ms)
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 18.7ms | Allocations: 10677)
+
+
+  
+NoMethodError (undefined method `experience_date' for #<UserProfile id: 1, firstname: "Earnest", middlename: "Odhiambo", lastname: "Achayo", email: "earnytech@live.com", gender: "", age: "25", national_id: 28756543, address: "234 UGUNJA", phone: 723459867, county: "Mombasa", estate: "Mombala", user_id: 1, career_summary: "In publishing and graphic design, Lorem ipsum is a...", experience: "In publishing and graphic design, Lorem ipsum is a...", education: "In publishing and graphic design, Lorem ipsum is a...", skills_and_hobbies: "In publishing and graphic design, Lorem ipsum is a...", languages: "In publishing and graphic design, Lorem ipsum is a...", image: nil, created_at: "2022-11-02 20:45:11.015727000 +0000", updated_at: "2022-11-02 20:45:11.015727000 +0000", experience_start_date: "", experience_end_date: "", education_start_date: "", education_end_date: "">
+Did you mean?  experience_was
+               experience_end_date
+               experience_change):
+  
+app/controllers/user_profiles_controller.rb:13:in `create'
+Started POST "/user_profiles" for 127.0.0.1 at 2022-11-02 23:48:50 +0300
+Processing by UserProfilesController#create as */*
+  Parameters: {"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnytech@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"Mombasa", "estate"=>"Mombala", "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience_start_date"=>"", "experience_end_date"=>"", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education_start_date"=>"", "education_end_date"=>"", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "image"=>"", "experience_date"=>"2022-11-02", "education_date"=>"2022-11-16", "user_id"=>1, "user_profile"=>{"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnytech@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"Mombasa", "estate"=>"Mombala", "user_id"=>1, "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "image"=>"", "experience_start_date"=>"", "experience_end_date"=>"", "education_start_date"=>"", "education_end_date"=>""}}
+[31mUnpermitted parameters: :image, :experience_date, :education_date, :user_profile. Context: { controller: UserProfilesController, action: create, request: #<ActionDispatch::Request:0x00007fa91c010b18>, params: {"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnytech@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"Mombasa", "estate"=>"Mombala", "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience_start_date"=>"", "experience_end_date"=>"", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education_start_date"=>"", "education_end_date"=>"", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "image"=>"", "experience_date"=>"2022-11-02", "education_date"=>"2022-11-16", "user_id"=>1, "controller"=>"user_profiles", "action"=>"create", "user_profile"=>{"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnytech@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"Mombasa", "estate"=>"Mombala", "user_id"=>1, "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "image"=>"", "experience_start_date"=>"", "experience_end_date"=>"", "education_start_date"=>"", "education_end_date"=>""}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mUserProfile Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "user_profiles" WHERE "user_profiles"."email" = $1 LIMIT $2[0m  [["email", "earnytech@live.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.96ms)
+Completed 422 Unprocessable Entity in 19ms (Views: 1.6ms | ActiveRecord: 1.5ms | Allocations: 4114)
+
+
+Started POST "/user_profiles" for 127.0.0.1 at 2022-11-02 23:49:32 +0300
+Processing by UserProfilesController#create as */*
+  Parameters: {"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnest@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"Mombasa", "estate"=>"Mombala", "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience_start_date"=>"", "experience_end_date"=>"", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education_start_date"=>"", "education_end_date"=>"", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"", "image"=>"", "experience_date"=>"2022-11-02", "education_date"=>"2022-11-16", "user_id"=>1, "user_profile"=>{"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnest@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"Mombasa", "estate"=>"Mombala", "user_id"=>1, "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"", "image"=>"", "experience_start_date"=>"", "experience_end_date"=>"", "education_start_date"=>"", "education_end_date"=>""}}
+[31mUnpermitted parameters: :image, :experience_date, :education_date, :user_profile. Context: { controller: UserProfilesController, action: create, request: #<ActionDispatch::Request:0x00007fa90035d788>, params: {"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnest@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"Mombasa", "estate"=>"Mombala", "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience_start_date"=>"", "experience_end_date"=>"", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education_start_date"=>"", "education_end_date"=>"", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"", "image"=>"", "experience_date"=>"2022-11-02", "education_date"=>"2022-11-16", "user_id"=>1, "controller"=>"user_profiles", "action"=>"create", "user_profile"=>{"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnest@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"Mombasa", "estate"=>"Mombala", "user_id"=>1, "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"", "image"=>"", "experience_start_date"=>"", "experience_end_date"=>"", "education_start_date"=>"", "education_end_date"=>""}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mUserProfile Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "user_profiles" WHERE "user_profiles"."email" = $1 LIMIT $2[0m  [["email", "earnest@live.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mUserProfile Create (3.0ms)[0m  [1m[32mINSERT INTO "user_profiles" ("firstname", "middlename", "lastname", "email", "gender", "age", "national_id", "address", "phone", "county", "estate", "user_id", "career_summary", "experience", "education", "skills_and_hobbies", "languages", "image", "created_at", "updated_at", "experience_start_date", "experience_end_date", "education_start_date", "education_end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24) RETURNING "id"[0m  [["firstname", "Earnest"], ["middlename", "Odhiambo"], ["lastname", "Achayo"], ["email", "earnest@live.com"], ["gender", ""], ["age", "25"], ["national_id", 28756543], ["address", "234 UGUNJA"], ["phone", 723459867], ["county", "Mombasa"], ["estate", "Mombala"], ["user_id", 1], ["career_summary", "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."], ["experience", "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."], ["education", "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."], ["skills_and_hobbies", "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."], ["languages", ""], ["image", nil], ["created_at", "2022-11-02 20:49:32.258692"], ["updated_at", "2022-11-02 20:49:32.258692"], ["experience_start_date", ""], ["experience_end_date", ""], ["education_start_date", ""], ["education_end_date", ""]]
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+[active_model_serializers] Rendered UserProfileSerializer with ActiveModelSerializers::Adapter::Attributes (57.75ms)
+Completed 500 Internal Server Error in 128ms (ActiveRecord: 9.4ms | Allocations: 9706)
+
+
+  
+NoMethodError (undefined method `experience_date' for #<UserProfile id: 2, firstname: "Earnest", middlename: "Odhiambo", lastname: "Achayo", email: "earnest@live.com", gender: "", age: "25", national_id: 28756543, address: "234 UGUNJA", phone: 723459867, county: "Mombasa", estate: "Mombala", user_id: 1, career_summary: "In publishing and graphic design, Lorem ipsum is a...", experience: "In publishing and graphic design, Lorem ipsum is a...", education: "In publishing and graphic design, Lorem ipsum is a...", skills_and_hobbies: "In publishing and graphic design, Lorem ipsum is a...", languages: "", image: nil, created_at: "2022-11-02 20:49:32.258692000 +0000", updated_at: "2022-11-02 20:49:32.258692000 +0000", experience_start_date: "", experience_end_date: "", education_start_date: "", education_end_date: "">
+Did you mean?  experience_was
+               experience_end_date
+               experience_change):
+  
+app/controllers/user_profiles_controller.rb:13:in `create'
+Started POST "/user_profiles" for 127.0.0.1 at 2022-11-02 23:50:45 +0300
+Processing by UserProfilesController#create as */*
+  Parameters: {"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnest@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"Mombasa", "estate"=>"Mombala", "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience_start_date"=>"", "experience_end_date"=>"", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education_start_date"=>"", "education_end_date"=>"", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"", "image"=>"", "experience_date"=>"2022-11-02", "education_date"=>"2022-11-16", "user_id"=>1, "user_profile"=>{"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnest@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"Mombasa", "estate"=>"Mombala", "user_id"=>1, "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"", "image"=>"", "experience_start_date"=>"", "experience_end_date"=>"", "education_start_date"=>"", "education_end_date"=>""}}
+[31mUnpermitted parameters: :image, :experience_date, :education_date, :user_profile. Context: { controller: UserProfilesController, action: create, request: #<ActionDispatch::Request:0x00007fa9250791f0>, params: {"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnest@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"Mombasa", "estate"=>"Mombala", "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience_start_date"=>"", "experience_end_date"=>"", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education_start_date"=>"", "education_end_date"=>"", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"", "image"=>"", "experience_date"=>"2022-11-02", "education_date"=>"2022-11-16", "user_id"=>1, "controller"=>"user_profiles", "action"=>"create", "user_profile"=>{"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnest@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"Mombasa", "estate"=>"Mombala", "user_id"=>1, "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"", "image"=>"", "experience_start_date"=>"", "experience_end_date"=>"", "education_start_date"=>"", "education_end_date"=>""}} }[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mUserProfile Exists? (4.2ms)[0m  [1m[34mSELECT 1 AS one FROM "user_profiles" WHERE "user_profiles"."email" = $1 LIMIT $2[0m  [["email", "earnest@live.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.38ms)
+Completed 422 Unprocessable Entity in 38ms (Views: 4.2ms | ActiveRecord: 5.7ms | Allocations: 4022)
+
+
+Started POST "/user_profiles" for 127.0.0.1 at 2022-11-02 23:51:24 +0300
+Processing by UserProfilesController#create as */*
+  Parameters: {"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnest@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"Mombasa", "estate"=>"Mombala", "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience_start_date"=>"", "experience_end_date"=>"", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education_start_date"=>"", "education_end_date"=>"", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"English", "image"=>"", "experience_date"=>"2022-11-02", "education_date"=>"2022-11-16", "user_id"=>1, "user_profile"=>{"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnest@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"Mombasa", "estate"=>"Mombala", "user_id"=>1, "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"English", "image"=>"", "experience_start_date"=>"", "experience_end_date"=>"", "education_start_date"=>"", "education_end_date"=>""}}
+[31mUnpermitted parameters: :image, :experience_date, :education_date, :user_profile. Context: { controller: UserProfilesController, action: create, request: #<ActionDispatch::Request:0x00007fa925a489d8>, params: {"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnest@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"Mombasa", "estate"=>"Mombala", "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience_start_date"=>"", "experience_end_date"=>"", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education_start_date"=>"", "education_end_date"=>"", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"English", "image"=>"", "experience_date"=>"2022-11-02", "education_date"=>"2022-11-16", "user_id"=>1, "controller"=>"user_profiles", "action"=>"create", "user_profile"=>{"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnest@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"Mombasa", "estate"=>"Mombala", "user_id"=>1, "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"English", "image"=>"", "experience_start_date"=>"", "experience_end_date"=>"", "education_start_date"=>"", "education_end_date"=>""}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mUserProfile Exists? (2.7ms)[0m  [1m[34mSELECT 1 AS one FROM "user_profiles" WHERE "user_profiles"."email" = $1 LIMIT $2[0m  [["email", "earnest@live.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.28ms)
+Completed 422 Unprocessable Entity in 32ms (Views: 2.1ms | ActiveRecord: 5.6ms | Allocations: 4025)
+
+
+Started GET "/user_profiles" for 127.0.0.1 at 2022-11-02 23:51:32 +0300
+Processing by UserProfilesController#index as HTML
+  [1m[36mUserProfile Load (2.2ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (59.86ms)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 2.2ms | Allocations: 6589)
+
+
+  
+NoMethodError (undefined method `experience_date' for #<UserProfile id: 1, firstname: "Earnest", middlename: "Odhiambo", lastname: "Achayo", email: "earnytech@live.com", gender: "", age: "25", national_id: 28756543, address: "234 UGUNJA", phone: 723459867, county: "Mombasa", estate: "Mombala", user_id: 1, career_summary: "In publishing and graphic design, Lorem ipsum is a...", experience: "In publishing and graphic design, Lorem ipsum is a...", education: "In publishing and graphic design, Lorem ipsum is a...", skills_and_hobbies: "In publishing and graphic design, Lorem ipsum is a...", languages: "In publishing and graphic design, Lorem ipsum is a...", image: nil, created_at: "2022-11-02 20:45:11.015727000 +0000", updated_at: "2022-11-02 20:45:11.015727000 +0000", experience_start_date: "", experience_end_date: "", education_start_date: "", education_end_date: "">
+Did you mean?  experience_was
+               experience_end_date
+               experience_change):
+  
+app/controllers/user_profiles_controller.rb:8:in `index'
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-11-02 23:51:33 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"favicon"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.42ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 176)
+
+
+Started GET "/user_profiles" for 127.0.0.1 at 2022-11-02 23:55:45 +0300
+Processing by UserProfilesController#index as HTML
+  [1m[36mUserProfile Load (4.7ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.71ms)
+Completed 200 OK in 63ms (Views: 41.2ms | ActiveRecord: 14.7ms | Allocations: 10449)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-11-02 23:55:46 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"favicon"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 320)
+
+
+Started POST "/user_profiles" for 127.0.0.1 at 2022-11-02 23:57:29 +0300
+Processing by UserProfilesController#create as */*
+  Parameters: {"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnest@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"Mombasa", "estate"=>"Mombala", "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience_start_date"=>"", "experience_end_date"=>"", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education_start_date"=>"", "education_end_date"=>"", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"English", "image"=>"", "experience_date"=>"2022-11-02", "education_date"=>"2022-11-16", "user_id"=>1, "user_profile"=>{"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnest@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"Mombasa", "estate"=>"Mombala", "user_id"=>1, "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"English", "image"=>"", "experience_start_date"=>"", "experience_end_date"=>"", "education_start_date"=>"", "education_end_date"=>""}}
+[31mUnpermitted parameters: :image, :experience_date, :education_date, :user_profile. Context: { controller: UserProfilesController, action: create, request: #<ActionDispatch::Request:0x00007fa9275d5570>, params: {"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnest@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"Mombasa", "estate"=>"Mombala", "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience_start_date"=>"", "experience_end_date"=>"", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education_start_date"=>"", "education_end_date"=>"", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"English", "image"=>"", "experience_date"=>"2022-11-02", "education_date"=>"2022-11-16", "user_id"=>1, "controller"=>"user_profiles", "action"=>"create", "user_profile"=>{"firstname"=>"Earnest", "middlename"=>"Odhiambo", "lastname"=>"Achayo", "email"=>"earnest@live.com", "gender"=>"", "age"=>"25", "national_id"=>"28756543", "address"=>"234 UGUNJA", "phone"=>"0723459867", "county"=>"Mombasa", "estate"=>"Mombala", "user_id"=>1, "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"English", "image"=>"", "experience_start_date"=>"", "experience_end_date"=>"", "education_start_date"=>"", "education_end_date"=>""}} }[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mUserProfile Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "user_profiles" WHERE "user_profiles"."email" = $1 LIMIT $2[0m  [["email", "earnest@live.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.46ms)
+Completed 422 Unprocessable Entity in 60ms (Views: 4.2ms | ActiveRecord: 9.6ms | Allocations: 8262)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-11-02 23:58:42 +0300
+Processing by UsersController#create as */*
+  Parameters: {"email"=>"tetjanet@live.com", "name"=>"Tet Janet", "username"=>"tet", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"tet", "email"=>"tetjanet@live.com", "name"=>"Tet Janet"}}
+[31mUnpermitted parameter: :user. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007fa927746788>, params: {"email"=>"tetjanet@live.com", "name"=>"Tet Janet", "username"=>"tet", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"users", "action"=>"create", "user"=>{"username"=>"tet", "email"=>"tetjanet@live.com", "name"=>"Tet Janet"}} }[0m
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tetjanet@live.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "tet"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "tet"], ["email", "tetjanet@live.com"], ["password_digest", "[FILTERED]"], ["created_at", "2022-11-02 20:58:43.224032"], ["updated_at", "2022-11-02 20:58:43.224032"], ["name", "Tet Janet"]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:16:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 200 OK in 353ms (Views: 1.0ms | ActiveRecord: 8.8ms | Allocations: 4227)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2022-11-02 23:58:58 +0300
+Processing by AuthenticationController#login as */*
+  Parameters: {"email"=>"tetjanet@live.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"tetjanet@live.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tetjanet@live.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 200 OK in 308ms (Views: 0.9ms | ActiveRecord: 2.9ms | Allocations: 1129)
+
+
+Started POST "/user_profiles" for 127.0.0.1 at 2022-11-03 00:01:02 +0300
+Processing by UserProfilesController#create as */*
+  Parameters: {"firstname"=>"Tet", "middlename"=>"Janet", "lastname"=>"Achayo", "email"=>"tetjanet@ctechlinks.com", "gender"=>"Female", "age"=>"23", "national_id"=>"29874756", "address"=>"234 UGUNJA", "phone"=>"0725234232", "county"=>"Mombasa", "estate"=>"Diani", "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience_start_date"=>"", "experience_end_date"=>"", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education_start_date"=>"", "education_end_date"=>"", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "image"=>"", "experience_date"=>"2022-11-01", "education_date"=>"2022-11-01", "user_id"=>2, "user_profile"=>{"firstname"=>"Tet", "middlename"=>"Janet", "lastname"=>"Achayo", "email"=>"tetjanet@ctechlinks.com", "gender"=>"Female", "age"=>"23", "national_id"=>"29874756", "address"=>"234 UGUNJA", "phone"=>"0725234232", "county"=>"Mombasa", "estate"=>"Diani", "user_id"=>2, "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "image"=>"", "experience_start_date"=>"", "experience_end_date"=>"", "education_start_date"=>"", "education_end_date"=>""}}
+[31mUnpermitted parameters: :image, :experience_date, :education_date, :user_profile. Context: { controller: UserProfilesController, action: create, request: #<ActionDispatch::Request:0x00007fa9278df0e0>, params: {"firstname"=>"Tet", "middlename"=>"Janet", "lastname"=>"Achayo", "email"=>"tetjanet@ctechlinks.com", "gender"=>"Female", "age"=>"23", "national_id"=>"29874756", "address"=>"234 UGUNJA", "phone"=>"0725234232", "county"=>"Mombasa", "estate"=>"Diani", "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience_start_date"=>"", "experience_end_date"=>"", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education_start_date"=>"", "education_end_date"=>"", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "image"=>"", "experience_date"=>"2022-11-01", "education_date"=>"2022-11-01", "user_id"=>2, "controller"=>"user_profiles", "action"=>"create", "user_profile"=>{"firstname"=>"Tet", "middlename"=>"Janet", "lastname"=>"Achayo", "email"=>"tetjanet@ctechlinks.com", "gender"=>"Female", "age"=>"23", "national_id"=>"29874756", "address"=>"234 UGUNJA", "phone"=>"0725234232", "county"=>"Mombasa", "estate"=>"Diani", "user_id"=>2, "career_summary"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "experience"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "education"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "skills_and_hobbies"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "languages"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.", "image"=>"", "experience_start_date"=>"", "experience_end_date"=>"", "education_start_date"=>"", "education_end_date"=>""}} }[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mUserProfile Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "user_profiles" WHERE "user_profiles"."email" = $1 LIMIT $2[0m  [["email", "tetjanet@ctechlinks.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mUserProfile Create (3.0ms)[0m  [1m[32mINSERT INTO "user_profiles" ("firstname", "middlename", "lastname", "email", "gender", "age", "national_id", "address", "phone", "county", "estate", "user_id", "career_summary", "experience", "education", "skills_and_hobbies", "languages", "image", "created_at", "updated_at", "experience_start_date", "experience_end_date", "education_start_date", "education_end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24) RETURNING "id"[0m  [["firstname", "Tet"], ["middlename", "Janet"], ["lastname", "Achayo"], ["email", "tetjanet@ctechlinks.com"], ["gender", "Female"], ["age", "23"], ["national_id", 29874756], ["address", "234 UGUNJA"], ["phone", 725234232], ["county", "Mombasa"], ["estate", "Diani"], ["user_id", 2], ["career_summary", "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."], ["experience", "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."], ["education", "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."], ["skills_and_hobbies", "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."], ["languages", "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."], ["image", nil], ["created_at", "2022-11-02 21:01:02.934392"], ["updated_at", "2022-11-02 21:01:02.934392"], ["experience_start_date", ""], ["experience_end_date", ""], ["education_start_date", ""], ["education_end_date", ""]]
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user_profiles_controller.rb:12:in `create'
+[active_model_serializers] Rendered UserProfileSerializer with ActiveModelSerializers::Adapter::Attributes (0.83ms)
+Completed 201 Created in 42ms (Views: 1.7ms | ActiveRecord: 12.4ms | Allocations: 4459)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2022-11-03 00:01:03 +0300
+Processing by JobsController#index as */*
+  [1m[36mJob Load (2.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 200 OK in 13ms (Views: 6.6ms | ActiveRecord: 2.4ms | Allocations: 1510)
+
+
+Started GET "/user_profiles" for 127.0.0.1 at 2022-11-03 00:01:23 +0300
+Processing by UserProfilesController#index as HTML
+  [1m[36mUserProfile Load (1.0ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.84ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 1.0ms | Allocations: 1859)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-11-03 00:01:23 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"favicon"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.24ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 178)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2022-11-03 00:13:36 +0300
+Processing by JobsController#index as */*
+  [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 32ms (Views: 25.1ms | ActiveRecord: 10.5ms | Allocations: 5449)
+
+
+Started POST "/job_applications" for 127.0.0.1 at 2022-11-03 00:14:28 +0300
+Processing by JobApplicationsController#create as */*
+  Parameters: {"cover_letter"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful ", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf", "job_application"=>{"cover_letter"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful ", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf"}}
+[31mUnpermitted parameter: :job_application. Context: { controller: JobApplicationsController, action: create, request: #<ActionDispatch::Request:0x00007fa927cd83e0>, params: {"cover_letter"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful ", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf", "controller"=>"job_applications", "action"=>"create", "job_application"=>{"cover_letter"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful ", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf"}} }[0m
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 17.3ms | Allocations: 18783)
+
+
+  
+NameError (undefined local variable or method `invalid' for #<JobApplicationsController:0x0000000000a668>):
+  
+app/controllers/job_applications_controller.rb:35:in `render_unprocessable_entity_response'
+Started POST "/job_applications" for 127.0.0.1 at 2022-11-03 00:15:22 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by JobApplicationsController#create as */*
+  Parameters: {"cover_letter"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful ", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf", "job_application"=>{"cover_letter"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful ", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf"}}
+[31mUnpermitted parameter: :job_application. Context: { controller: JobApplicationsController, action: create, request: #<ActionDispatch::Request:0x00007f346cada2d0>, params: {"cover_letter"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful ", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf", "controller"=>"job_applications", "action"=>"create", "job_application"=>{"cover_letter"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful ", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf"}} }[0m
+Completed 500 Internal Server Error in 2099ms (ActiveRecord: 5.5ms | Allocations: 1056303)
+
+
+  
+NameError (undefined local variable or method `invalid' for #<JobApplicationsController:0x00000000005730>):
+  
+app/controllers/job_applications_controller.rb:35:in `render_unprocessable_entity_response'
+Started GET "/user_profiles" for 127.0.0.1 at 2022-11-03 00:16:00 +0300
+Processing by UserProfilesController#index as HTML
+  [1m[36mUserProfile Load (0.7ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.02ms)
+Completed 200 OK in 89ms (Views: 78.5ms | ActiveRecord: 9.7ms | Allocations: 28190)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-11-03 00:16:00 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"favicon"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 575)
+
+
+Started GET "/user_profiles" for 127.0.0.1 at 2022-11-03 00:17:44 +0300
+Processing by UserProfilesController#index as HTML
+  [1m[36mUserProfile Load (1.0ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.15ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 1.0ms | Allocations: 1853)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-11-03 00:17:44 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"favicon"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 176)
+
+
+Started GET "/user_profiles" for 127.0.0.1 at 2022-11-03 00:17:46 +0300
+Processing by UserProfilesController#index as HTML
+  [1m[36mUserProfile Load (0.6ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.9ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.6ms | Allocations: 1849)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-11-03 00:17:47 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"favicon"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.4ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Started GET "/user_profiles" for 127.0.0.1 at 2022-11-03 00:22:20 +0300
+Processing by UserProfilesController#index as HTML
+  [1m[36mUserProfile Load (4.5ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.38ms)
+Completed 200 OK in 16ms (Views: 11.0ms | ActiveRecord: 4.5ms | Allocations: 1857)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-11-03 00:22:21 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"favicon"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 176)
+
+
+Started POST "/job_applications" for 127.0.0.1 at 2022-11-03 00:23:15 +0300
+Processing by JobApplicationsController#create as */*
+  Parameters: {"cover_letter"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful ", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf", "job_application"=>{"cover_letter"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful ", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf"}}
+[31mUnpermitted parameter: :job_application. Context: { controller: JobApplicationsController, action: create, request: #<ActionDispatch::Request:0x00007f343c2c9bc0>, params: {"cover_letter"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful ", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf", "controller"=>"job_applications", "action"=>"create", "job_application"=>{"cover_letter"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful ", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf"}} }[0m
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms | Allocations: 2589)
+
+
+  
+NameError (undefined local variable or method `invalid' for #<JobApplicationsController:0x00000000005af0>):
+  
+app/controllers/job_applications_controller.rb:35:in `render_unprocessable_entity_response'
+Started POST "/job_applications" for 127.0.0.1 at 2022-11-03 00:25:13 +0300
+Processing by JobApplicationsController#create as */*
+  Parameters: {"cover_letter"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful ", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf", "job_application"=>{"cover_letter"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful ", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf"}}
+[31mUnpermitted parameter: :job_application. Context: { controller: JobApplicationsController, action: create, request: #<ActionDispatch::Request:0x00007f3450335c08>, params: {"cover_letter"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful ", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf", "controller"=>"job_applications", "action"=>"create", "job_application"=>{"cover_letter"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful ", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf"}} }[0m
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 5.5ms | Allocations: 6260)
+
+
+  
+NameError (undefined local variable or method `invalid' for #<JobApplicationsController:0x00000000007c10>):
+  
+app/controllers/job_applications_controller.rb:35:in `render_unprocessable_entity_response'
+Started POST "/job_applications" for 127.0.0.1 at 2022-11-03 00:26:06 +0300
+Processing by JobApplicationsController#create as */*
+  Parameters: {"cover_letter"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful ", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf", "job_application"=>{"cover_letter"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful ", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf"}}
+[31mUnpermitted parameter: :job_application. Context: { controller: JobApplicationsController, action: create, request: #<ActionDispatch::Request:0x00007f3464177ad8>, params: {"cover_letter"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful ", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf", "controller"=>"job_applications", "action"=>"create", "job_application"=>{"cover_letter"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful ", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf"}} }[0m
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 8.1ms | Allocations: 6241)
+
+
+  
+NameError (undefined local variable or method `invalid' for #<JobApplicationsController:0x00000000009c18>):
+  
+app/controllers/job_applications_controller.rb:35:in `render_unprocessable_entity_response'
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1655429459639930310)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddColumnToJobApplications (20221102213542)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "job_applications" ADD "user_profile_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221102213542"]]
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(1655429459639930310)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/job_applications" for 127.0.0.1 at 2022-11-03 00:37:27 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by JobApplicationsController#create as */*
+  Parameters: {"cover_letter"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful ", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf", "job_application"=>{"cover_letter"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful ", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf"}}
+[31mUnpermitted parameter: :job_application. Context: { controller: JobApplicationsController, action: create, request: #<ActionDispatch::Request:0x00007f345d23b700>, params: {"cover_letter"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful ", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf", "controller"=>"job_applications", "action"=>"create", "job_application"=>{"cover_letter"=>"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful ", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf"}} }[0m
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms | Allocations: 6238)
+
+
+  
+NameError (undefined local variable or method `invalid' for #<JobApplicationsController:0x0000000000bc48>):
+  
+app/controllers/job_applications_controller.rb:35:in `render_unprocessable_entity_response'
+Started GET "/jobs" for 127.0.0.1 at 2022-11-03 00:37:45 +0300
+Processing by JobsController#index as */*
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 200 OK in 14ms (Views: 7.1ms | ActiveRecord: 1.0ms | Allocations: 2485)
+
+
+Started POST "/job_applications" for 127.0.0.1 at 2022-11-03 00:37:59 +0300
+Processing by JobApplicationsController#create as */*
+  Parameters: {"cover_letter"=>"dcdcdcdc", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf", "job_application"=>{"cover_letter"=>"dcdcdcdc", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf"}}
+[31mUnpermitted parameter: :job_application. Context: { controller: JobApplicationsController, action: create, request: #<ActionDispatch::Request:0x00007f345dd90fb0>, params: {"cover_letter"=>"dcdcdcdc", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf", "controller"=>"job_applications", "action"=>"create", "job_application"=>{"cover_letter"=>"dcdcdcdc", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf"}} }[0m
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 2592)
+
+
+  
+NameError (undefined local variable or method `invalid' for #<JobApplicationsController:0x0000000000bd60>):
+  
+app/controllers/job_applications_controller.rb:35:in `render_unprocessable_entity_response'
+Started GET "/user_profiles" for 127.0.0.1 at 2022-11-03 01:14:21 +0300
+Processing by UserProfilesController#index as HTML
+  [1m[36mUserProfile Load (1.7ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mJobApplication Load (1.3ms)[0m  [1m[34mSELECT "job_applications".* FROM "job_applications" WHERE "job_applications"."user_profile_id" = $1[0m  [["user_profile_id", 1]]
+[active_model_serializers]   ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mJobApplication Load (0.4ms)[0m  [1m[34mSELECT "job_applications".* FROM "job_applications" WHERE "job_applications"."user_profile_id" = $1[0m  [["user_profile_id", 2]]
+[active_model_serializers]   ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mJobApplication Load (0.4ms)[0m  [1m[34mSELECT "job_applications".* FROM "job_applications" WHERE "job_applications"."user_profile_id" = $1[0m  [["user_profile_id", 3]]
+[active_model_serializers]   ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (136.77ms)
+Completed 200 OK in 516ms (Views: 431.6ms | ActiveRecord: 33.0ms | Allocations: 25016)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-11-03 01:14:22 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"favicon"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.21ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 322)
+
+
+Started POST "/job_applications" for 127.0.0.1 at 2022-11-03 01:22:42 +0300
+Processing by JobApplicationsController#create as */*
+  Parameters: {"cover_letter"=>"dcdcdcdc", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf", "job_application"=>{"cover_letter"=>"dcdcdcdc", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf"}}
+[31mUnpermitted parameter: :job_application. Context: { controller: JobApplicationsController, action: create, request: #<ActionDispatch::Request:0x00007f345e466308>, params: {"cover_letter"=>"dcdcdcdc", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf", "controller"=>"job_applications", "action"=>"create", "job_application"=>{"cover_letter"=>"dcdcdcdc", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf"}} }[0m
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 11.1ms | Allocations: 3899)
+
+
+  
+NameError (undefined local variable or method `invalid' for #<JobApplicationsController:0x0000000000df20>):
+  
+app/controllers/job_applications_controller.rb:35:in `render_unprocessable_entity_response'
+Started GET "/user_profiles" for 127.0.0.1 at 2022-11-03 01:28:57 +0300
+Processing by UserProfilesController#index as HTML
+  [1m[36mUserProfile Load (3.4ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mJobApplication Load (0.3ms)[0m  [1m[34mSELECT "job_applications".* FROM "job_applications" WHERE "job_applications"."user_profile_id" = $1[0m  [["user_profile_id", 1]]
+[active_model_serializers]   ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mJobApplication Load (0.8ms)[0m  [1m[34mSELECT "job_applications".* FROM "job_applications" WHERE "job_applications"."user_profile_id" = $1[0m  [["user_profile_id", 2]]
+[active_model_serializers]   ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mJobApplication Load (0.3ms)[0m  [1m[34mSELECT "job_applications".* FROM "job_applications" WHERE "job_applications"."user_profile_id" = $1[0m  [["user_profile_id", 3]]
+[active_model_serializers]   ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (34.45ms)
+Completed 200 OK in 106ms (Views: 104.5ms | ActiveRecord: 26.1ms | Allocations: 7529)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-11-03 01:28:58 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"favicon"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 176)
+
+
+Started GET "/user_profiles" for 127.0.0.1 at 2022-11-03 01:29:01 +0300
+Processing by UserProfilesController#index as HTML
+  [1m[36mUserProfile Load (1.3ms)[0m  [1m[34mSELECT "user_profiles".* FROM "user_profiles"[0m
+  ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mJobApplication Load (0.3ms)[0m  [1m[34mSELECT "job_applications".* FROM "job_applications" WHERE "job_applications"."user_profile_id" = $1[0m  [["user_profile_id", 1]]
+[active_model_serializers]   ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mJobApplication Load (0.4ms)[0m  [1m[34mSELECT "job_applications".* FROM "job_applications" WHERE "job_applications"."user_profile_id" = $1[0m  [["user_profile_id", 2]]
+[active_model_serializers]   ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mJobApplication Load (0.8ms)[0m  [1m[34mSELECT "job_applications".* FROM "job_applications" WHERE "job_applications"."user_profile_id" = $1[0m  [["user_profile_id", 3]]
+[active_model_serializers]   ↳ app/controllers/user_profiles_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (49.59ms)
+Completed 200 OK in 55ms (Views: 52.1ms | ActiveRecord: 2.8ms | Allocations: 4703)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-11-03 01:29:01 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"favicon"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.4ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 176)
+
+
+Started GET "/job_applications" for 127.0.0.1 at 2022-11-03 01:29:32 +0300
+Processing by JobApplicationsController#index as HTML
+  [1m[36mJobApplication Load (0.4ms)[0m  [1m[34mSELECT "job_applications".* FROM "job_applications"[0m
+  ↳ app/controllers/job_applications_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 845)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-11-03 01:29:33 +0300
+Processing by ApplicationController#not_found as */*
+  Parameters: {"a"=>"favicon"}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 176)
+
+
+Started POST "/job_applications" for 127.0.0.1 at 2022-11-03 01:29:53 +0300
+Processing by JobApplicationsController#create as */*
+  Parameters: {"cover_letter"=>"dcdcdcdc", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf", "job_application"=>{"cover_letter"=>"dcdcdcdc", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf"}}
+[31mUnpermitted parameter: :job_application. Context: { controller: JobApplicationsController, action: create, request: #<ActionDispatch::Request:0x00007f345cdedb58>, params: {"cover_letter"=>"dcdcdcdc", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf", "controller"=>"job_applications", "action"=>"create", "job_application"=>{"cover_letter"=>"dcdcdcdc", "attachment"=>"C:\\fakepath\\615-22-165_Sylvia Achayo_17 November 2022_HIV Care Support.pdf"}} }[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 2587)
+
+
+  
+NameError (undefined local variable or method `invalid' for #<JobApplicationsController:0x0000000000e1c8>):
+  
+app/controllers/job_applications_controller.rb:35:in `render_unprocessable_entity_response'
