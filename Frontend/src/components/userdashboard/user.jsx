@@ -14,7 +14,7 @@ export default function UserDashboard() {
       <div className="flex flex-col h-screen p-3 shadow w-60 ">
         <div className="space-y-9 bg-white h-screen rounded-lg">
           <div className="flex justify-center mt-2">
-            <span className="text-3xl font-bold">My Profile</span>
+            <span className="text-3xl font-bold">Dashboard</span>
           </div>
           <div className="flex-1">
             <ul className="pt-2 pb-4 space-y-1 text-sm">
