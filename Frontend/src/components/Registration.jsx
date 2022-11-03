@@ -175,7 +175,7 @@ export default function Registration({onLogin}) {
               </button>
             </div>
           </form>
-          <div className="mt-4 text-grey-600">
+          <div className="my-4 text-grey-600">
             Already have an account?{" "}
             <span>                      
             <Link to="/signin">
@@ -185,7 +185,7 @@ export default function Registration({onLogin}) {
             </Link>              
             </span>
           </div>
-          <div className="flex items-center w-full my-4">
+          {/* <div className="flex items-center w-full my-4">
             <hr className="w-full" />
             <p className="px-3 ">OR</p>
             <hr className="w-full" />
@@ -205,7 +205,7 @@ export default function Registration({onLogin}) {
               </svg>
               <p className="text-green-600">Login with Google</p>
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>)}
