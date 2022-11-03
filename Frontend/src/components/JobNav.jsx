@@ -28,8 +28,8 @@ const JobNav = () => {
         </div>
 
         <div className='hidden md:flex flex-end pr-4 basis-1/8 mr-21 font-bold' >
-          <button className='border-none bg-transparent text-green-600 mr-4'>Dashboard</button>
-          <button className='px-4 py-2 rounded-3xl border-2 border-green-600'>Logout</button>
+          <button className='border-none bg-transparent text-green-600 mr-4 hidden'>Dashboard</button>
+          <button className='px-4 py-2 rounded-3xl border-2 border-green-600 hidden'>Logout</button>
         </div>
 
       </div>

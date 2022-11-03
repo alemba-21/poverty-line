@@ -32,7 +32,7 @@ const Hero = () => {
         </div>
                 <div className='flex '>
                   <Link to="/adminlogin">
-                  <button className='bg-green-600 w-[200px] rounded-full font-medium my-6  py-3 text-black'>Find Talent</button>
+                  <button className='bg-green-600 w-[200px] rounded-full font-medium my-6  py-3 text-black'>Post Job</button>
                   </Link>
                   <Link to="/signin">
                   <button className='bg-slate-200 w-[200px] rounded-full font-medium my-6 ml-2 py-3 text-black'>Find Job</button>
