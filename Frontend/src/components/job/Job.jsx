@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 
 const Job = () => {
 
-  const [jobs, setJobs ] = useState ([])
+  const [jobs, setJobs] = useState ([])
 
   useEffect(() => {
     axios.get('/jobs').then((response) => setJobs(response.data));

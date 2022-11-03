@@ -24,7 +24,7 @@ import Applications from './components/admin/Applications'
 function App() {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
         <Route path="/job" element={<Job />} />
         <Route path="/" element={<Home />} />
