@@ -28,7 +28,7 @@ const ProfileCreation = () => {
     education: "",
     skills_and_hobbies: "",
     languages: "",
-    image: "",
+    // image: "",
   });
 
   //hangle change event
@@ -257,7 +257,7 @@ const ProfileCreation = () => {
                 <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-password"
                   type="date"
-                  name="experience_date"
+                  name="experience_start_date"
                   value={formData?.experience_start_date}
                     onChange={handleChange}
                 />
@@ -270,7 +270,7 @@ const ProfileCreation = () => {
                 <input className="appearance-none block w-2/3 bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-password"
                   type="date"
-                  name="experience_date"
+                  name="experience_end_date"
                   value={formData?.experience_end_date}
                     onChange={handleChange}
                 />
@@ -298,7 +298,7 @@ const ProfileCreation = () => {
                 <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-password"
                   type="date"
-                  name="education_date"
+                  name="education_start_date"
                   value={formData?.education_start_date}
                     onChange={handleChange}
                 />
@@ -311,7 +311,7 @@ const ProfileCreation = () => {
                 <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-password"
                   type="date"
-                  name="education_date"
+                  name="education_end_date"
                   value={formData?.education_end_date}
                     onChange={handleChange}
                 />

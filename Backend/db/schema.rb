@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema[7.0].define(version: 2022_10_31_215044) do
-=======
 ActiveRecord::Schema[7.0].define(version: 2022_11_01_045236) do
->>>>>>> origin/bryan
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -37,7 +33,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_01_045236) do
 
   create_table "jobs", force: :cascade do |t|
     t.string "job_title"
+    t.string "company_name"
     t.text "job_description"
+    t.date "deadline"
+    t.text "job_type"
     t.text "required_skills"
     t.string "job_link"
     t.integer "admin_id"
@@ -63,13 +62,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_01_045236) do
     t.text "education"
     t.text "skills_and_hobbies"
     t.string "languages"
-    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "experience_start_date"
-    t.string "experience_end_date"
-    t.string "education_start_date"
-    t.string "education_end_date"
+    t.date "experience_start_date"
+    t.date "experience_end_date"
+    t.date "education_start_date"
+    t.date "education_end_date"
   end
 
   create_table "users", force: :cascade do |t|

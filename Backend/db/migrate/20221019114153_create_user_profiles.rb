@@ -20,7 +20,7 @@ class CreateUserProfiles < ActiveRecord::Migration[7.0]
       t.text :education_date
       t.text :skills_and_hobbies
       t.string :languages
-      t.string :image
+      # t.string :image
 
       t.timestamps
     end
