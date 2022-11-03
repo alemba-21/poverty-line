@@ -1,5 +1,5 @@
 import { Routes, Route} from 'react-router-dom'
-import Jobs from "./Links/Jobs";
+import Job from "./Links/Job";
 import Home from "./Links/Home"
 import Profile from "./Links/Profile";
 import SignIn from "./Links/SignIn";
@@ -23,8 +23,9 @@ import UsersProfiles from './components/admin/UsersProfiles'
 function App() {
   return (
     <>
-      <Navbar/>
+      {/* <Navbar /> */}
       <Routes>
+        <Route path="/job" element={<Job />} />
         <Route path="/" element={<Home />} />
         <Route path="/view" element={<Profview />} />
         <Route path="/User" element={<User />} />
@@ -36,7 +37,6 @@ function App() {
         <Route path="/create" element={<Profile />} />
         <Route path="/apply" element={<ApplyJob />} />
         <Route path="/post" element={<Createjob />} />
-        <Route path="/Jobs" element={<Jobs/>}/>
         <Route path="/admin" element={ <Admin /> } />
         <Route path="/adminlogin" element={ <AdminLogin /> } />
         <Route path="/usersdata" element={ <UsersData /> } />
