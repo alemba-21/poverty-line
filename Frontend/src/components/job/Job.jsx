@@ -51,9 +51,7 @@ const Job = () => {
 
                 {/* Map Required Skill here */}
                 <div className='flex flex-wrap gap-2 mt-4'>
-                    <p className='p-2 border border-green-600 rounded-lg font-bold'>Coding</p>
-                    <p className='p-2 border border-green-600 rounded-lg font-bold'>Learning</p>
-                    
+                    <p className='p-2 border border-green-600 rounded-lg font-bold'>{ job.required_skills }</p>                    
                 </div>
                 <Link to="/apply">
                   <button className='bg-green-600 text-white px-4 py-2 rounded-3xl mt-4'>Apply</button>
