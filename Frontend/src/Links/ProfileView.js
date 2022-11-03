@@ -3,7 +3,7 @@ import View from '../components/profile/ProfileView'
 
 
 
-const ProfView = () => {
+const ProfileView = () => {
   return (
     <div>
       <View/>
@@ -11,4 +11,4 @@ const ProfView = () => {
   )
 }
 
-export default ProfView
+export default ProfileView

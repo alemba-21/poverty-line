@@ -1,23 +1,25 @@
-import { Routes, Route} from 'react-router-dom'
-import Job from "./Links/Job";
-import Home from "./Links/Home"
-import Profile from "./Links/Profile";
-import SignIn from "./Links/SignIn";
-import SignedUp from "./Links/SignedUp";
-import About from "./Links/About";
-import Profview from './Links/ProfView'
+// import { Routes, Route} from 'react-router-dom'
+// import Job from "./Links/Job";
+// import Home from "./Links/Home"
+// import Profile from "./Links/Profile";
+// import SignIn from "./Links/SignIn";
+// import SignedUp from "./Links/SignedUp";
+// import About from "./Links/About";
+// import ProfileView from './Links/ProfileView'
 import React from "react";
-import Message from "./Links/Message";
-import ApplyJob from './Links/ApplyJob';
-import User from './Links/User';
-import Createjob from './Links/Createjob'
+// import Message from "./Links/Message";
+// import ApplyJob from './Links/ApplyJob';
+// import User from './Links/User';
+// import Createjob from './Links/Createjob'
 import Navbar from './components/Navbar'
-import Admin from './Links/Admin';
-import AdminLogin from './components/admin/AdminLogin'
-import UsersData from './components/admin/UsersData';
-import UpdateUser from './components/admin/UpdateUser';
-import UsersProfiles from './components/admin/UsersProfiles'
-import Applications from './components/admin/Applications'
+import ProfileView from "./components/profile/ProfileView";
+// import Admin from './Links/Admin';
+// import AdminLogin from './components/admin/AdminLogin'
+// import UsersData from './components/admin/UsersData';
+// import UpdateUser from './components/admin/UpdateUser';
+// import UsersProfiles from './components/admin/UsersProfiles'
+// import Applications from './components/admin/Applications'
+
 
 
 
@@ -25,10 +27,11 @@ function App() {
   return (
     <>
       <Navbar />
-      <Routes>
+      <ProfileView />
+      {/* <Routes>
         <Route path="/job" element={<Job />} />
         <Route path="/" element={<Home />} />
-        <Route path="/view" element={<Profview />} />
+        <Route path="/view" element={<ProfileView />} />
         <Route path="/User" element={<User />} />
         <Route path="/about" element={<About />}/>
         <Route path="/chat" element={<Message />} />
@@ -44,7 +47,7 @@ function App() {
         <Route path="/updateuser" element={ <UpdateUser /> } />
         <Route path="/usersprofiles" element={ <UsersProfiles /> } />
         <Route path="/applications" element={<Applications/>} />
-      </Routes>
+      </Routes> */}
     </>      
   );
 }
